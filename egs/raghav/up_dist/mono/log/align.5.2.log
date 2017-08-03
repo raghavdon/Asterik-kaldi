@@ -1,0 +1,133 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 61 exp/mono/5.mdl - |" "ark:gunzip -c exp/mono/fsts.2.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/2/utt2spk scp:data/train/split3/2/cmvn.scp scp:data/train/split3/2/feats.scp ark:- | add-deltas ark:- ark:- |" "ark,t:|gzip -c >exp/mono/ali.2.gz" 
+# Started at Wed Jul 20 23:25:25 IST 2016
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 61 exp/mono/5.mdl - |' 'ark:gunzip -c exp/mono/fsts.2.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/2/utt2spk scp:data/train/split3/2/cmvn.scp scp:data/train/split3/2/feats.scp ark:- | add-deltas ark:- ark:- |' 'ark,t:|gzip -c >exp/mono/ali.2.gz' 
+gmm-boost-silence --boost=1.0 61 exp/mono/5.mdl - 
+WARNING (gmm-boost-silence:main():gmm-boost-silence.cc:82) The pdfs for the silence phones may be shared by other phones (note: this probably does not matter.)
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:103) Wrote model to -
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split3/2/utt2spk scp:data/train/split3/2/cmvn.scp scp:data/train/split3/2/feats.scp ark:- 
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0739I301 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0741I506 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0742I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0742I47 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0750I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0750I44 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0751I414 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP20A0752I435 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP21A0609I41 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1322I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1323I309 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1325I418 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1342I411 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1342I418 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1342I422 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1354F601 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1355F601 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1355I507 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP22A1362I46 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP23A0233I410 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP23A0247I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0172I416 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0173I410 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0173I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0173I425 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0175I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0177I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP24A0189I428 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1205I42 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1211I414 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1216I412 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1216I430 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1216I438 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1220I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP25A1261I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP26A0267I414 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP26A0268I419 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP26A0272I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0639I433 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0643I422 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0650I438 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0651I428 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0651I429 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP27A0657I411 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP28A0221I504 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP28A0224I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP28A0230I413 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0507I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0507I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0508I424 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0509I307 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0512I44 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0513I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0516I502 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0520I301 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0520I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP29A0520I303 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1290I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1292I410 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1292I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1294I303 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1298I420 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1298I49 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1300I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1300I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1304I422 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1304I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1305I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1307I49 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1308I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP31A1310I426 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP34A0552I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP34A0555I308 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP34A0557F603 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP34A0560I413 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0446I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0447I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0449I425 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0450F600 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0452I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0452I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP35A0456F601 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0821I310 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0822I300 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0822I301 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0831I300 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0832I420 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0833I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0834I414 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0836I416 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0836I42 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0837I301 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0840I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP36A0840I310 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0305I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0305I436 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0305I438 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0306I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0307I502 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0312I42 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0316I303 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0316I412 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP37A0316I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP38A0099I415 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP38A0105I42 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP39A0777I43 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP39A0788I423 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP39A0791I412 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP41A0282I413 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP41A0290I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP41A0292I508 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP42A0117I416 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP42A0117I43 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP42A0117I504 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP42A0123I419 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP43A0148I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP43A0158I417 with beam 40
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 9603 utterances, errors on 0
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -100.819 over 3455926 frames.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:131) Retried 117 out of 9603 utterances.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:133) Done 9603, errors on 0
+# Accounting: time=288 threads=1
+# Ended (code 0) at Wed Jul 20 23:30:13 IST 2016, elapsed time 288 seconds

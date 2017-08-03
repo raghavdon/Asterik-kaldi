@@ -1,0 +1,1118 @@
+# lattice-scale --inv-acoustic-scale=11 "ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri1_1600_25600/graph/words.txt | cat > exp/tri1_1600_25600/decode/scoring_kaldi/penalty_1.0/11.txt 
+# Started at Mon Jul 25 00:37:37 IST 2016
+#
+lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
+lattice-scale --inv-acoustic-scale=11 'ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|' ark:- 
+lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I42, best cost 20.7559 + 2767.37 = 2788.13 over 300 frames.
+F07UP02A0332I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I43, best cost 17.9128 + 2623.61 = 2641.53 over 298 frames.
+F07UP02A0332I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP06A0432I42, best cost 21.6753 + 2438.15 = 2459.83 over 300 frames.
+F07UP06A0432I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0094I427, best cost 16.4497 + 2524.2 = 2540.65 over 298 frames.
+F07UP07A0094I427 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0096I44, best cost 18.2619 + 2752.34 = 2770.6 over 298 frames.
+F07UP07A0096I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP09A0491I46, best cost 17.4152 + 2839.72 = 2857.14 over 298 frames.
+F07UP09A0491I46 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP11A1331I301, best cost 15.1613 + 4086.91 = 4102.07 over 498 frames.
+F07UP11A1331I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP19A0344I46, best cost 18.8289 + 2495.39 = 2514.22 over 298 frames.
+F07UP19A0344I46 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP21A0612I41, best cost 19.7639 + 2576.25 = 2596.01 over 298 frames.
+F07UP21A0612I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I429, best cost 21.0485 + 2657.23 = 2678.28 over 298 frames.
+F07UP22A1336I429 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I501, best cost 16.7876 + 3425.19 = 3441.98 over 398 frames.
+F07UP22A1336I501 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I301, best cost 17.0077 + 4101.57 = 4118.58 over 498 frames.
+F07UP22A1343I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I47, best cost 18.6699 + 2843.92 = 2862.59 over 298 frames.
+F07UP22A1343I47 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1345I47, best cost 14.9788 + 2492.99 = 2507.96 over 298 frames.
+F07UP22A1345I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1346I435, best cost 21.7891 + 2785.49 = 2807.28 over 300 frames.
+F07UP22A1346I435 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP23A0248I41, best cost 16.9482 + 2929.08 = 2946.02 over 298 frames.
+F07UP23A0248I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I302, best cost 19.0048 + 4632.38 = 4651.38 over 498 frames.
+F07UP24A0182I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I41, best cost 17.2434 + 2836.75 = 2854 over 298 frames.
+F07UP24A0182I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I302, best cost 14.897 + 4864.43 = 4879.33 over 498 frames.
+F07UP24A0183I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I47, best cost 19.0305 + 2773.54 = 2792.57 over 298 frames.
+F07UP24A0183I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1212I41, best cost 13.91 + 2905.19 = 2919.1 over 298 frames.
+F07UP25A1212I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1215I42, best cost 14.2847 + 2827.71 = 2841.99 over 298 frames.
+F07UP25A1215I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP26A0256I43, best cost 14.2033 + 2830.41 = 2844.61 over 298 frames.
+F07UP26A0256I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I300, best cost 18.256 + 4870.33 = 4888.59 over 498 frames.
+F07UP28A0226I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I45, best cost 11.8373 + 2891.16 = 2903 over 298 frames.
+F07UP28A0226I45 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0227I301, best cost 27.3362 + 4809.07 = 4836.41 over 498 frames.
+F07UP28A0227I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0228I303, best cost 14.2109 + 4999.13 = 5013.34 over 498 frames.
+F07UP28A0228I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I41, best cost 20.1128 + 2569.07 = 2589.18 over 298 frames.
+F07UP29A0523I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I44, best cost 16.5507 + 2490.13 = 2506.68 over 298 frames.
+F07UP29A0523I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP31A1293I42, best cost 14.5916 + 2910.23 = 2924.82 over 298 frames.
+F07UP31A1293I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP34A0567I44, best cost 21.6348 + 2701.85 = 2723.49 over 300 frames.
+F07UP34A0567I44 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP35A0453I300, best cost 28.5461 + 4161.4 = 4189.94 over 498 frames.
+F07UP35A0453I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP37A0304I300, best cost 19.4763 + 4132.24 = 4151.72 over 498 frames.
+F07UP37A0304I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP38A0101I41, best cost 20.2246 + 2746.76 = 2766.98 over 298 frames.
+F07UP38A0101I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I40, best cost 12.9829 + 2399.43 = 2412.42 over 298 frames.
+F07UP41A0286I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I42, best cost 10.848 + 2244.82 = 2255.67 over 298 frames.
+F07UP41A0286I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP52A0208I44, best cost 10.974 + 2864.37 = 2875.34 over 298 frames.
+F07UP52A0208I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP54A1284I430, best cost 15.019 + 2590.96 = 2605.98 over 298 frames.
+F07UP54A1284I430 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP57A0408I41, best cost 18.8815 + 2825.61 = 2844.49 over 298 frames.
+F07UP57A0408I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0943I300, best cost 24.6224 + 4928.09 = 4952.71 over 498 frames.
+F07UP60A0943I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0944I303, best cost 18.7144 + 4055.23 = 4073.94 over 498 frames.
+F07UP60A0944I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I300, best cost 26.8338 + 4349.58 = 4376.41 over 498 frames.
+F07UP60A0949I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I302, best cost 24.7865 + 4091.36 = 4116.14 over 498 frames.
+F07UP60A0949I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I303, best cost 27.0479 + 4101.23 = 4128.28 over 498 frames.
+F07UP60A0949I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0953I41, best cost 20.0554 + 2527.33 = 2547.39 over 298 frames.
+F07UP60A0953I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0962I427, best cost 14.6237 + 2742.06 = 2756.68 over 298 frames.
+F07UP60A0962I427 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0963I46, best cost 25.6305 + 2831.31 = 2856.94 over 298 frames.
+F07UP60A0963I46 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0395I300, best cost 23.6071 + 4301.16 = 4324.76 over 498 frames.
+F07UP64A0395I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0397I301, best cost 14.9452 + 4714.86 = 4729.81 over 498 frames.
+F07UP64A0397I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0402I41, best cost 19.7671 + 2602.7 = 2622.47 over 298 frames.
+F07UP64A0402I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP72A0728I300, best cost 23.1705 + 4616.06 = 4639.23 over 498 frames.
+F07UP72A0728I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0756I300, best cost 26.3409 + 4302.69 = 4329.03 over 498 frames.
+F07UP75A0756I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0763I435, best cost 12.3128 + 2472.16 = 2484.47 over 300 frames.
+F07UP75A0763I435 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0057I427, best cost 12.4391 + 2926.85 = 2939.29 over 298 frames.
+M07UP01A0057I427 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I412, best cost 21.3712 + 2773.16 = 2794.53 over 298 frames.
+M07UP01A0062I412 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I45, best cost 18.0828 + 2624.78 = 2642.87 over 300 frames.
+M07UP01A0062I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0063I43, best cost 17.1958 + 2780.8 = 2798 over 298 frames.
+M07UP01A0063I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0069I413, best cost 18.8372 + 2683.48 = 2702.32 over 298 frames.
+M07UP01A0069I413 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I420, best cost 17.754 + 2647.98 = 2665.74 over 298 frames.
+M07UP01A0160I420 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I430, best cost 17.1897 + 2731.68 = 2748.87 over 298 frames.
+M07UP01A0160I430 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I47, best cost 11.889 + 2799.94 = 2811.83 over 298 frames.
+M07UP01A0160I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0321I47, best cost 19.2793 + 2608.22 = 2627.5 over 300 frames.
+M07UP02A0321I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0323I300, best cost 13.1281 + 4236.75 = 4249.87 over 498 frames.
+M07UP02A0323I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0325I43, best cost 14.8581 + 2830.67 = 2845.53 over 298 frames.
+M07UP02A0325I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0329I43, best cost 18.4282 + 2483.24 = 2501.67 over 298 frames.
+M07UP02A0329I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0330I303, best cost 20.2332 + 3814.63 = 3834.87 over 498 frames.
+M07UP02A0330I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0333I45, best cost 21.094 + 2635.27 = 2656.36 over 298 frames.
+M07UP02A0333I45 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0335I301, best cost 16.2243 + 4587.47 = 4603.7 over 498 frames.
+M07UP02A0335I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0336I44, best cost 17.1605 + 2605.74 = 2622.91 over 290 frames.
+M07UP02A0336I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I41, best cost 21.5992 + 2879.27 = 2900.87 over 298 frames.
+M07UP02A0337I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I44, best cost 16.1788 + 2506.57 = 2522.75 over 298 frames.
+M07UP02A0337I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1227I45, best cost 17.2068 + 2792.07 = 2809.28 over 298 frames.
+M07UP04A1227I45 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1230I303, best cost 41.472 + 4455.63 = 4497.11 over 498 frames.
+M07UP04A1230I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I41, best cost 14.368 + 2830.68 = 2845.04 over 298 frames.
+M07UP04A1235I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I46, best cost 18.4295 + 2462.43 = 2480.86 over 298 frames.
+M07UP04A1235I46 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1236I303, best cost 33.0005 + 4438.82 = 4471.82 over 498 frames.
+M07UP04A1236I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1239I301, best cost 25.969 + 4080.04 = 4106.01 over 498 frames.
+M07UP04A1239I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1242I410, best cost 20.9062 + 2696.53 = 2717.44 over 298 frames.
+M07UP04A1242I410 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I300, best cost 30.0741 + 4735.81 = 4765.89 over 498 frames.
+M07UP04A1243I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I435, best cost 19.7917 + 2629.19 = 2648.98 over 300 frames.
+M07UP04A1243I435 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1244I44, best cost 15.7318 + 3049.52 = 3065.26 over 298 frames.
+M07UP04A1244I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1245I48, best cost 22.9891 + 2939.49 = 2962.48 over 298 frames.
+M07UP04A1245I48 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0903I43, best cost 20.4372 + 2567.23 = 2587.67 over 298 frames.
+M07UP05A0903I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0910I300, best cost 26.5331 + 3980.83 = 4007.37 over 498 frames.
+M07UP05A0910I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0911I42, best cost 15.0368 + 2750.35 = 2765.38 over 298 frames.
+M07UP05A0911I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I300, best cost 21.2446 + 4021.46 = 4042.7 over 498 frames.
+M07UP05A0914I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I302, best cost 33.4947 + 4195.62 = 4229.11 over 498 frames.
+M07UP05A0914I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0915I301, best cost 17.5831 + 4082.78 = 4100.36 over 498 frames.
+M07UP05A0915I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0916I43, best cost 25.8423 + 2651.45 = 2677.3 over 298 frames.
+M07UP05A0916I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0920I411, best cost 18.1099 + 2611.51 = 2629.62 over 298 frames.
+M07UP05A0920I411 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0427I301, best cost 17.6188 + 3703.34 = 3720.96 over 498 frames.
+M07UP06A0427I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0428I41, best cost 13.9785 + 2788.92 = 2802.9 over 298 frames.
+M07UP06A0428I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0429I411, best cost 15.0115 + 2503.77 = 2518.79 over 298 frames.
+M07UP06A0429I411 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I301, best cost 26.5879 + 4089.03 = 4115.61 over 498 frames.
+M07UP06A0433I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I40, best cost 21.2756 + 2652.49 = 2673.77 over 298 frames.
+M07UP06A0433I40 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I41, best cost 21.9793 + 2804.3 = 2826.28 over 298 frames.
+M07UP06A0433I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0437I42, best cost 14.5899 + 2455.58 = 2470.17 over 298 frames.
+M07UP06A0437I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0438I41, best cost 16.2157 + 2505.28 = 2521.49 over 298 frames.
+M07UP06A0438I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I41, best cost 14.1495 + 2820.67 = 2834.82 over 298 frames.
+M07UP06A0442I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I42, best cost 17.6672 + 2678.03 = 2695.7 over 300 frames.
+M07UP06A0442I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0444I43, best cost 20.6062 + 2415.29 = 2435.9 over 298 frames.
+M07UP06A0444I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0445I301, best cost 22.0385 + 4404.21 = 4426.25 over 490 frames.
+M07UP06A0445I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0447I41, best cost 17.6342 + 2485.19 = 2502.83 over 298 frames.
+M07UP06A0447I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I42, best cost 18.3775 + 2470.81 = 2489.19 over 298 frames.
+M07UP07A0134I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I436, best cost 17.8323 + 2708.1 = 2725.93 over 298 frames.
+M07UP07A0134I436 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I410, best cost 13.9224 + 2853.83 = 2867.75 over 298 frames.
+M07UP07A0136I410 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I438, best cost 22.4162 + 2761.57 = 2783.99 over 298 frames.
+M07UP07A0136I438 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0138I414, best cost 10.3426 + 2321.24 = 2331.59 over 298 frames.
+M07UP07A0138I414 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0139I42, best cost 13.0607 + 2678.97 = 2692.03 over 298 frames.
+M07UP07A0139I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0142I43, best cost 16.087 + 2873.32 = 2889.41 over 298 frames.
+M07UP07A0142I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0143I45, best cost 15.0246 + 2719.82 = 2734.85 over 298 frames.
+M07UP07A0143I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0145I436, best cost 13.5047 + 2462.3 = 2475.81 over 298 frames.
+M07UP07A0145I436 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0483I300, best cost 13.1632 + 3971.52 = 3984.68 over 498 frames.
+M07UP09A0483I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0485I43, best cost 21.9574 + 2676.3 = 2698.26 over 298 frames.
+M07UP09A0485I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0488I43, best cost 16.2494 + 2868.12 = 2884.37 over 298 frames.
+M07UP09A0488I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0489I300, best cost 20.4404 + 4157.3 = 4177.74 over 498 frames.
+M07UP09A0489I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0490I301, best cost 14.6048 + 3988.92 = 4003.52 over 498 frames.
+M07UP09A0490I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0494I300, best cost 19.431 + 4166.39 = 4185.82 over 498 frames.
+M07UP09A0494I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I301, best cost 20.7484 + 4093.08 = 4113.82 over 498 frames.
+M07UP09A0495I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I41, best cost 20.9959 + 2699.44 = 2720.43 over 298 frames.
+M07UP09A0495I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0496I303, best cost 20.3645 + 3969.65 = 3990.01 over 498 frames.
+M07UP09A0496I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0499I43, best cost 14.9138 + 2327.46 = 2342.38 over 298 frames.
+M07UP09A0499I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I42, best cost 23.228 + 2813.99 = 2837.22 over 298 frames.
+M07UP09A0500I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I44, best cost 18.2706 + 2556.85 = 2575.12 over 298 frames.
+M07UP09A0500I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0503I301, best cost 15.9199 + 4338.89 = 4354.81 over 498 frames.
+M07UP09A0503I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I300, best cost 25.2991 + 4683.33 = 4708.63 over 498 frames.
+M07UP09A0505I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I504, best cost 19.3438 + 2678.28 = 2697.62 over 298 frames.
+M07UP09A0505I504 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1317I41, best cost 15.5496 + 2453.63 = 2469.18 over 298 frames.
+M07UP11A1317I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1319I300, best cost 32.0713 + 4098.92 = 4130.99 over 498 frames.
+M07UP11A1319I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1328I301, best cost 30.8061 + 4068.13 = 4098.94 over 498 frames.
+M07UP11A1328I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1337I301, best cost 21.8449 + 4117.99 = 4139.83 over 498 frames.
+M07UP11A1337I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1349I303, best cost 23.4047 + 4588.95 = 4612.35 over 498 frames.
+M07UP11A1349I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1351I302, best cost 27.5402 + 4259.82 = 4287.36 over 498 frames.
+M07UP11A1351I302 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I427, best cost 15.2357 + 2517.96 = 2533.2 over 298 frames.
+M07UP11A1352I427 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I429, best cost 14.9235 + 2505.59 = 2520.51 over 298 frames.
+M07UP11A1352I429 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I300, best cost 19.9021 + 4559.62 = 4579.52 over 498 frames.
+M07UP13A0882I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I301, best cost 19.6501 + 4676.39 = 4696.04 over 498 frames.
+M07UP13A0882I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0884I303, best cost 22.1799 + 4650.03 = 4672.21 over 498 frames.
+M07UP13A0884I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0888I41, best cost 15.0322 + 2676.8 = 2691.83 over 298 frames.
+M07UP13A0888I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0889I41, best cost 20.0381 + 2974.22 = 2994.26 over 298 frames.
+M07UP13A0889I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0890I43, best cost 15.7733 + 3006.86 = 3022.64 over 298 frames.
+M07UP13A0890I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I302, best cost 31.9366 + 4433.1 = 4465.03 over 498 frames.
+M07UP13A0897I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I41, best cost 18.0412 + 2589.59 = 2607.63 over 298 frames.
+M07UP13A0897I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0898I303, best cost 24.0876 + 4566.13 = 4590.22 over 498 frames.
+M07UP13A0898I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0900I436, best cost 12.6518 + 2645.55 = 2658.2 over 298 frames.
+M07UP13A0900I436 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0572I301, best cost 22.1479 + 4046.96 = 4069.1 over 498 frames.
+M07UP14A0572I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0576I41, best cost 20.8635 + 2727.63 = 2748.49 over 298 frames.
+M07UP14A0576I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0583I300, best cost 24.3466 + 4587.09 = 4611.44 over 498 frames.
+M07UP14A0583I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0588I41, best cost 20.5944 + 2714.87 = 2735.47 over 300 frames.
+M07UP14A0588I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I300, best cost 21.7019 + 4225.89 = 4247.59 over 498 frames.
+M07UP14A0590I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I43, best cost 21.8622 + 2698.44 = 2720.3 over 298 frames.
+M07UP14A0590I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I302, best cost 17.0162 + 4084.3 = 4101.32 over 498 frames.
+M07UP14A0591I302 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I303, best cost 13.8686 + 4609.15 = 4623.02 over 498 frames.
+M07UP14A0591I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0362I47, best cost 19.4334 + 2645.92 = 2665.35 over 298 frames.
+M07UP18A0362I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I300, best cost 22.8851 + 4184.28 = 4207.16 over 498 frames.
+M07UP18A0363I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I302, best cost 22.5803 + 4051.4 = 4073.98 over 498 frames.
+M07UP18A0363I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0365I42, best cost 16.7921 + 2547.76 = 2564.55 over 298 frames.
+M07UP18A0365I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0366I41, best cost 18.8628 + 2664.77 = 2683.63 over 298 frames.
+M07UP18A0366I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0367I43, best cost 15.2215 + 2678.87 = 2694.09 over 298 frames.
+M07UP18A0367I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I301, best cost 29.1889 + 4494.49 = 4523.67 over 498 frames.
+M07UP18A0368I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I49, best cost 14.6922 + 2711.8 = 2726.49 over 298 frames.
+M07UP18A0368I49 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0369I48, best cost 22.0711 + 2957.57 = 2979.64 over 298 frames.
+M07UP18A0369I48 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0371I300, best cost 21.2365 + 4710.06 = 4731.29 over 498 frames.
+M07UP18A0371I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I300, best cost 21.6472 + 5025.6 = 5047.25 over 498 frames.
+M07UP18A0374I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I48, best cost 19.037 + 2894.78 = 2913.82 over 298 frames.
+M07UP18A0374I48 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0375I45, best cost 17.2331 + 2856.98 = 2874.22 over 298 frames.
+M07UP18A0375I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I43, best cost 14.7917 + 2525.93 = 2540.72 over 298 frames.
+M07UP18A0376I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I49, best cost 18.3086 + 2552.37 = 2570.68 over 298 frames.
+M07UP18A0376I49 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0378I302, best cost 26.5027 + 4985.48 = 5011.98 over 498 frames.
+M07UP18A0378I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0380I300, best cost 23.2975 + 4529.04 = 4552.33 over 498 frames.
+M07UP18A0380I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0341I48, best cost 11.6666 + 2383.63 = 2395.3 over 298 frames.
+M07UP19A0341I48 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I300, best cost 25.7901 + 4939.66 = 4965.45 over 490 frames.
+M07UP19A0345I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I45, best cost 18.5938 + 2561.42 = 2580.01 over 298 frames.
+M07UP19A0345I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0346I301, best cost 26.0817 + 4760.88 = 4786.96 over 498 frames.
+M07UP19A0346I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0348I301, best cost 32.0079 + 4218.06 = 4250.07 over 498 frames.
+M07UP19A0348I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I301, best cost 23.1103 + 4863.33 = 4886.44 over 498 frames.
+M07UP19A0354I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I303, best cost 25.7528 + 4728.38 = 4754.14 over 498 frames.
+M07UP19A0354I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0356I43, best cost 20.5288 + 2654.08 = 2674.61 over 298 frames.
+M07UP19A0356I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0357I300, best cost 20.319 + 4387.83 = 4408.15 over 498 frames.
+M07UP19A0357I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0358I303, best cost 25.5488 + 4170.52 = 4196.07 over 498 frames.
+M07UP19A0358I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0359I40, best cost 13.427 + 2456.59 = 2470.01 over 298 frames.
+M07UP19A0359I40 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0734I300, best cost 26.4944 + 4348.7 = 4375.19 over 498 frames.
+M07UP20A0734I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I44, best cost 20.7743 + 2510.16 = 2530.94 over 298 frames.
+M07UP20A0739I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I45, best cost 15.2353 + 2445.34 = 2460.58 over 300 frames.
+M07UP20A0739I45 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0740I302, best cost 22.3877 + 4216.42 = 4238.8 over 498 frames.
+M07UP20A0740I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0742I302, best cost 16.7124 + 3876.52 = 3893.23 over 498 frames.
+M07UP20A0742I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0750I40, best cost 24.0275 + 2669.28 = 2693.31 over 298 frames.
+M07UP20A0750I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0753I43, best cost 15.6175 + 2899.98 = 2915.6 over 298 frames.
+M07UP20A0753I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0593I302, best cost 25.9698 + 4617.01 = 4642.98 over 498 frames.
+M07UP21A0593I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0598I41, best cost 24.1209 + 2584.55 = 2608.67 over 298 frames.
+M07UP21A0598I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I300, best cost 29.3757 + 4489.18 = 4518.56 over 498 frames.
+M07UP21A0600I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I42, best cost 24.8668 + 2579.58 = 2604.45 over 298 frames.
+M07UP21A0600I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I301, best cost 34.071 + 4513.58 = 4547.65 over 498 frames.
+M07UP21A0606I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I302, best cost 20.1603 + 4765.73 = 4785.89 over 498 frames.
+M07UP21A0606I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0607I301, best cost 29.2529 + 4307.06 = 4336.31 over 498 frames.
+M07UP21A0607I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1323I47, best cost 11.0905 + 2298.63 = 2309.72 over 298 frames.
+M07UP22A1323I47 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1326I300, best cost 23.5597 + 4298.97 = 4322.53 over 498 frames.
+M07UP22A1326I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1342I301, best cost 24.3599 + 4010.04 = 4034.4 over 498 frames.
+M07UP22A1342I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I43, best cost 17.2509 + 2963.6 = 2980.85 over 298 frames.
+M07UP22A1347I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I47, best cost 17.2174 + 2878.12 = 2895.34 over 300 frames.
+M07UP22A1347I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I301, best cost 21.0459 + 4610.02 = 4631.07 over 498 frames.
+M07UP22A1355I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I47, best cost 18.399 + 2600.36 = 2618.76 over 298 frames.
+M07UP22A1355I47 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I300, best cost 27.4099 + 4213.7 = 4241.11 over 498 frames.
+M07UP22A1357I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I45, best cost 15.0925 + 2510.23 = 2525.32 over 298 frames.
+M07UP22A1357I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I47, best cost 13.1998 + 2577.81 = 2591.01 over 298 frames.
+M07UP22A1357I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0224I44, best cost 17.3725 + 2904.63 = 2922 over 298 frames.
+M07UP23A0224I44 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0233I43, best cost 13.6783 + 2415.74 = 2429.42 over 298 frames.
+M07UP23A0233I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0234I41, best cost 22.57 + 2929.81 = 2952.38 over 298 frames.
+M07UP23A0234I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0235I42, best cost 16.5185 + 2917.81 = 2934.33 over 298 frames.
+M07UP23A0235I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0236I43, best cost 19.7165 + 2714.81 = 2734.53 over 298 frames.
+M07UP23A0236I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0239I40, best cost 13.5693 + 2837.93 = 2851.5 over 298 frames.
+M07UP23A0239I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0242I42, best cost 23.5532 + 2802.35 = 2825.9 over 298 frames.
+M07UP23A0242I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0171I300, best cost 23.8048 + 4430.63 = 4454.44 over 498 frames.
+M07UP24A0171I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I45, best cost 14.0772 + 2746.48 = 2760.56 over 298 frames.
+M07UP24A0172I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I49, best cost 13.9802 + 2798.64 = 2812.62 over 298 frames.
+M07UP24A0172I49 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I44, best cost 19.6343 + 2465.81 = 2485.45 over 298 frames.
+M07UP24A0173I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I46, best cost 12.4592 + 2355.4 = 2367.86 over 298 frames.
+M07UP24A0173I46 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0175I301, best cost 29.3041 + 4255.22 = 4284.52 over 498 frames.
+M07UP24A0175I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0177F606, best cost 26.2248 + 8157.01 = 8183.23 over 998 frames.
+M07UP24A0177F606 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0179I302, best cost 23.0981 + 4232.31 = 4255.41 over 498 frames.
+M07UP24A0179I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I301, best cost 23.0507 + 4817.53 = 4840.58 over 498 frames.
+M07UP24A0181I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I42, best cost 15.4255 + 2790.92 = 2806.35 over 298 frames.
+M07UP24A0181I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I48, best cost 14.3188 + 2715.6 = 2729.92 over 298 frames.
+M07UP24A0181I48 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0185I303, best cost 23.0734 + 4492.16 = 4515.23 over 498 frames.
+M07UP24A0185I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0188I302, best cost 19.6952 + 4345.56 = 4365.25 over 498 frames.
+M07UP24A0188I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0191I300, best cost 19.2464 + 4094.7 = 4113.95 over 498 frames.
+M07UP24A0191I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I302, best cost 25.8376 + 4758.97 = 4784.81 over 498 frames.
+M07UP25A1205I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I43, best cost 17.0608 + 2831.71 = 2848.78 over 298 frames.
+M07UP25A1205I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1206I45, best cost 21.7344 + 2751.8 = 2773.54 over 298 frames.
+M07UP25A1206I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1209I41, best cost 21.6911 + 2693.28 = 2714.98 over 298 frames.
+M07UP25A1209I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1216I41, best cost 14.2258 + 2948.93 = 2963.16 over 298 frames.
+M07UP25A1216I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I300, best cost 36.8101 + 4403.56 = 4440.37 over 498 frames.
+M07UP25A1220I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I42, best cost 19.6482 + 2651.62 = 2671.27 over 298 frames.
+M07UP25A1220I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1261I302, best cost 21.8319 + 4811.92 = 4833.75 over 500 frames.
+M07UP25A1261I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0214I42, best cost 13.1071 + 2970.32 = 2983.43 over 298 frames.
+M07UP26A0214I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0255I48, best cost 20.4567 + 2653.97 = 2674.43 over 300 frames.
+M07UP26A0255I48 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0257I47, best cost 17.7379 + 2391.33 = 2409.07 over 298 frames.
+M07UP26A0257I47 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0258I414, best cost 22.2537 + 2549.98 = 2572.24 over 298 frames.
+M07UP26A0258I414 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0261I47, best cost 14.0614 + 2604.42 = 2618.48 over 298 frames.
+M07UP26A0261I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0262I41, best cost 12.3366 + 2855.67 = 2868.01 over 298 frames.
+M07UP26A0262I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0263I43, best cost 18.9264 + 2470.49 = 2489.42 over 298 frames.
+M07UP26A0263I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0267I44, best cost 14.4628 + 2589.54 = 2604 over 298 frames.
+M07UP26A0267I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0269I47, best cost 17.2819 + 2853.77 = 2871.05 over 298 frames.
+M07UP26A0269I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0270I42, best cost 19.6695 + 2764.86 = 2784.53 over 298 frames.
+M07UP26A0270I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0272I44, best cost 11.4491 + 2288.24 = 2299.68 over 298 frames.
+M07UP26A0272I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0641I438, best cost 15.0397 + 2583.91 = 2598.95 over 298 frames.
+M07UP27A0641I438 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I41, best cost 16.2788 + 2593.18 = 2609.46 over 298 frames.
+M07UP27A0647I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I43, best cost 18.187 + 2626.54 = 2644.73 over 298 frames.
+M07UP27A0647I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0657I303, best cost 21.9666 + 4439.88 = 4461.85 over 498 frames.
+M07UP27A0657I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0216I301, best cost 15.8678 + 4569.22 = 4585.09 over 498 frames.
+M07UP28A0216I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0218I300, best cost 28.6155 + 4347.64 = 4376.26 over 498 frames.
+M07UP28A0218I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I40, best cost 16.5255 + 2636.05 = 2652.57 over 298 frames.
+M07UP28A0219I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I505, best cost 15.5305 + 2620.16 = 2635.69 over 300 frames.
+M07UP28A0219I505 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I302, best cost 14.1171 + 4611.55 = 4625.67 over 498 frames.
+M07UP28A0225I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I40, best cost 23.3978 + 2595.49 = 2618.88 over 298 frames.
+M07UP28A0225I40 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I41, best cost 14.2524 + 3070.58 = 3084.83 over 298 frames.
+M07UP28A0225I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0506I301, best cost 23.6509 + 4111.78 = 4135.43 over 498 frames.
+M07UP29A0506I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I42, best cost 23.5116 + 2689.4 = 2712.91 over 298 frames.
+M07UP29A0509I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I45, best cost 15.8945 + 2635.96 = 2651.85 over 298 frames.
+M07UP29A0509I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I303, best cost 22.1717 + 4255.24 = 4277.41 over 500 frames.
+M07UP29A0510I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I44, best cost 16.0323 + 2438.64 = 2454.67 over 298 frames.
+M07UP29A0510I44 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I301, best cost 18.719 + 4406.68 = 4425.4 over 498 frames.
+M07UP29A0511I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I42, best cost 18.844 + 2797.99 = 2816.84 over 298 frames.
+M07UP29A0511I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0513I44, best cost 14.3677 + 2573.64 = 2588.01 over 298 frames.
+M07UP29A0513I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0514I41, best cost 15.645 + 2690.52 = 2706.16 over 298 frames.
+M07UP29A0514I41 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0516I41, best cost 14.7045 + 2883.51 = 2898.21 over 298 frames.
+M07UP29A0516I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0517I303, best cost 19.2882 + 4387.13 = 4406.42 over 498 frames.
+M07UP29A0517I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I42, best cost 17.7126 + 2482.99 = 2500.71 over 298 frames.
+M07UP29A0520I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I45, best cost 20.9657 + 2730.92 = 2751.89 over 298 frames.
+M07UP29A0520I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I303, best cost 25.6189 + 4252.24 = 4277.86 over 498 frames.
+M07UP29A0521I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I47, best cost 17.0806 + 2499.02 = 2516.1 over 298 frames.
+M07UP29A0521I47 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1290I43, best cost 13.8615 + 2582.24 = 2596.1 over 298 frames.
+M07UP31A1290I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1291I42, best cost 21.8282 + 2646.16 = 2667.99 over 298 frames.
+M07UP31A1291I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1292I301, best cost 23.9875 + 4295.16 = 4319.15 over 498 frames.
+M07UP31A1292I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I302, best cost 32.8808 + 4187.38 = 4220.26 over 498 frames.
+M07UP31A1294I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I43, best cost 21.0448 + 2690.13 = 2711.18 over 298 frames.
+M07UP31A1294I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1296I500, best cost 23.3962 + 3887.03 = 3910.43 over 498 frames.
+M07UP31A1296I500 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1300I300, best cost 25.7425 + 4880.6 = 4906.34 over 498 frames.
+M07UP31A1300I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1302I301, best cost 31.0694 + 4313.59 = 4344.66 over 498 frames.
+M07UP31A1302I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I302, best cost 33.3435 + 4396.81 = 4430.15 over 498 frames.
+M07UP31A1306I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I303, best cost 22.8576 + 4972.05 = 4994.91 over 498 frames.
+M07UP31A1306I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I43, best cost 15.2489 + 2440.48 = 2455.73 over 298 frames.
+M07UP31A1306I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1307I430, best cost 27.0661 + 2643.56 = 2670.63 over 298 frames.
+M07UP31A1307I430 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1308I435, best cost 20.2625 + 2640.87 = 2661.14 over 298 frames.
+M07UP31A1308I435 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1309I44, best cost 16.1723 + 2948.22 = 2964.39 over 298 frames.
+M07UP31A1309I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1310I45, best cost 21.8365 + 2822.74 = 2844.58 over 298 frames.
+M07UP31A1310I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0551I43, best cost 13.8522 + 2828.54 = 2842.39 over 300 frames.
+M07UP34A0551I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0554I301, best cost 18.8526 + 4265.94 = 4284.79 over 498 frames.
+M07UP34A0554I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0555I300, best cost 24.0542 + 4863.21 = 4887.27 over 498 frames.
+M07UP34A0555I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0558I42, best cost 15.0324 + 2760.75 = 2775.79 over 298 frames.
+M07UP34A0558I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I303, best cost 28.6255 + 4381.69 = 4410.31 over 498 frames.
+M07UP34A0559I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I44, best cost 22.3962 + 2650.8 = 2673.19 over 298 frames.
+M07UP34A0559I44 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0561I300, best cost 23.3538 + 4873.1 = 4896.45 over 498 frames.
+M07UP34A0561I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0563I303, best cost 38.9717 + 4167.86 = 4206.84 over 498 frames.
+M07UP34A0563I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0564I43, best cost 14.9207 + 2641.12 = 2656.04 over 298 frames.
+M07UP34A0564I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0566I301, best cost 28.4324 + 4130.27 = 4158.7 over 498 frames.
+M07UP34A0566I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0443I41, best cost 15.9825 + 2749.96 = 2765.94 over 298 frames.
+M07UP35A0443I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0446I301, best cost 24.16 + 4461.02 = 4485.18 over 498 frames.
+M07UP35A0446I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0448I301, best cost 29.5156 + 4063.48 = 4092.99 over 498 frames.
+M07UP35A0448I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0450I301, best cost 29.5926 + 4785.58 = 4815.17 over 498 frames.
+M07UP35A0450I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0452I303, best cost 34.5835 + 4110.93 = 4145.51 over 498 frames.
+M07UP35A0452I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I303, best cost 31.7446 + 4066.72 = 4098.47 over 498 frames.
+M07UP35A0455I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I426, best cost 22.3197 + 2785.79 = 2808.11 over 298 frames.
+M07UP35A0455I426 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0456I43, best cost 20.5664 + 2680.06 = 2700.62 over 298 frames.
+M07UP35A0456I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0457I41, best cost 17.3628 + 2817.5 = 2834.86 over 298 frames.
+M07UP35A0457I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0459I303, best cost 18.8593 + 4244.41 = 4263.27 over 498 frames.
+M07UP35A0459I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I301, best cost 35.2761 + 4414.68 = 4449.96 over 498 frames.
+M07UP36A0825I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I40, best cost 19.0817 + 2600.82 = 2619.9 over 298 frames.
+M07UP36A0825I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0827I300, best cost 34.0795 + 3998.42 = 4032.5 over 498 frames.
+M07UP36A0827I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0829I302, best cost 21.2799 + 4397.97 = 4419.25 over 498 frames.
+M07UP36A0829I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0832I302, best cost 25.6441 + 4493.45 = 4519.1 over 498 frames.
+M07UP36A0832I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0840I41, best cost 15.0586 + 2446.27 = 2461.33 over 298 frames.
+M07UP36A0840I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0301I42, best cost 11.1501 + 2318.1 = 2329.25 over 298 frames.
+M07UP37A0301I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0302I45, best cost 14.5727 + 2906.04 = 2920.61 over 298 frames.
+M07UP37A0302I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0306I47, best cost 17.4744 + 2935.56 = 2953.03 over 298 frames.
+M07UP37A0306I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0307I303, best cost 13.5992 + 4669.6 = 4683.2 over 498 frames.
+M07UP37A0307I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I40, best cost 12.845 + 3016.03 = 3028.88 over 298 frames.
+M07UP37A0309I40 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I44, best cost 16.2418 + 2897.33 = 2913.57 over 300 frames.
+M07UP37A0309I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I43, best cost 19.2051 + 2623.7 = 2642.9 over 298 frames.
+M07UP37A0311I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I44, best cost 18.4204 + 2604.42 = 2622.84 over 298 frames.
+M07UP37A0311I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I48, best cost 15.4351 + 2399.34 = 2414.78 over 300 frames.
+M07UP37A0311I48 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0313I427, best cost 13.7939 + 2669.95 = 2683.75 over 298 frames.
+M07UP37A0313I427 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0314I300, best cost 20.0505 + 4697.91 = 4717.96 over 498 frames.
+M07UP37A0314I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0316I305, best cost 15.5732 + 4889.59 = 4905.17 over 498 frames.
+M07UP37A0316I305 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I47, best cost 17.8081 + 2573.27 = 2591.07 over 298 frames.
+M07UP37A0317I47 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I48, best cost 15.371 + 2910.18 = 2925.55 over 298 frames.
+M07UP37A0317I48 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0319I301, best cost 20.1297 + 4887.47 = 4907.6 over 498 frames.
+M07UP37A0319I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0103I43, best cost 18.2677 + 2632.95 = 2651.22 over 298 frames.
+M07UP38A0103I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0107I43, best cost 15.0885 + 2687.13 = 2702.22 over 298 frames.
+M07UP38A0107I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0774I301, best cost 21.7975 + 4043.07 = 4064.87 over 498 frames.
+M07UP39A0774I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0776I302, best cost 16.9888 + 4033.38 = 4050.36 over 498 frames.
+M07UP39A0776I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I300, best cost 26.0431 + 4206.36 = 4232.4 over 498 frames.
+M07UP39A0777I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I423, best cost 12.9118 + 2396.82 = 2409.73 over 298 frames.
+M07UP39A0777I423 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0778I303, best cost 29.2578 + 4452.9 = 4482.16 over 498 frames.
+M07UP39A0778I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0781I501, best cost 12.7758 + 3458.56 = 3471.34 over 398 frames.
+M07UP39A0781I501 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I301, best cost 19.3144 + 4991.11 = 5010.43 over 498 frames.
+M07UP41A0273I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I47, best cost 14.8295 + 2727.98 = 2742.81 over 298 frames.
+M07UP41A0273I47 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0275I300, best cost 24.4431 + 4085.07 = 4109.52 over 498 frames.
+M07UP41A0275I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I300, best cost 16.4172 + 4521.25 = 4537.67 over 498 frames.
+M07UP41A0277I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I43, best cost 15.8252 + 2859.08 = 2874.91 over 298 frames.
+M07UP41A0277I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I301, best cost 21.0317 + 4489.47 = 4510.5 over 498 frames.
+M07UP41A0279I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I302, best cost 22.4801 + 4324.01 = 4346.49 over 498 frames.
+M07UP41A0279I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I47, best cost 15.9628 + 2923.03 = 2938.99 over 298 frames.
+M07UP41A0279I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I42, best cost 14.7001 + 2658.64 = 2673.34 over 298 frames.
+M07UP41A0280I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I45, best cost 15.6689 + 2887.73 = 2903.4 over 298 frames.
+M07UP41A0280I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0283I48, best cost 14.5086 + 2405.38 = 2419.89 over 298 frames.
+M07UP41A0283I48 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I303, best cost 23.4956 + 4451.77 = 4475.27 over 498 frames.
+M07UP41A0289I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I44, best cost 14.5033 + 2544.51 = 2559.01 over 300 frames.
+M07UP41A0289I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0290I47, best cost 16.2938 + 2602.88 = 2619.18 over 298 frames.
+M07UP41A0290I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I43, best cost 17.9458 + 2474.8 = 2492.75 over 298 frames.
+M07UP41A0291I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I46, best cost 17.2299 + 2574.83 = 2592.06 over 298 frames.
+M07UP41A0291I46 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0111I46, best cost 17.9247 + 2530.61 = 2548.54 over 298 frames.
+M07UP42A0111I46 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0116I430, best cost 17.9608 + 2777.32 = 2795.28 over 298 frames.
+M07UP42A0116I430 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I419, best cost 22.7826 + 2614.95 = 2637.73 over 298 frames.
+M07UP42A0117I419 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I423, best cost 13.82 + 2757.62 = 2771.44 over 298 frames.
+M07UP42A0117I423 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I300, best cost 22.9295 + 4688.04 = 4710.97 over 498 frames.
+M07UP42A0119I300 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I46, best cost 20.76 + 2855.44 = 2876.2 over 298 frames.
+M07UP42A0119I46 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I418, best cost 20.1706 + 2640.48 = 2660.65 over 298 frames.
+M07UP42A0120I418 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I424, best cost 20.4682 + 2654.45 = 2674.92 over 298 frames.
+M07UP42A0120I424 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I429, best cost 17.9477 + 2799.5 = 2817.45 over 298 frames.
+M07UP42A0120I429 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I302, best cost 17.8239 + 4569.2 = 4587.03 over 498 frames.
+M07UP42A0122I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I424, best cost 15.7087 + 2811.58 = 2827.29 over 298 frames.
+M07UP42A0122I424 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I46, best cost 21.6332 + 2759.05 = 2780.68 over 298 frames.
+M07UP42A0122I46 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I42, best cost 16.3765 + 2755.03 = 2771.4 over 298 frames.
+M07UP42A0123I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I424, best cost 14.3629 + 2852.24 = 2866.6 over 298 frames.
+M07UP42A0123I424 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0124I45, best cost 15.7068 + 2635.14 = 2650.85 over 298 frames.
+M07UP42A0124I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0126I437, best cost 17.2435 + 2769.12 = 2786.37 over 298 frames.
+M07UP42A0126I437 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0148I300, best cost 23.6815 + 4799.07 = 4822.75 over 498 frames.
+M07UP43A0148I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0151I42, best cost 18.3625 + 2930.24 = 2948.6 over 298 frames.
+M07UP43A0151I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I43, best cost 12.8008 + 2421.68 = 2434.49 over 298 frames.
+M07UP43A0154I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I44, best cost 15.5403 + 2513.82 = 2529.36 over 298 frames.
+M07UP43A0154I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0158I41, best cost 14.7086 + 2792.23 = 2806.94 over 298 frames.
+M07UP43A0158I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0614I48, best cost 18.7968 + 2802.62 = 2821.41 over 298 frames.
+M07UP45A0614I48 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0616I43, best cost 19.6028 + 2656.64 = 2676.25 over 298 frames.
+M07UP45A0616I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I41, best cost 20.3267 + 2687.53 = 2707.86 over 298 frames.
+M07UP45A0624I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I44, best cost 23.7688 + 2640.57 = 2664.34 over 298 frames.
+M07UP45A0624I44 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0625I41, best cost 13.7819 + 2758.93 = 2772.71 over 298 frames.
+M07UP45A0625I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0627I43, best cost 15.6412 + 2402.87 = 2418.51 over 298 frames.
+M07UP45A0627I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0628I41, best cost 16.7865 + 2730.27 = 2747.05 over 298 frames.
+M07UP45A0628I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0629I303, best cost 22.1887 + 4803.03 = 4825.22 over 498 frames.
+M07UP45A0629I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0634I48, best cost 20.3523 + 2588.32 = 2608.67 over 298 frames.
+M07UP45A0634I48 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0635I42, best cost 20.4334 + 2736.56 = 2756.99 over 298 frames.
+M07UP45A0635I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0636I300, best cost 13.7405 + 3952.9 = 3966.64 over 498 frames.
+M07UP45A0636I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I417, best cost 19.1505 + 2647.89 = 2667.04 over 298 frames.
+M07UP48A0013I417 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I43, best cost 13.27 + 2706.62 = 2719.89 over 298 frames.
+M07UP48A0013I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0014I44, best cost 12.9287 + 2694.94 = 2707.87 over 298 frames.
+M07UP48A0014I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0015I422, best cost 15.4178 + 2671.62 = 2687.04 over 298 frames.
+M07UP48A0015I422 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0018I422, best cost 14.8976 + 2825.69 = 2840.59 over 298 frames.
+M07UP48A0018I422 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0020I43, best cost 13.1523 + 2505.61 = 2518.76 over 298 frames.
+M07UP48A0020I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0021I45, best cost 17.8675 + 2450.28 = 2468.14 over 298 frames.
+M07UP48A0021I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0024I49, best cost 17.4239 + 2814.22 = 2831.65 over 304 frames.
+M07UP48A0024I49 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0028I45, best cost 16.5485 + 2790.12 = 2806.67 over 298 frames.
+M07UP48A0028I45 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0031I44, best cost 18.9955 + 2824.21 = 2843.2 over 298 frames.
+M07UP48A0031I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0861I41, best cost 17.2334 + 2478.99 = 2496.23 over 300 frames.
+M07UP49A0861I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0863I300, best cost 29.2761 + 4550.13 = 4579.41 over 498 frames.
+M07UP49A0863I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0866I504, best cost 16.6163 + 2984.52 = 3001.13 over 298 frames.
+M07UP49A0866I504 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0869I301, best cost 23.3086 + 4481.31 = 4504.61 over 498 frames.
+M07UP49A0869I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0880I43, best cost 25.1647 + 2631.57 = 2656.74 over 298 frames.
+M07UP49A0880I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0032I301, best cost 16.2308 + 4116.17 = 4132.4 over 430 frames.
+M07UP51A0032I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I42, best cost 17.9212 + 2754.66 = 2772.58 over 298 frames.
+M07UP51A0033I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I48, best cost 17.0334 + 2878.27 = 2895.31 over 298 frames.
+M07UP51A0033I48 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0035I302, best cost 31.0952 + 4465.52 = 4496.61 over 498 frames.
+M07UP51A0035I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I300, best cost 17.5973 + 4645.99 = 4663.59 over 498 frames.
+M07UP51A0036I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I44, best cost 18.7492 + 2606.91 = 2625.65 over 298 frames.
+M07UP51A0036I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I45, best cost 19.002 + 2648.44 = 2667.44 over 298 frames.
+M07UP51A0036I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I48, best cost 18.8612 + 2697.52 = 2716.39 over 298 frames.
+M07UP51A0036I48 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0038I48, best cost 16.2619 + 2778.95 = 2795.21 over 298 frames.
+M07UP51A0038I48 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0041I300, best cost 18.7481 + 3916.34 = 3935.09 over 498 frames.
+M07UP51A0041I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0042I302, best cost 25.2117 + 4180.77 = 4205.98 over 498 frames.
+M07UP51A0042I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I410, best cost 14.5988 + 2678.8 = 2693.4 over 298 frames.
+M07UP51A0043I410 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I44, best cost 20.1687 + 2768.48 = 2788.64 over 298 frames.
+M07UP51A0043I44 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I45, best cost 23.0168 + 2528.98 = 2552 over 298 frames.
+M07UP51A0043I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0044I303, best cost 35.1636 + 4233.79 = 4268.96 over 498 frames.
+M07UP51A0044I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0045I412, best cost 24.2853 + 2776.49 = 2800.77 over 298 frames.
+M07UP51A0045I412 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I412, best cost 16.1873 + 2497.82 = 2514.01 over 298 frames.
+M07UP51A0046I412 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I43, best cost 21.8617 + 2694.12 = 2715.98 over 298 frames.
+M07UP51A0046I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I44, best cost 17.1887 + 2873.8 = 2890.99 over 298 frames.
+M07UP51A0049I44 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I48, best cost 22.4777 + 2898.45 = 2920.93 over 298 frames.
+M07UP51A0049I48 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I300, best cost 22.9168 + 4216.71 = 4239.63 over 498 frames.
+M07UP51A0050I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I42, best cost 23.5887 + 2655.79 = 2679.38 over 298 frames.
+M07UP51A0050I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I45, best cost 12.207 + 2711.49 = 2723.7 over 298 frames.
+M07UP51A0050I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I301, best cost 21.9001 + 4072.15 = 4094.05 over 498 frames.
+M07UP51A0052I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I303, best cost 21.1137 + 3931.85 = 3952.96 over 498 frames.
+M07UP51A0052I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I412, best cost 18.1555 + 2488.73 = 2506.89 over 298 frames.
+M07UP51A0052I412 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I45, best cost 18.4407 + 2618.4 = 2636.84 over 298 frames.
+M07UP51A0052I45 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0053I302, best cost 22.8506 + 4226.35 = 4249.2 over 498 frames.
+M07UP51A0053I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I40, best cost 16.3329 + 2876.95 = 2893.29 over 298 frames.
+M07UP51A0054I40 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I47, best cost 13.2964 + 2870.44 = 2883.74 over 298 frames.
+M07UP51A0054I47 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0094I411, best cost 26.8654 + 2551.13 = 2577.99 over 298 frames.
+M07UP51A0094I411 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I300, best cost 24.7996 + 4328.79 = 4353.59 over 498 frames.
+M07UP52A0193I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I302, best cost 29.9093 + 4231.77 = 4261.68 over 498 frames.
+M07UP52A0193I302 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I43, best cost 21.5824 + 2483.27 = 2504.85 over 298 frames.
+M07UP52A0193I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0195I45, best cost 10.0773 + 2898.45 = 2908.52 over 298 frames.
+M07UP52A0195I45 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I300, best cost 23.8944 + 4401.69 = 4425.59 over 498 frames.
+M07UP52A0196I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I41, best cost 16.8546 + 2688.91 = 2705.76 over 292 frames.
+M07UP52A0196I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0199I41, best cost 15.4331 + 2987.07 = 3002.5 over 298 frames.
+M07UP52A0199I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I302, best cost 26.2388 + 4804.79 = 4831.03 over 498 frames.
+M07UP52A0202I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I40, best cost 14.8729 + 2916.07 = 2930.94 over 298 frames.
+M07UP52A0202I40 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I45, best cost 19.4218 + 2951.38 = 2970.8 over 298 frames.
+M07UP52A0202I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0205I43, best cost 18.2809 + 2716.63 = 2734.91 over 298 frames.
+M07UP52A0205I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I302, best cost 26.8396 + 4349.68 = 4376.52 over 498 frames.
+M07UP52A0206I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I40, best cost 11.5509 + 2885.98 = 2897.53 over 298 frames.
+M07UP52A0206I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0207I42, best cost 19.4293 + 2842.94 = 2862.37 over 298 frames.
+M07UP52A0207I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I300, best cost 25.6731 + 4703.74 = 4729.41 over 498 frames.
+M07UP52A0210I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I43, best cost 19.2938 + 2836.08 = 2855.37 over 298 frames.
+M07UP52A0210I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I603, best cost 36.1411 + 9484.35 = 9520.49 over 998 frames.
+M07UP52A0210I603 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0211I300, best cost 19.5022 + 4982.74 = 5002.25 over 500 frames.
+M07UP52A0211I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0213I45, best cost 14.435 + 2360.07 = 2374.51 over 298 frames.
+M07UP52A0213I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0072I44, best cost 19.2713 + 2790.3 = 2809.57 over 298 frames.
+M07UP53A0072I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0076I413, best cost 19.145 + 2751.36 = 2770.51 over 298 frames.
+M07UP53A0076I413 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0079I42, best cost 15.6196 + 2810.15 = 2825.77 over 298 frames.
+M07UP53A0079I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I41, best cost 14.0931 + 2338.11 = 2352.21 over 298 frames.
+M07UP53A0080I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I413, best cost 22.997 + 2569.4 = 2592.39 over 298 frames.
+M07UP53A0080I413 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I42, best cost 14.7906 + 2516.36 = 2531.15 over 298 frames.
+M07UP53A0080I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0081I424, best cost 11.5338 + 2398.42 = 2409.96 over 298 frames.
+M07UP53A0081I424 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0083I419, best cost 17.9149 + 2709.5 = 2727.42 over 298 frames.
+M07UP53A0083I419 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0085I45, best cost 22.5488 + 2892.09 = 2914.64 over 300 frames.
+M07UP53A0085I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0088I413, best cost 20.9031 + 2817.3 = 2838.2 over 298 frames.
+M07UP53A0088I413 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0090I410, best cost 16.4948 + 2925.86 = 2942.35 over 300 frames.
+M07UP53A0090I410 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1272I428, best cost 12.9624 + 2715.86 = 2728.82 over 298 frames.
+M07UP54A1272I428 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1280I300, best cost 25.9427 + 4523.77 = 4549.71 over 498 frames.
+M07UP54A1280I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1290I45, best cost 17.1736 + 2803.74 = 2820.91 over 300 frames.
+M07UP54A1290I45 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0462I422, best cost 14.4505 + 2542.79 = 2557.24 over 298 frames.
+M07UP55A0462I422 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I303, best cost 18.9524 + 4178.15 = 4197.1 over 498 frames.
+M07UP55A0464I303 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I42, best cost 17.2958 + 2708.83 = 2726.12 over 298 frames.
+M07UP55A0464I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I300, best cost 32.0985 + 4443.86 = 4475.96 over 498 frames.
+M07UP55A0469I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I40, best cost 23.1194 + 2566.12 = 2589.24 over 298 frames.
+M07UP55A0469I40 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0470I301, best cost 23.1945 + 4341.6 = 4364.79 over 498 frames.
+M07UP55A0470I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0474I40, best cost 16.3204 + 2920.32 = 2936.64 over 298 frames.
+M07UP55A0474I40 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0476I42, best cost 23.4667 + 2869.52 = 2892.99 over 298 frames.
+M07UP55A0476I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0477I301, best cost 26.8379 + 4306.71 = 4333.55 over 498 frames.
+M07UP55A0477I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0480I300, best cost 19.2508 + 4547.54 = 4566.79 over 498 frames.
+M07UP55A0480I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0695I300, best cost 20.5241 + 4811.87 = 4832.39 over 498 frames.
+M07UP56A0695I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0699I301, best cost 26.0173 + 4340.83 = 4366.85 over 498 frames.
+M07UP56A0699I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0706I43, best cost 13.9521 + 2862.48 = 2876.44 over 298 frames.
+M07UP56A0706I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0707I45, best cost 14.8361 + 2407.03 = 2421.86 over 298 frames.
+M07UP56A0707I45 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0708I47, best cost 27.1826 + 2734.6 = 2761.78 over 298 frames.
+M07UP56A0708I47 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0710I421, best cost 24.1412 + 2694.87 = 2719.01 over 298 frames.
+M07UP56A0710I421 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0404I43, best cost 15.6999 + 2558.77 = 2574.47 over 298 frames.
+M07UP57A0404I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0406I300, best cost 26.6044 + 4307.35 = 4333.96 over 498 frames.
+M07UP57A0406I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0409I42, best cost 15.8671 + 2478.63 = 2494.5 over 298 frames.
+M07UP57A0409I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0411I301, best cost 19.0199 + 4458.53 = 4477.55 over 498 frames.
+M07UP57A0411I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I301, best cost 21.6393 + 4119.62 = 4141.26 over 498 frames.
+M07UP57A0413I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I41, best cost 14.0609 + 2870.41 = 2884.47 over 298 frames.
+M07UP57A0413I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I507, best cost 11.9996 + 2880.4 = 2892.4 over 298 frames.
+M07UP57A0413I507 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0416I301, best cost 28.3119 + 4724.23 = 4752.54 over 498 frames.
+M07UP57A0416I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I301, best cost 23.8428 + 4465.93 = 4489.77 over 498 frames.
+M07UP57A0417I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I42, best cost 12.9886 + 2878.99 = 2891.97 over 298 frames.
+M07UP57A0417I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0418I303, best cost 17.2331 + 4594.65 = 4611.89 over 498 frames.
+M07UP57A0418I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I416, best cost 11.4635 + 2397.39 = 2408.86 over 298 frames.
+M07UP60A0942I416 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I418, best cost 15.9518 + 2576.37 = 2592.32 over 298 frames.
+M07UP60A0942I418 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0944I42, best cost 18.5033 + 2715.91 = 2734.41 over 298 frames.
+M07UP60A0944I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0946I303, best cost 33.3604 + 4447.34 = 4480.7 over 498 frames.
+M07UP60A0946I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0954I303, best cost 15.2523 + 3829.7 = 3844.95 over 498 frames.
+M07UP60A0954I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I301, best cost 27.7849 + 3967.08 = 3994.86 over 498 frames.
+M07UP60A0955I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I302, best cost 18.3431 + 3861.21 = 3879.55 over 498 frames.
+M07UP60A0955I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0956I414, best cost 21.2977 + 2759.25 = 2780.55 over 298 frames.
+M07UP60A0956I414 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I412, best cost 19.5459 + 2591.87 = 2611.41 over 298 frames.
+M07UP60A0957I412 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I413, best cost 18.6892 + 2531.98 = 2550.67 over 298 frames.
+M07UP60A0957I413 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0966I300, best cost 20.5377 + 4045.04 = 4065.58 over 498 frames.
+M07UP61A0966I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0968I301, best cost 18.0553 + 3984.07 = 4002.12 over 498 frames.
+M07UP61A0968I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0971I302, best cost 29.2013 + 4189.17 = 4218.37 over 498 frames.
+M07UP61A0971I302 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0972I44, best cost 16.7873 + 2790.39 = 2807.17 over 298 frames.
+M07UP61A0972I44 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0980I301, best cost 31.6172 + 4691.65 = 4723.27 over 498 frames.
+M07UP61A0980I301 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I300, best cost 30.3717 + 4572.7 = 4603.07 over 498 frames.
+M07UP64A0382I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I301, best cost 23.8137 + 4675.9 = 4699.71 over 498 frames.
+M07UP64A0382I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0386I42, best cost 18.652 + 2742.99 = 2761.64 over 298 frames.
+M07UP64A0386I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0389I42, best cost 20.5633 + 2460.73 = 2481.29 over 298 frames.
+M07UP64A0389I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0390I300, best cost 24.9659 + 4264.75 = 4289.72 over 498 frames.
+M07UP64A0390I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I302, best cost 42.9752 + 4275.01 = 4317.98 over 498 frames.
+M07UP64A0391I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I303, best cost 29.9428 + 4337.38 = 4367.32 over 498 frames.
+M07UP64A0391I303 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0392I301, best cost 15.0044 + 3760.09 = 3775.09 over 498 frames.
+M07UP64A0392I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0393I41, best cost 18.4736 + 2826.44 = 2844.91 over 298 frames.
+M07UP64A0393I41 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0396I43, best cost 16.6277 + 2933.48 = 2950.11 over 300 frames.
+M07UP64A0396I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0399I302, best cost 29.8984 + 4433.95 = 4463.85 over 498 frames.
+M07UP64A0399I302 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I300, best cost 40.7448 + 4653.07 = 4693.82 over 498 frames.
+M07UP64A0400I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I426, best cost 19.4082 + 2676.38 = 2695.79 over 298 frames.
+M07UP64A0400I426 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0401I43, best cost 15.9624 + 2777.33 = 2793.3 over 300 frames.
+M07UP64A0401I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0674I303, best cost 19.6169 + 4608.36 = 4627.98 over 498 frames.
+M07UP66A0674I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0676I303, best cost 17.872 + 4701.6 = 4719.47 over 498 frames.
+M07UP66A0676I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0684I43, best cost 19.3512 + 2631.37 = 2650.72 over 298 frames.
+M07UP66A0684I43 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0685I42, best cost 21.9816 + 2690.92 = 2712.9 over 298 frames.
+M07UP66A0685I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0687I301, best cost 18.3263 + 3937.66 = 3955.98 over 498 frames.
+M07UP66A0687I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0688I410, best cost 19.2041 + 2412.26 = 2431.46 over 298 frames.
+M07UP66A0688I410 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0692I301, best cost 25.275 + 4442.22 = 4467.49 over 498 frames.
+M07UP66A0692I301 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I42, best cost 16.8793 + 2751.71 = 2768.59 over 298 frames.
+M07UP72A0730I42 uttarpradesh 
+LOG (lattice-scale:main():lattice-scale.cc:90) Done 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I46, best cost 20.4418 + 2673.13 = 2693.57 over 298 frames.
+M07UP72A0730I46 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0731I42, best cost 20.1421 + 2923.5 = 2943.64 over 298 frames.
+M07UP72A0731I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0922I300, best cost 15.669 + 4716.03 = 4731.7 over 498 frames.
+M07UP73A0922I300 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0923I41, best cost 14.0585 + 2770.87 = 2784.93 over 298 frames.
+M07UP73A0923I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0924I41, best cost 17.842 + 2641.84 = 2659.68 over 298 frames.
+M07UP73A0924I41 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0925I42, best cost 16.1796 + 2405.92 = 2422.1 over 298 frames.
+M07UP73A0925I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0927I43, best cost 22.0452 + 2546.09 = 2568.14 over 298 frames.
+M07UP73A0927I43 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0929I42, best cost 25.4372 + 2772.25 = 2797.68 over 298 frames.
+M07UP73A0929I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0930I43, best cost 23.2862 + 2607.41 = 2630.7 over 298 frames.
+M07UP73A0930I43 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0931I49, best cost 16.7684 + 2737.62 = 2754.38 over 298 frames.
+M07UP73A0931I49 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0937I42, best cost 16.9254 + 2606.62 = 2623.55 over 298 frames.
+M07UP73A0937I42 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0938I42, best cost 17.4881 + 2545.54 = 2563.03 over 298 frames.
+M07UP73A0938I42 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0802I303, best cost 30.5845 + 4241.42 = 4272.01 over 498 frames.
+M07UP74A0802I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0813I300, best cost 22.8451 + 4151.11 = 4173.95 over 498 frames.
+M07UP74A0813I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0814I301, best cost 21.4367 + 4114.4 = 4135.83 over 504 frames.
+M07UP74A0814I301 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0817I42, best cost 19.8363 + 2559.26 = 2579.09 over 300 frames.
+M07UP74A0817I42 eempii 
+LOG (lattice-add-penalty:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0755I303, best cost 32.5451 + 4412.13 = 4444.67 over 498 frames.
+M07UP75A0755I303 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0758I300, best cost 23.3861 + 4355.63 = 4379.02 over 498 frames.
+M07UP75A0758I300 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I302, best cost 26.9804 + 4570.57 = 4597.55 over 498 frames.
+M07UP75A0764I302 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I42, best cost 19.8061 + 2795.87 = 2815.68 over 298 frames.
+M07UP75A0764I42 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0768I40, best cost 17.7113 + 2622.57 = 2640.28 over 298 frames.
+M07UP75A0768I40 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0769I301, best cost 26.9178 + 4188.65 = 4215.57 over 498 frames.
+M07UP75A0769I301 uttarpradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0770I303, best cost 31.5208 + 4305.37 = 4336.89 over 498 frames.
+M07UP75A0770I303 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I42, best cost 16.4306 + 2620.23 = 2636.66 over 298 frames.
+M07UP75A0771I42 eempii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I43, best cost 17.7489 + 2655.98 = 2673.73 over 298 frames.
+M07UP75A0771I43 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0772I300, best cost 21.0465 + 4117.41 = 4138.45 over 498 frames.
+M07UP75A0772I300 madhyapradesh 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0773I41, best cost 13.3543 + 2534.05 = 2547.4 over 298 frames.
+M07UP75A0773I41 yuupii 
+LOG (lattice-best-path:main():lattice-best-path.cc:124) Overall cost per frame is 8.95522 = 0.0531718 [graph] + 8.90204 [acoustic] over 207364 frames.
+LOG (lattice-best-path:main():lattice-best-path.cc:128) Done 553 lattices, failed for 0
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Jul 25 00:37:38 IST 2016, elapsed time 1 seconds

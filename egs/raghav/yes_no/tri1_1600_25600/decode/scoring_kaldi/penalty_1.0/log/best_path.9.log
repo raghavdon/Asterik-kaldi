@@ -1,0 +1,1118 @@
+# lattice-scale --inv-acoustic-scale=9 "ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri1_1600_25600/graph/words.txt | cat > exp/tri1_1600_25600/decode/scoring_kaldi/penalty_1.0/9.txt 
+# Started at Thu Jul 21 15:05:38 IST 2016
+#
+lattice-scale --inv-acoustic-scale=9 'ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|' ark:- 
+lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=1.0 ark:- ark:- 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I42, best cost 18.4213 + 3384.2 = 3402.62 over 300 frames.
+F07UP02A0332I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I43, best cost 15.6225 + 3203.33 = 3218.95 over 298 frames.
+F07UP02A0332I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP06A0432I42, best cost 24.1676 + 2953.75 = 2977.92 over 300 frames.
+F07UP06A0432I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0094I427, best cost 13.874 + 3083.07 = 3096.94 over 298 frames.
+F07UP07A0094I427 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0096I44, best cost 14.1797 + 3359.42 = 3373.6 over 298 frames.
+F07UP07A0096I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP09A0491I46, best cost 11.5743 + 3464.39 = 3475.97 over 298 frames.
+F07UP09A0491I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP11A1331I301, best cost 12.6582 + 4986.26 = 4998.92 over 498 frames.
+F07UP11A1331I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP19A0344I46, best cost 19.791 + 3046 = 3065.79 over 298 frames.
+F07UP19A0344I46 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP21A0612I41, best cost 17.3684 + 3151.89 = 3169.26 over 298 frames.
+F07UP21A0612I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I429, best cost 18.5354 + 3236.3 = 3254.83 over 298 frames.
+F07UP22A1336I429 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I501, best cost 16.6855 + 4184.46 = 4201.14 over 398 frames.
+F07UP22A1336I501 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I301, best cost 13.2891 + 5017.52 = 5030.81 over 498 frames.
+F07UP22A1343I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I47, best cost 17.7691 + 3467.46 = 3485.23 over 298 frames.
+F07UP22A1343I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1345I47, best cost 14.5823 + 3029.45 = 3044.04 over 298 frames.
+F07UP22A1345I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1346I435, best cost 17.9811 + 3412.09 = 3430.07 over 300 frames.
+F07UP22A1346I435 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP23A0248I41, best cost 13.826 + 3580.02 = 3593.85 over 298 frames.
+F07UP23A0248I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I302, best cost 20.7489 + 5650.89 = 5671.64 over 498 frames.
+F07UP24A0182I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I41, best cost 12.2638 + 3480.59 = 3492.85 over 298 frames.
+F07UP24A0182I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I302, best cost 14.2733 + 5943.53 = 5957.81 over 498 frames.
+F07UP24A0183I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I47, best cost 15.0436 + 3396.39 = 3411.44 over 298 frames.
+F07UP24A0183I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1212I41, best cost 11.9656 + 3552.92 = 3564.88 over 298 frames.
+F07UP25A1212I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1215I42, best cost 13.7231 + 3460.03 = 3473.76 over 298 frames.
+F07UP25A1215I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP26A0256I43, best cost 13.7077 + 3449.9 = 3463.61 over 298 frames.
+F07UP26A0256I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I300, best cost 20.1394 + 5947.59 = 5967.73 over 498 frames.
+F07UP28A0226I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I45, best cost 12.1669 + 3525.59 = 3537.76 over 298 frames.
+F07UP28A0226I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0227I301, best cost 25.9242 + 5879.37 = 5905.3 over 498 frames.
+F07UP28A0227I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0228I303, best cost 13.268 + 6108.26 = 6121.53 over 498 frames.
+F07UP28A0228I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I41, best cost 18.3071 + 3133.1 = 3151.41 over 298 frames.
+F07UP29A0523I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I44, best cost 16.2743 + 3033.8 = 3050.07 over 298 frames.
+F07UP29A0523I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP31A1293I42, best cost 14.1815 + 3550.5 = 3564.69 over 298 frames.
+F07UP31A1293I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP34A0567I44, best cost 20.3092 + 3308.06 = 3328.37 over 300 frames.
+F07UP34A0567I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP35A0453I300, best cost 26.0968 + 5078.9 = 5105 over 498 frames.
+F07UP35A0453I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP37A0304I300, best cost 18.8102 + 5050.7 = 5069.51 over 498 frames.
+F07UP37A0304I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP38A0101I41, best cost 21.134 + 3353.22 = 3374.35 over 298 frames.
+F07UP38A0101I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I40, best cost 12.81 + 2919.52 = 2932.33 over 298 frames.
+F07UP41A0286I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I42, best cost 10.6819 + 2747.33 = 2758.02 over 298 frames.
+F07UP41A0286I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP52A0208I44, best cost 12.0892 + 3491.07 = 3503.16 over 298 frames.
+F07UP52A0208I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP54A1284I430, best cost 13.4793 + 3163.58 = 3177.06 over 298 frames.
+F07UP54A1284I430 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP57A0408I41, best cost 18.5974 + 3453.6 = 3472.2 over 298 frames.
+F07UP57A0408I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0943I300, best cost 21.9864 + 6012.62 = 6034.6 over 498 frames.
+F07UP60A0943I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0944I303, best cost 18.1731 + 4956.97 = 4975.15 over 498 frames.
+F07UP60A0944I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I300, best cost 26.2012 + 5310.33 = 5336.53 over 498 frames.
+F07UP60A0949I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I302, best cost 24.9465 + 5001.28 = 5026.23 over 498 frames.
+F07UP60A0949I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I303, best cost 23.9946 + 5011.46 = 5035.45 over 498 frames.
+F07UP60A0949I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0953I41, best cost 18.3816 + 3082.06 = 3100.44 over 298 frames.
+F07UP60A0953I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0962I427, best cost 18.9769 + 3340.73 = 3359.71 over 298 frames.
+F07UP60A0962I427 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0963I46, best cost 23.7294 + 3463.85 = 3487.58 over 298 frames.
+F07UP60A0963I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0395I300, best cost 24.0291 + 5231.81 = 5255.84 over 498 frames.
+F07UP64A0395I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0397I301, best cost 14.1413 + 5768.17 = 5782.31 over 498 frames.
+F07UP64A0397I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0402I41, best cost 15.7775 + 3166.27 = 3182.05 over 298 frames.
+F07UP64A0402I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP72A0728I300, best cost 20.62 + 5647.57 = 5668.19 over 498 frames.
+F07UP72A0728I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0756I300, best cost 25.0838 + 5263.2 = 5288.29 over 498 frames.
+F07UP75A0756I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0763I435, best cost 13.4167 + 3036.65 = 3050.06 over 300 frames.
+F07UP75A0763I435 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0057I427, best cost 15.4638 + 3558.9 = 3574.36 over 298 frames.
+M07UP01A0057I427 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I412, best cost 18.5265 + 3381.83 = 3400.36 over 298 frames.
+M07UP01A0062I412 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I45, best cost 16.803 + 3197.99 = 3214.79 over 300 frames.
+M07UP01A0062I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0063I43, best cost 18.2959 + 3398.75 = 3417.05 over 298 frames.
+M07UP01A0063I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0069I413, best cost 18.5448 + 3273.69 = 3292.24 over 298 frames.
+M07UP01A0069I413 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I420, best cost 13.1555 + 3256.18 = 3269.33 over 298 frames.
+M07UP01A0160I420 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I430, best cost 22.11 + 3330.2 = 3352.31 over 298 frames.
+M07UP01A0160I430 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I47, best cost 13.0659 + 3394.95 = 3408.01 over 298 frames.
+M07UP01A0160I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0321I47, best cost 14.8118 + 3176.59 = 3191.4 over 300 frames.
+M07UP02A0321I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0323I300, best cost 12.2244 + 5179.21 = 5191.43 over 498 frames.
+M07UP02A0323I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0325I43, best cost 14.0929 + 3456.19 = 3470.28 over 298 frames.
+M07UP02A0325I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0329I43, best cost 16.5298 + 3026.21 = 3042.74 over 298 frames.
+M07UP02A0329I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0330I303, best cost 18.6759 + 4667.73 = 4686.41 over 498 frames.
+M07UP02A0330I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0333I45, best cost 24.2517 + 3209.56 = 3233.81 over 298 frames.
+M07UP02A0333I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0335I301, best cost 15.4013 + 5605.66 = 5621.06 over 498 frames.
+M07UP02A0335I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0336I44, best cost 17.1956 + 3181.21 = 3198.41 over 290 frames.
+M07UP02A0336I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I41, best cost 19.9113 + 3515.59 = 3535.5 over 298 frames.
+M07UP02A0337I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I44, best cost 14.5844 + 3063.29 = 3077.88 over 298 frames.
+M07UP02A0337I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1227I45, best cost 18.5346 + 3408.1 = 3426.64 over 298 frames.
+M07UP04A1227I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1230I303, best cost 40.7741 + 5447.09 = 5487.87 over 498 frames.
+M07UP04A1230I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I41, best cost 11.8074 + 3458.74 = 3470.55 over 298 frames.
+M07UP04A1235I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I46, best cost 16.6522 + 3017.54 = 3034.19 over 298 frames.
+M07UP04A1235I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1236I303, best cost 31.454 + 5436.62 = 5468.08 over 498 frames.
+M07UP04A1236I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1239I301, best cost 23.2739 + 4985.16 = 5008.44 over 498 frames.
+M07UP04A1239I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1242I410, best cost 17.5313 + 3298.5 = 3316.03 over 298 frames.
+M07UP04A1242I410 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I300, best cost 22.1485 + 5801.49 = 5823.64 over 498 frames.
+M07UP04A1243I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I435, best cost 18.0323 + 3243.33 = 3261.36 over 300 frames.
+M07UP04A1243I435 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1244I44, best cost 14.6817 + 3732.15 = 3746.83 over 298 frames.
+M07UP04A1244I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1245I48, best cost 15.5204 + 3599.3 = 3614.82 over 298 frames.
+M07UP04A1245I48 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0903I43, best cost 19.8332 + 3128.21 = 3148.04 over 298 frames.
+M07UP05A0903I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0910I300, best cost 25.9278 + 4886.78 = 4912.71 over 498 frames.
+M07UP05A0910I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0911I42, best cost 12.6318 + 3360.86 = 3373.49 over 298 frames.
+M07UP05A0911I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I300, best cost 20.9416 + 4913.75 = 4934.69 over 498 frames.
+M07UP05A0914I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I302, best cost 34.4175 + 5136.86 = 5171.27 over 498 frames.
+M07UP05A0914I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0915I301, best cost 16.4425 + 5024.78 = 5041.22 over 498 frames.
+M07UP05A0915I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0916I43, best cost 25.0166 + 3255.1 = 3280.11 over 298 frames.
+M07UP05A0916I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0920I411, best cost 16.6733 + 3207.56 = 3224.23 over 298 frames.
+M07UP05A0920I411 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0427I301, best cost 15.1966 + 4527.01 = 4542.21 over 498 frames.
+M07UP06A0427I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0428I41, best cost 12.6852 + 3405.46 = 3418.14 over 298 frames.
+M07UP06A0428I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0429I411, best cost 13.7863 + 3058.98 = 3072.77 over 298 frames.
+M07UP06A0429I411 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I301, best cost 23.0906 + 4997.35 = 5020.44 over 498 frames.
+M07UP06A0433I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I40, best cost 20.1762 + 3259.5 = 3279.68 over 298 frames.
+M07UP06A0433I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I41, best cost 20.9061 + 3423.09 = 3444 over 298 frames.
+M07UP06A0433I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0437I42, best cost 11.5326 + 3035.14 = 3046.68 over 298 frames.
+M07UP06A0437I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0438I41, best cost 16.3535 + 3055.53 = 3071.88 over 298 frames.
+M07UP06A0438I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I41, best cost 14.7324 + 3444.05 = 3458.78 over 298 frames.
+M07UP06A0442I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I42, best cost 15.0679 + 3276.05 = 3291.12 over 300 frames.
+M07UP06A0442I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0444I43, best cost 20.5808 + 2943.47 = 2964.05 over 298 frames.
+M07UP06A0444I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0445I301, best cost 18.2813 + 5384.85 = 5403.13 over 490 frames.
+M07UP06A0445I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0447I41, best cost 17.9527 + 3033.53 = 3051.48 over 298 frames.
+M07UP06A0447I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I42, best cost 11.815 + 3015.27 = 3027.08 over 298 frames.
+M07UP07A0134I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I436, best cost 13.1256 + 3292.38 = 3305.51 over 298 frames.
+M07UP07A0134I436 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I410, best cost 13.774 + 3485.93 = 3499.7 over 298 frames.
+M07UP07A0136I410 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I438, best cost 22.9051 + 3345.07 = 3367.97 over 298 frames.
+M07UP07A0136I438 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0138I414, best cost 8.19068 + 2824.53 = 2832.72 over 298 frames.
+M07UP07A0138I414 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0139I42, best cost 12.5469 + 3271.1 = 3283.64 over 298 frames.
+M07UP07A0139I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0142I43, best cost 10.5199 + 3516.49 = 3527.01 over 298 frames.
+M07UP07A0142I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0143I45, best cost 14.0782 + 3313.27 = 3327.35 over 298 frames.
+M07UP07A0143I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0145I436, best cost 13.3549 + 2985.04 = 2998.4 over 298 frames.
+M07UP07A0145I436 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0483I300, best cost 12.8381 + 4807.78 = 4820.62 over 498 frames.
+M07UP09A0483I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0485I43, best cost 19.9753 + 3272.06 = 3292.04 over 298 frames.
+M07UP09A0485I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0488I43, best cost 16.0875 + 3492.52 = 3508.61 over 298 frames.
+M07UP09A0488I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0489I300, best cost 19.5017 + 5086.31 = 5105.81 over 498 frames.
+M07UP09A0489I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0490I301, best cost 14.946 + 4862.28 = 4877.23 over 498 frames.
+M07UP09A0490I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0494I300, best cost 18.4424 + 5088.67 = 5107.11 over 498 frames.
+M07UP09A0494I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I301, best cost 20.0473 + 5000.22 = 5020.26 over 498 frames.
+M07UP09A0495I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I41, best cost 16.121 + 3333.12 = 3349.24 over 298 frames.
+M07UP09A0495I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0496I303, best cost 15.5667 + 4858.34 = 4873.91 over 498 frames.
+M07UP09A0496I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0499I43, best cost 13.1989 + 2847.15 = 2860.35 over 298 frames.
+M07UP09A0499I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I42, best cost 18.2774 + 3433.31 = 3451.59 over 298 frames.
+M07UP09A0500I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I44, best cost 18.1811 + 3106.02 = 3124.2 over 298 frames.
+M07UP09A0500I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0503I301, best cost 16.6772 + 5295.27 = 5311.95 over 498 frames.
+M07UP09A0503I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I300, best cost 25.0509 + 5718.7 = 5743.75 over 498 frames.
+M07UP09A0505I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I504, best cost 19.1727 + 3289.64 = 3308.81 over 298 frames.
+M07UP09A0505I504 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1317I41, best cost 14.6785 + 2991.54 = 3006.21 over 298 frames.
+M07UP11A1317I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1319I300, best cost 31.5456 + 5013.94 = 5045.49 over 498 frames.
+M07UP11A1319I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1328I301, best cost 27.515 + 4977.69 = 5005.21 over 498 frames.
+M07UP11A1328I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1337I301, best cost 21.3338 + 5015.75 = 5037.09 over 498 frames.
+M07UP11A1337I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1349I303, best cost 22.9464 + 5594.14 = 5617.08 over 498 frames.
+M07UP11A1349I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1351I302, best cost 26.9575 + 5205.43 = 5232.39 over 498 frames.
+M07UP11A1351I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I427, best cost 15.109 + 3075.67 = 3090.77 over 298 frames.
+M07UP11A1352I427 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I429, best cost 13.7526 + 3068.6 = 3082.35 over 298 frames.
+M07UP11A1352I429 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I300, best cost 17.9736 + 5597.77 = 5615.74 over 498 frames.
+M07UP13A0882I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I301, best cost 19.8531 + 5701.32 = 5721.17 over 498 frames.
+M07UP13A0882I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0884I303, best cost 20.3196 + 5686.12 = 5706.44 over 498 frames.
+M07UP13A0884I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0888I41, best cost 12.5248 + 3257.89 = 3270.42 over 298 frames.
+M07UP13A0888I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0889I41, best cost 20.3124 + 3638.1 = 3658.41 over 298 frames.
+M07UP13A0889I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0890I43, best cost 16.0615 + 3666.64 = 3682.7 over 298 frames.
+M07UP13A0890I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I302, best cost 29.8712 + 5421.26 = 5451.13 over 498 frames.
+M07UP13A0897I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I41, best cost 16.5009 + 3186.04 = 3202.54 over 298 frames.
+M07UP13A0897I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0898I303, best cost 22.9841 + 5591.76 = 5614.74 over 498 frames.
+M07UP13A0898I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0900I436, best cost 12.2445 + 3229.77 = 3242.02 over 298 frames.
+M07UP13A0900I436 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0572I301, best cost 21.7585 + 4968.67 = 4990.43 over 498 frames.
+M07UP14A0572I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0576I41, best cost 17.3195 + 3346.64 = 3363.96 over 298 frames.
+M07UP14A0576I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0583I300, best cost 25.033 + 5596.85 = 5621.89 over 498 frames.
+M07UP14A0583I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0588I41, best cost 18.6399 + 3316.85 = 3335.49 over 300 frames.
+M07UP14A0588I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I300, best cost 20.6245 + 5161 = 5181.62 over 498 frames.
+M07UP14A0590I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I43, best cost 19.3157 + 3317.3 = 3336.62 over 298 frames.
+M07UP14A0590I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I302, best cost 13.5099 + 5002.42 = 5015.93 over 498 frames.
+M07UP14A0591I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I303, best cost 17.0609 + 5628.17 = 5645.24 over 498 frames.
+M07UP14A0591I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0362I47, best cost 15.2194 + 3235.29 = 3250.5 over 298 frames.
+M07UP18A0362I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I300, best cost 22.5747 + 5107.55 = 5130.12 over 498 frames.
+M07UP18A0363I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I302, best cost 21.9481 + 4960.9 = 4982.85 over 498 frames.
+M07UP18A0363I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0365I42, best cost 15.9183 + 3107.8 = 3123.72 over 298 frames.
+M07UP18A0365I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0366I41, best cost 18.3101 + 3249.34 = 3267.65 over 298 frames.
+M07UP18A0366I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0367I43, best cost 12.9988 + 3282.59 = 3295.59 over 298 frames.
+M07UP18A0367I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I301, best cost 28.1494 + 5495.49 = 5523.64 over 498 frames.
+M07UP18A0368I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I49, best cost 14.0531 + 3309.45 = 3323.5 over 298 frames.
+M07UP18A0368I49 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0369I48, best cost 21.2191 + 3608.77 = 3629.99 over 298 frames.
+M07UP18A0369I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0371I300, best cost 21.2565 + 5751.39 = 5772.65 over 498 frames.
+M07UP18A0371I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I300, best cost 21.5963 + 6142.46 = 6164.05 over 498 frames.
+M07UP18A0374I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I48, best cost 19.8314 + 3539.08 = 3558.91 over 298 frames.
+M07UP18A0374I48 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0375I45, best cost 15.9064 + 3485.86 = 3501.76 over 298 frames.
+M07UP18A0375I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I43, best cost 16.2854 + 3086.51 = 3102.79 over 298 frames.
+M07UP18A0376I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I49, best cost 18.0132 + 3106.69 = 3124.7 over 298 frames.
+M07UP18A0376I49 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0378I302, best cost 19.3233 + 6106.92 = 6126.24 over 498 frames.
+M07UP18A0378I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0380I300, best cost 21.7119 + 5535.45 = 5557.17 over 498 frames.
+M07UP18A0380I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0341I48, best cost 11.3179 + 2916.49 = 2927.81 over 298 frames.
+M07UP19A0341I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I300, best cost 21.4397 + 6058.92 = 6080.36 over 490 frames.
+M07UP19A0345I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I45, best cost 16.1592 + 3114.46 = 3130.62 over 298 frames.
+M07UP19A0345I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0346I301, best cost 24.5622 + 5812.6 = 5837.16 over 498 frames.
+M07UP19A0346I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0348I301, best cost 30.7562 + 5139.24 = 5169.99 over 498 frames.
+M07UP19A0348I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I301, best cost 24.5525 + 5941.53 = 5966.08 over 498 frames.
+M07UP19A0354I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I303, best cost 24.3584 + 5778.21 = 5802.57 over 498 frames.
+M07UP19A0354I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0356I43, best cost 17.2772 + 3247.85 = 3265.13 over 298 frames.
+M07UP19A0356I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0357I300, best cost 19.3778 + 5366.34 = 5385.72 over 498 frames.
+M07UP19A0357I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0358I303, best cost 26.807 + 5091.27 = 5118.08 over 498 frames.
+M07UP19A0358I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0359I40, best cost 12.6699 + 3015.63 = 3028.3 over 298 frames.
+M07UP19A0359I40 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0734I300, best cost 22.6757 + 5321.52 = 5344.2 over 498 frames.
+M07UP20A0734I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I44, best cost 14.7653 + 3091.91 = 3106.67 over 298 frames.
+M07UP20A0739I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I45, best cost 14.5226 + 2993.95 = 3008.47 over 300 frames.
+M07UP20A0739I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0740I302, best cost 20.107 + 5155.01 = 5175.11 over 498 frames.
+M07UP20A0740I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0742I302, best cost 16.1282 + 4725.02 = 4741.14 over 498 frames.
+M07UP20A0742I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0750I40, best cost 23.8688 + 3265.91 = 3289.78 over 298 frames.
+M07UP20A0750I40 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0753I43, best cost 15.0174 + 3539.06 = 3554.08 over 298 frames.
+M07UP20A0753I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0593I302, best cost 25.1331 + 5639.26 = 5664.39 over 498 frames.
+M07UP21A0593I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0598I41, best cost 23.0478 + 3145.69 = 3168.74 over 298 frames.
+M07UP21A0598I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I300, best cost 29.617 + 5497.91 = 5527.53 over 498 frames.
+M07UP21A0600I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I42, best cost 26.4439 + 3144.89 = 3171.34 over 298 frames.
+M07UP21A0600I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I301, best cost 33.5195 + 5517.1 = 5550.62 over 498 frames.
+M07UP21A0606I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I302, best cost 16.0134 + 5821.51 = 5837.52 over 498 frames.
+M07UP21A0606I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0607I301, best cost 28.5762 + 5264.36 = 5292.94 over 498 frames.
+M07UP21A0607I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1323I47, best cost 10.9526 + 2786.72 = 2797.67 over 298 frames.
+M07UP22A1323I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1326I300, best cost 22.288 + 5252.86 = 5275.15 over 498 frames.
+M07UP22A1326I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1342I301, best cost 25.7026 + 4898.87 = 4924.58 over 498 frames.
+M07UP22A1342I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I43, best cost 15.5263 + 3632.41 = 3647.93 over 298 frames.
+M07UP22A1347I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I47, best cost 17.1832 + 3518.37 = 3535.55 over 300 frames.
+M07UP22A1347I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I301, best cost 20.5551 + 5641.79 = 5662.34 over 498 frames.
+M07UP22A1355I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I47, best cost 17.5324 + 3179 = 3196.53 over 298 frames.
+M07UP22A1355I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I300, best cost 25.4573 + 5151.73 = 5177.19 over 498 frames.
+M07UP22A1357I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I45, best cost 12.9642 + 3079.04 = 3092.01 over 298 frames.
+M07UP22A1357I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I47, best cost 13.3714 + 3142.51 = 3155.89 over 298 frames.
+M07UP22A1357I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0224I44, best cost 15.6221 + 3553.25 = 3568.87 over 298 frames.
+M07UP23A0224I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0233I43, best cost 12.922 + 2952.46 = 2965.38 over 298 frames.
+M07UP23A0233I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0234I41, best cost 19.3665 + 3588.15 = 3607.52 over 298 frames.
+M07UP23A0234I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0235I42, best cost 12.4097 + 3565.56 = 3577.97 over 298 frames.
+M07UP23A0235I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0236I43, best cost 17.898 + 3325.4 = 3343.3 over 298 frames.
+M07UP23A0236I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0239I40, best cost 9.01887 + 3468.96 = 3477.98 over 298 frames.
+M07UP23A0239I40 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0242I42, best cost 18.912 + 3415.34 = 3434.26 over 298 frames.
+M07UP23A0242I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0171I300, best cost 21.6075 + 5410.38 = 5431.99 over 498 frames.
+M07UP24A0171I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I45, best cost 15.0372 + 3377.32 = 3392.36 over 298 frames.
+M07UP24A0172I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I49, best cost 13.0914 + 3411.67 = 3424.76 over 298 frames.
+M07UP24A0172I49 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I44, best cost 17.4948 + 3018.07 = 3035.57 over 298 frames.
+M07UP24A0173I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I46, best cost 11.0624 + 2862.86 = 2873.92 over 298 frames.
+M07UP24A0173I46 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0175I301, best cost 27.5397 + 5188.24 = 5215.78 over 498 frames.
+M07UP24A0175I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0177F606, best cost 25.4376 + 9981.45 = 10006.9 over 998 frames.
+M07UP24A0177F606 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0179I302, best cost 20.7859 + 5173.26 = 5194.05 over 498 frames.
+M07UP24A0179I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I301, best cost 18.0688 + 5882.71 = 5900.78 over 498 frames.
+M07UP24A0181I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I42, best cost 15.6043 + 3420.57 = 3436.18 over 298 frames.
+M07UP24A0181I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I48, best cost 14.0455 + 3309.12 = 3323.17 over 298 frames.
+M07UP24A0181I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0185I303, best cost 22.4074 + 5490.59 = 5512.99 over 498 frames.
+M07UP24A0185I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0188I302, best cost 21.8287 + 5311.08 = 5332.91 over 498 frames.
+M07UP24A0188I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0191I300, best cost 16.8608 + 4997.68 = 5014.54 over 498 frames.
+M07UP24A0191I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I302, best cost 24.5212 + 5823.79 = 5848.31 over 498 frames.
+M07UP25A1205I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I43, best cost 16.6037 + 3453.65 = 3470.26 over 298 frames.
+M07UP25A1205I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1206I45, best cost 18.9229 + 3364.4 = 3383.33 over 298 frames.
+M07UP25A1206I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1209I41, best cost 16.0424 + 3296.2 = 3312.24 over 298 frames.
+M07UP25A1209I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1216I41, best cost 15.282 + 3596.1 = 3611.39 over 298 frames.
+M07UP25A1216I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I300, best cost 35.4542 + 5383.15 = 5418.6 over 498 frames.
+M07UP25A1220I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I42, best cost 19.7065 + 3244.77 = 3264.48 over 298 frames.
+M07UP25A1220I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1261I302, best cost 24.1643 + 5871 = 5895.16 over 500 frames.
+M07UP25A1261I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0214I42, best cost 12.8994 + 3625.15 = 3638.05 over 298 frames.
+M07UP26A0214I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0255I48, best cost 17.8039 + 3246.91 = 3264.71 over 300 frames.
+M07UP26A0255I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0257I47, best cost 13.1244 + 2919.21 = 2932.34 over 298 frames.
+M07UP26A0257I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0258I414, best cost 19.4953 + 3116.22 = 3135.71 over 298 frames.
+M07UP26A0258I414 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0261I47, best cost 13.155 + 3180.36 = 3193.51 over 298 frames.
+M07UP26A0261I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0262I41, best cost 12.5635 + 3478.08 = 3490.65 over 298 frames.
+M07UP26A0262I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0263I43, best cost 15.0322 + 3005.58 = 3020.62 over 298 frames.
+M07UP26A0263I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0267I44, best cost 12.89 + 3170.76 = 3183.65 over 298 frames.
+M07UP26A0267I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0269I47, best cost 16.047 + 3488.79 = 3504.84 over 298 frames.
+M07UP26A0269I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0270I42, best cost 18.1261 + 3377.7 = 3395.82 over 298 frames.
+M07UP26A0270I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0272I44, best cost 11.622 + 2811.92 = 2823.54 over 298 frames.
+M07UP26A0272I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0641I438, best cost 14.9562 + 3154.6 = 3169.55 over 298 frames.
+M07UP27A0641I438 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I41, best cost 14.0105 + 3153.3 = 3167.31 over 298 frames.
+M07UP27A0647I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I43, best cost 18.2822 + 3214.23 = 3232.51 over 298 frames.
+M07UP27A0647I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0657I303, best cost 21.7333 + 5442.55 = 5464.28 over 498 frames.
+M07UP27A0657I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0216I301, best cost 15.8813 + 5579.27 = 5595.15 over 498 frames.
+M07UP28A0216I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0218I300, best cost 27.2948 + 5314.17 = 5341.47 over 498 frames.
+M07UP28A0218I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I40, best cost 13.6273 + 3204 = 3217.62 over 298 frames.
+M07UP28A0219I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I505, best cost 16.4755 + 3202.71 = 3219.18 over 300 frames.
+M07UP28A0219I505 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I302, best cost 13.9032 + 5619.48 = 5633.38 over 498 frames.
+M07UP28A0225I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I40, best cost 23.8214 + 3158.17 = 3181.99 over 298 frames.
+M07UP28A0225I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I41, best cost 12.0391 + 3750.4 = 3762.44 over 298 frames.
+M07UP28A0225I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0506I301, best cost 20.804 + 5048.54 = 5069.35 over 498 frames.
+M07UP29A0506I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I42, best cost 21.6458 + 3293.55 = 3315.2 over 298 frames.
+M07UP29A0509I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I45, best cost 13.3652 + 3216.83 = 3230.2 over 298 frames.
+M07UP29A0509I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I303, best cost 19.7083 + 5217.07 = 5236.77 over 500 frames.
+M07UP29A0510I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I44, best cost 13.8738 + 2996.33 = 3010.21 over 298 frames.
+M07UP29A0510I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I301, best cost 15.1104 + 5399.68 = 5414.79 over 498 frames.
+M07UP29A0511I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I42, best cost 13.5706 + 3434.56 = 3448.13 over 298 frames.
+M07UP29A0511I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0513I44, best cost 14.1091 + 3146.69 = 3160.8 over 298 frames.
+M07UP29A0513I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0514I41, best cost 16.5879 + 3286.46 = 3303.04 over 298 frames.
+M07UP29A0514I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0516I41, best cost 13.6087 + 3518.15 = 3531.76 over 298 frames.
+M07UP29A0516I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0517I303, best cost 20.4289 + 5363.27 = 5383.7 over 498 frames.
+M07UP29A0517I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I42, best cost 16.9008 + 3033.6 = 3050.5 over 298 frames.
+M07UP29A0520I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I45, best cost 20.9223 + 3332.9 = 3353.82 over 298 frames.
+M07UP29A0520I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I303, best cost 23.9151 + 5203.49 = 5227.4 over 498 frames.
+M07UP29A0521I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I47, best cost 15.5774 + 3045.3 = 3060.87 over 298 frames.
+M07UP29A0521I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1290I43, best cost 15.2671 + 3146.93 = 3162.2 over 298 frames.
+M07UP31A1290I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1291I42, best cost 21.0203 + 3235.57 = 3256.6 over 298 frames.
+M07UP31A1291I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1292I301, best cost 21.7477 + 5248.33 = 5270.08 over 498 frames.
+M07UP31A1292I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I302, best cost 32.7241 + 5104.65 = 5137.37 over 498 frames.
+M07UP31A1294I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I43, best cost 20.2736 + 3283.18 = 3303.46 over 298 frames.
+M07UP31A1294I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1296I500, best cost 23.333 + 4739.55 = 4762.88 over 498 frames.
+M07UP31A1296I500 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1300I300, best cost 24.8613 + 5960.85 = 5985.71 over 498 frames.
+M07UP31A1300I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1302I301, best cost 28.5863 + 5277.21 = 5305.8 over 498 frames.
+M07UP31A1302I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I302, best cost 33.9053 + 5364.9 = 5398.8 over 498 frames.
+M07UP31A1306I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I303, best cost 18.172 + 6082.69 = 6100.86 over 498 frames.
+M07UP31A1306I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I43, best cost 13.1765 + 2995.84 = 3009.02 over 298 frames.
+M07UP31A1306I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1307I430, best cost 21.9146 + 3254.75 = 3276.66 over 298 frames.
+M07UP31A1307I430 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1308I435, best cost 15.6056 + 3233.31 = 3248.91 over 298 frames.
+M07UP31A1308I435 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1309I44, best cost 15.2086 + 3605.82 = 3621.03 over 298 frames.
+M07UP31A1309I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1310I45, best cost 18.6911 + 3464.66 = 3483.35 over 298 frames.
+M07UP31A1310I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0551I43, best cost 11.361 + 3459.53 = 3470.89 over 300 frames.
+M07UP34A0551I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0554I301, best cost 18.8861 + 5198.56 = 5217.44 over 498 frames.
+M07UP34A0554I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0555I300, best cost 23.4534 + 5942.89 = 5966.34 over 498 frames.
+M07UP34A0555I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0558I42, best cost 16.0562 + 3366.83 = 3382.88 over 298 frames.
+M07UP34A0558I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I303, best cost 27.5908 + 5347.79 = 5375.38 over 498 frames.
+M07UP34A0559I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I44, best cost 20.8686 + 3262.61 = 3283.48 over 298 frames.
+M07UP34A0559I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0561I300, best cost 22.0573 + 5954.75 = 5976.81 over 498 frames.
+M07UP34A0561I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0563I303, best cost 38.6002 + 5076.64 = 5115.24 over 498 frames.
+M07UP34A0563I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0564I43, best cost 15.1154 + 3230.68 = 3245.8 over 298 frames.
+M07UP34A0564I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0566I301, best cost 22.4531 + 5057.91 = 5080.37 over 498 frames.
+M07UP34A0566I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0443I41, best cost 16.6018 + 3352.87 = 3369.47 over 298 frames.
+M07UP35A0443I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0446I301, best cost 21.5677 + 5466.01 = 5487.58 over 498 frames.
+M07UP35A0446I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0448I301, best cost 21.6331 + 4977.41 = 4999.04 over 498 frames.
+M07UP35A0448I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0450I301, best cost 23.7129 + 5871.35 = 5895.06 over 498 frames.
+M07UP35A0450I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0452I303, best cost 33.3205 + 5005.31 = 5038.63 over 498 frames.
+M07UP35A0452I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I303, best cost 29.7823 + 4962.21 = 4991.99 over 498 frames.
+M07UP35A0455I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I426, best cost 21.4982 + 3398.8 = 3420.3 over 298 frames.
+M07UP35A0455I426 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0456I43, best cost 17.5966 + 3270.86 = 3288.46 over 298 frames.
+M07UP35A0456I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0457I41, best cost 15.8386 + 3436.61 = 3452.45 over 298 frames.
+M07UP35A0457I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0459I303, best cost 16.9095 + 5170.64 = 5187.55 over 498 frames.
+M07UP35A0459I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I301, best cost 35.155 + 5386 = 5421.15 over 498 frames.
+M07UP36A0825I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I40, best cost 23.068 + 3171.24 = 3194.31 over 298 frames.
+M07UP36A0825I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0827I300, best cost 29.5978 + 4897.8 = 4927.4 over 498 frames.
+M07UP36A0827I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0829I302, best cost 20.9834 + 5358 = 5378.98 over 498 frames.
+M07UP36A0829I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0832I302, best cost 21.4658 + 5503.78 = 5525.25 over 498 frames.
+M07UP36A0832I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0840I41, best cost 15.5467 + 2999.61 = 3015.15 over 298 frames.
+M07UP36A0840I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0301I42, best cost 12.7502 + 2832.52 = 2845.27 over 298 frames.
+M07UP37A0301I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0302I45, best cost 9.79563 + 3544.05 = 3553.84 over 298 frames.
+M07UP37A0302I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0306I47, best cost 14.3631 + 3585.83 = 3600.2 over 298 frames.
+M07UP37A0306I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0307I303, best cost 15.0532 + 5695.61 = 5710.66 over 498 frames.
+M07UP37A0307I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I40, best cost 9.74676 + 3683.27 = 3693.02 over 298 frames.
+M07UP37A0309I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I44, best cost 16.1814 + 3532 = 3548.18 over 300 frames.
+M07UP37A0309I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I43, best cost 18.1345 + 3208.34 = 3226.47 over 298 frames.
+M07UP37A0311I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I44, best cost 17.9443 + 3182 = 3199.94 over 298 frames.
+M07UP37A0311I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I48, best cost 11.7665 + 2919.4 = 2931.17 over 300 frames.
+M07UP37A0311I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0313I427, best cost 13.2584 + 3263.17 = 3276.43 over 298 frames.
+M07UP37A0313I427 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0314I300, best cost 19.2309 + 5738.49 = 5757.72 over 498 frames.
+M07UP37A0314I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0316I305, best cost 15.5192 + 5959.65 = 5975.17 over 498 frames.
+M07UP37A0316I305 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I47, best cost 14.6136 + 3146.42 = 3161.03 over 298 frames.
+M07UP37A0317I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I48, best cost 15.3003 + 3550.34 = 3565.64 over 298 frames.
+M07UP37A0317I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0319I301, best cost 19.879 + 5976.28 = 5996.15 over 498 frames.
+M07UP37A0319I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0103I43, best cost 14.4712 + 3223.6 = 3238.08 over 298 frames.
+M07UP38A0103I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0107I43, best cost 12.4714 + 3275.44 = 3287.91 over 298 frames.
+M07UP38A0107I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0774I301, best cost 19.3733 + 4971.02 = 4990.39 over 498 frames.
+M07UP39A0774I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0776I302, best cost 13.7574 + 4919.9 = 4933.66 over 498 frames.
+M07UP39A0776I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I300, best cost 25.2846 + 5143.32 = 5168.61 over 498 frames.
+M07UP39A0777I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I423, best cost 12.88 + 2917.48 = 2930.36 over 298 frames.
+M07UP39A0777I423 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0778I303, best cost 26.1362 + 5432.17 = 5458.3 over 498 frames.
+M07UP39A0778I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0781I501, best cost 12.2035 + 4221.41 = 4233.62 over 398 frames.
+M07UP39A0781I501 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I301, best cost 18.609 + 6094.31 = 6112.92 over 498 frames.
+M07UP41A0273I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I47, best cost 11.8799 + 3341.06 = 3352.94 over 298 frames.
+M07UP41A0273I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0275I300, best cost 22.7366 + 4988.44 = 5011.17 over 498 frames.
+M07UP41A0275I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I300, best cost 13.6788 + 5526.62 = 5540.3 over 498 frames.
+M07UP41A0277I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I43, best cost 14.3907 + 3497.04 = 3511.43 over 298 frames.
+M07UP41A0277I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I301, best cost 16.4186 + 5506.22 = 5522.64 over 498 frames.
+M07UP41A0279I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I302, best cost 23.655 + 5271.77 = 5295.42 over 498 frames.
+M07UP41A0279I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I47, best cost 15.5274 + 3576.63 = 3592.16 over 298 frames.
+M07UP41A0279I47 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I42, best cost 11.172 + 3298.05 = 3309.22 over 298 frames.
+M07UP41A0280I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I45, best cost 16.1723 + 3524.75 = 3540.93 over 298 frames.
+M07UP41A0280I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0283I48, best cost 11.9924 + 2924.84 = 2936.84 over 298 frames.
+M07UP41A0283I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I303, best cost 23.861 + 5420.62 = 5444.48 over 498 frames.
+M07UP41A0289I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I44, best cost 13.1256 + 3132.36 = 3145.49 over 300 frames.
+M07UP41A0289I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0290I47, best cost 16.3518 + 3163.62 = 3179.97 over 298 frames.
+M07UP41A0290I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I43, best cost 14.8848 + 3021.8 = 3036.68 over 298 frames.
+M07UP41A0291I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I46, best cost 13.824 + 3128.91 = 3142.73 over 298 frames.
+M07UP41A0291I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0111I46, best cost 17.8622 + 3078.7 = 3096.56 over 298 frames.
+M07UP42A0111I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0116I430, best cost 12.88 + 3391.45 = 3404.33 over 298 frames.
+M07UP42A0116I430 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I419, best cost 18.988 + 3186.23 = 3205.22 over 298 frames.
+M07UP42A0117I419 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I423, best cost 13.1037 + 3369.24 = 3382.35 over 298 frames.
+M07UP42A0117I423 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I300, best cost 22.4179 + 5739.58 = 5761.99 over 498 frames.
+M07UP42A0119I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I46, best cost 18.475 + 3482.04 = 3500.52 over 298 frames.
+M07UP42A0119I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I418, best cost 17.2788 + 3225.49 = 3242.77 over 298 frames.
+M07UP42A0120I418 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I424, best cost 16.0266 + 3258.88 = 3274.91 over 298 frames.
+M07UP42A0120I424 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I429, best cost 15.9536 + 3409.6 = 3425.56 over 298 frames.
+M07UP42A0120I429 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I302, best cost 15.9412 + 5578.15 = 5594.1 over 498 frames.
+M07UP42A0122I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I424, best cost 15.2905 + 3433.98 = 3449.27 over 298 frames.
+M07UP42A0122I424 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I46, best cost 22.3911 + 3354.81 = 3377.2 over 298 frames.
+M07UP42A0122I46 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I42, best cost 17.6635 + 3355.55 = 3373.21 over 298 frames.
+M07UP42A0123I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I424, best cost 11.6667 + 3491.59 = 3503.26 over 298 frames.
+M07UP42A0123I424 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0124I45, best cost 15.163 + 3213.15 = 3228.32 over 298 frames.
+M07UP42A0124I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0126I437, best cost 16.4471 + 3381.77 = 3398.21 over 298 frames.
+M07UP42A0126I437 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0148I300, best cost 23.0385 + 5853.29 = 5876.33 over 498 frames.
+M07UP43A0148I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0151I42, best cost 18.0138 + 3583.63 = 3601.64 over 298 frames.
+M07UP43A0151I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I43, best cost 12.8766 + 2956.06 = 2968.94 over 298 frames.
+M07UP43A0154I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I44, best cost 15.7893 + 3059.44 = 3075.23 over 298 frames.
+M07UP43A0154I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0158I41, best cost 14.0521 + 3404.88 = 3418.94 over 298 frames.
+M07UP43A0158I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0614I48, best cost 18.6891 + 3425.16 = 3443.85 over 298 frames.
+M07UP45A0614I48 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0616I43, best cost 16.6371 + 3261.1 = 3277.74 over 298 frames.
+M07UP45A0616I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I41, best cost 16.6051 + 3284.64 = 3301.24 over 298 frames.
+M07UP45A0624I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I44, best cost 20.8598 + 3241.66 = 3262.52 over 298 frames.
+M07UP45A0624I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0625I41, best cost 14.2563 + 3363.13 = 3377.39 over 298 frames.
+M07UP45A0625I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0627I43, best cost 16.2193 + 2935.65 = 2951.87 over 298 frames.
+M07UP45A0627I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0628I41, best cost 16.8085 + 3318.69 = 3335.5 over 298 frames.
+M07UP45A0628I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0629I303, best cost 23.4026 + 5871.5 = 5894.9 over 498 frames.
+M07UP45A0629I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0634I48, best cost 17.9027 + 3172.45 = 3190.35 over 298 frames.
+M07UP45A0634I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0635I42, best cost 18.4546 + 3333.55 = 3352 over 298 frames.
+M07UP45A0635I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0636I300, best cost 14.8806 + 4829.28 = 4844.16 over 498 frames.
+M07UP45A0636I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I417, best cost 20.0123 + 3232.61 = 3252.63 over 298 frames.
+M07UP48A0013I417 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I43, best cost 14.1524 + 3308.36 = 3322.51 over 298 frames.
+M07UP48A0013I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0014I44, best cost 12.0185 + 3294.25 = 3306.27 over 298 frames.
+M07UP48A0014I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0015I422, best cost 15.3272 + 3270.6 = 3285.93 over 298 frames.
+M07UP48A0015I422 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0018I422, best cost 14.1556 + 3453.95 = 3468.1 over 298 frames.
+M07UP48A0018I422 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0020I43, best cost 12.6493 + 3032.67 = 3045.32 over 298 frames.
+M07UP48A0020I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0021I45, best cost 17.1917 + 3008.82 = 3026.01 over 298 frames.
+M07UP48A0021I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0024I49, best cost 16.5399 + 3430.53 = 3447.07 over 304 frames.
+M07UP48A0024I49 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0028I45, best cost 13.5099 + 3411.04 = 3424.55 over 298 frames.
+M07UP48A0028I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0031I44, best cost 18.616 + 3445.22 = 3463.84 over 298 frames.
+M07UP48A0031I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0861I41, best cost 14.3413 + 3041.4 = 3055.74 over 300 frames.
+M07UP49A0861I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0863I300, best cost 28.4886 + 5557.47 = 5585.96 over 498 frames.
+M07UP49A0863I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0866I504, best cost 17.7173 + 3645.72 = 3663.44 over 298 frames.
+M07UP49A0866I504 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0869I301, best cost 21.9144 + 5472.14 = 5494.05 over 498 frames.
+M07UP49A0869I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0880I43, best cost 23.042 + 3229.83 = 3252.87 over 298 frames.
+M07UP49A0880I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0032I301, best cost 15.0518 + 5025.23 = 5040.28 over 430 frames.
+M07UP51A0032I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I42, best cost 20.1754 + 3357.71 = 3377.88 over 298 frames.
+M07UP51A0033I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I48, best cost 15.6305 + 3510.03 = 3525.66 over 298 frames.
+M07UP51A0033I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0035I302, best cost 29.0153 + 5449.76 = 5478.78 over 498 frames.
+M07UP51A0035I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I300, best cost 17.0846 + 5665.33 = 5682.42 over 498 frames.
+M07UP51A0036I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I44, best cost 21.5456 + 3183.91 = 3205.46 over 298 frames.
+M07UP51A0036I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I45, best cost 18.6758 + 3221.42 = 3240.09 over 298 frames.
+M07UP51A0036I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I48, best cost 17.2462 + 3287.96 = 3305.2 over 298 frames.
+M07UP51A0036I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0038I48, best cost 18.4107 + 3387.9 = 3406.31 over 298 frames.
+M07UP51A0038I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0041I300, best cost 17.6395 + 4772.92 = 4790.56 over 498 frames.
+M07UP51A0041I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0042I302, best cost 29.5339 + 5094.42 = 5123.95 over 498 frames.
+M07UP51A0042I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I410, best cost 12.1844 + 3261.65 = 3273.83 over 298 frames.
+M07UP51A0043I410 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I44, best cost 19.4501 + 3376.52 = 3395.97 over 298 frames.
+M07UP51A0043I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I45, best cost 22.3643 + 3066.14 = 3088.5 over 298 frames.
+M07UP51A0043I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0044I303, best cost 35.3665 + 5162.45 = 5197.82 over 498 frames.
+M07UP51A0044I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0045I412, best cost 23.834 + 3393.14 = 3416.97 over 298 frames.
+M07UP51A0045I412 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I412, best cost 16.8828 + 3039.04 = 3055.92 over 298 frames.
+M07UP51A0046I412 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I43, best cost 21.4068 + 3280.2 = 3301.61 over 298 frames.
+M07UP51A0046I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I44, best cost 14.7707 + 3508.19 = 3522.97 over 298 frames.
+M07UP51A0049I44 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I48, best cost 18.9106 + 3536.87 = 3555.78 over 298 frames.
+M07UP51A0049I48 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I300, best cost 23.6873 + 5140.27 = 5163.95 over 498 frames.
+M07UP51A0050I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I42, best cost 19.7318 + 3242.93 = 3262.66 over 298 frames.
+M07UP51A0050I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I45, best cost 14.2177 + 3295.07 = 3309.29 over 298 frames.
+M07UP51A0050I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I301, best cost 19.5697 + 4972.92 = 4992.49 over 498 frames.
+M07UP51A0052I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I303, best cost 18.9136 + 4807.1 = 4826.02 over 498 frames.
+M07UP51A0052I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I412, best cost 15.0996 + 3027.09 = 3042.19 over 298 frames.
+M07UP51A0052I412 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I45, best cost 18.2012 + 3182.95 = 3201.15 over 298 frames.
+M07UP51A0052I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0053I302, best cost 22.598 + 5149.09 = 5171.69 over 498 frames.
+M07UP51A0053I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I40, best cost 15.7663 + 3508.01 = 3523.77 over 298 frames.
+M07UP51A0054I40 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I47, best cost 16.3895 + 3493.7 = 3510.09 over 298 frames.
+M07UP51A0054I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0094I411, best cost 24.7276 + 3104.1 = 3128.83 over 298 frames.
+M07UP51A0094I411 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I300, best cost 25.1029 + 5287.54 = 5312.65 over 498 frames.
+M07UP52A0193I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I302, best cost 25.1655 + 5189.02 = 5214.19 over 498 frames.
+M07UP52A0193I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I43, best cost 20.0367 + 3039.8 = 3059.84 over 298 frames.
+M07UP52A0193I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0195I45, best cost 13.3292 + 3533.31 = 3546.64 over 298 frames.
+M07UP52A0195I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I300, best cost 23.7973 + 5383.19 = 5406.98 over 498 frames.
+M07UP52A0196I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I41, best cost 16.6473 + 3281.08 = 3297.73 over 292 frames.
+M07UP52A0196I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0199I41, best cost 13.4104 + 3643.52 = 3656.93 over 298 frames.
+M07UP52A0199I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I302, best cost 24.735 + 5887.55 = 5912.28 over 498 frames.
+M07UP52A0202I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I40, best cost 13.8282 + 3559.79 = 3573.62 over 298 frames.
+M07UP52A0202I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I45, best cost 18.5375 + 3599.91 = 3618.45 over 298 frames.
+M07UP52A0202I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0205I43, best cost 17.8743 + 3320.49 = 3338.37 over 298 frames.
+M07UP52A0205I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I302, best cost 21.9843 + 5317.77 = 5339.75 over 498 frames.
+M07UP52A0206I302 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I40, best cost 10.801 + 3511.55 = 3522.35 over 298 frames.
+M07UP52A0206I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0207I42, best cost 17.6734 + 3459.75 = 3477.42 over 298 frames.
+M07UP52A0207I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I300, best cost 26.1714 + 5752.43 = 5778.6 over 498 frames.
+M07UP52A0210I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I43, best cost 16.4998 + 3462.03 = 3478.53 over 298 frames.
+M07UP52A0210I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I603, best cost 35.9241 + 11581.9 = 11617.9 over 998 frames.
+M07UP52A0210I603 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0211I300, best cost 19.2982 + 6084.96 = 6104.26 over 500 frames.
+M07UP52A0211I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0213I45, best cost 13.3538 + 2875.86 = 2889.22 over 298 frames.
+M07UP52A0213I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0072I44, best cost 17.8922 + 3412.32 = 3430.21 over 298 frames.
+M07UP53A0072I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0076I413, best cost 17.6225 + 3367.56 = 3385.18 over 298 frames.
+M07UP53A0076I413 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0079I42, best cost 14.5403 + 3421.4 = 3435.94 over 298 frames.
+M07UP53A0079I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I41, best cost 14.9573 + 2859.13 = 2874.09 over 298 frames.
+M07UP53A0080I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I413, best cost 20.9288 + 3140.85 = 3161.78 over 298 frames.
+M07UP53A0080I413 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I42, best cost 14.3921 + 3062.4 = 3076.79 over 298 frames.
+M07UP53A0080I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0081I424, best cost 10.5887 + 2931.67 = 2942.26 over 298 frames.
+M07UP53A0081I424 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0083I419, best cost 14.9455 + 3322.2 = 3337.14 over 298 frames.
+M07UP53A0083I419 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0085I45, best cost 18.5375 + 3522.76 = 3541.3 over 300 frames.
+M07UP53A0085I45 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0088I413, best cost 18.6866 + 3441.67 = 3460.36 over 298 frames.
+M07UP53A0088I413 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0090I410, best cost 16.1938 + 3582.08 = 3598.27 over 300 frames.
+M07UP53A0090I410 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1272I428, best cost 12.0138 + 3307.89 = 3319.9 over 298 frames.
+M07UP54A1272I428 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1280I300, best cost 26.831 + 5521.66 = 5548.49 over 498 frames.
+M07UP54A1280I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1290I45, best cost 17.5241 + 3424.96 = 3442.49 over 300 frames.
+M07UP54A1290I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0462I422, best cost 12.2097 + 3121.22 = 3133.43 over 298 frames.
+M07UP55A0462I422 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I303, best cost 20.3904 + 5094.65 = 5115.04 over 498 frames.
+M07UP55A0464I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I42, best cost 18.5346 + 3316.88 = 3335.42 over 298 frames.
+M07UP55A0464I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I300, best cost 31.746 + 5431.25 = 5463 over 498 frames.
+M07UP55A0469I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I40, best cost 25.7851 + 3118.39 = 3144.17 over 298 frames.
+M07UP55A0469I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0470I301, best cost 26.263 + 5281.76 = 5308.02 over 498 frames.
+M07UP55A0470I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0474I40, best cost 15.9572 + 3563.21 = 3579.17 over 298 frames.
+M07UP55A0474I40 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0476I42, best cost 22.4209 + 3511.32 = 3533.74 over 298 frames.
+M07UP55A0476I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0477I301, best cost 22.7483 + 5265.75 = 5288.5 over 498 frames.
+M07UP55A0477I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0480I300, best cost 22.013 + 5548.22 = 5570.24 over 498 frames.
+M07UP55A0480I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0695I300, best cost 21.2749 + 5876.72 = 5897.99 over 498 frames.
+M07UP56A0695I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0699I301, best cost 24.0109 + 5307.54 = 5331.55 over 498 frames.
+M07UP56A0699I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0706I43, best cost 15.7907 + 3491.1 = 3506.89 over 298 frames.
+M07UP56A0706I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0707I45, best cost 15.7486 + 2941.32 = 2957.07 over 298 frames.
+M07UP56A0707I45 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0708I47, best cost 24.4184 + 3361.68 = 3386.09 over 298 frames.
+M07UP56A0708I47 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0710I421, best cost 22.1986 + 3290.62 = 3312.82 over 298 frames.
+M07UP56A0710I421 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0404I43, best cost 18.0196 + 3132.92 = 3150.94 over 298 frames.
+M07UP57A0404I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0406I300, best cost 23.7609 + 5273.64 = 5297.4 over 498 frames.
+M07UP57A0406I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0409I42, best cost 12.1215 + 3024.29 = 3036.41 over 298 frames.
+M07UP57A0409I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0411I301, best cost 17.8753 + 5442.68 = 5460.56 over 498 frames.
+M07UP57A0411I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I301, best cost 21.9119 + 5044.79 = 5066.7 over 498 frames.
+M07UP57A0413I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I41, best cost 13.3131 + 3497.2 = 3510.51 over 298 frames.
+M07UP57A0413I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I507, best cost 13.7068 + 3515.35 = 3529.06 over 298 frames.
+M07UP57A0413I507 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0416I301, best cost 28.8701 + 5759.15 = 5788.02 over 498 frames.
+M07UP57A0416I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I301, best cost 24.9569 + 5448.41 = 5473.37 over 498 frames.
+M07UP57A0417I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I42, best cost 13.7713 + 3504.24 = 3518.01 over 298 frames.
+M07UP57A0417I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0418I303, best cost 16.1607 + 5627.41 = 5643.57 over 498 frames.
+M07UP57A0418I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I416, best cost 11.266 + 2922.94 = 2934.21 over 298 frames.
+M07UP60A0942I416 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I418, best cost 12.9014 + 3150.44 = 3163.34 over 298 frames.
+M07UP60A0942I418 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0944I42, best cost 16.763 + 3338.8 = 3355.56 over 298 frames.
+M07UP60A0944I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0946I303, best cost 31.2546 + 5447.33 = 5478.59 over 498 frames.
+M07UP60A0946I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0954I303, best cost 15.3166 + 4675.34 = 4690.66 over 498 frames.
+M07UP60A0954I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I301, best cost 25.3797 + 4844.06 = 4869.44 over 498 frames.
+M07UP60A0955I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I302, best cost 16.6524 + 4709.77 = 4726.42 over 498 frames.
+M07UP60A0955I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0956I414, best cost 18.0285 + 3382.81 = 3400.84 over 298 frames.
+M07UP60A0956I414 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I412, best cost 18.5578 + 3173.1 = 3191.65 over 298 frames.
+M07UP60A0957I412 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I413, best cost 15.5031 + 3111.24 = 3126.75 over 298 frames.
+M07UP60A0957I413 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0966I300, best cost 19.369 + 4915.35 = 4934.72 over 498 frames.
+M07UP61A0966I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0968I301, best cost 17.0116 + 4885.09 = 4902.11 over 498 frames.
+M07UP61A0968I301 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0971I302, best cost 26.9178 + 5115.61 = 5142.53 over 498 frames.
+M07UP61A0971I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0972I44, best cost 15.8404 + 3420.99 = 3436.83 over 298 frames.
+M07UP61A0972I44 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0980I301, best cost 29.8185 + 5737.7 = 5767.52 over 498 frames.
+M07UP61A0980I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I300, best cost 27.9718 + 5598.12 = 5626.09 over 498 frames.
+M07UP64A0382I300 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I301, best cost 18.1344 + 5727.52 = 5745.65 over 498 frames.
+M07UP64A0382I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0386I42, best cost 15.7179 + 3348.02 = 3363.73 over 298 frames.
+M07UP64A0386I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0389I42, best cost 20.3187 + 2984.29 = 3004.61 over 298 frames.
+M07UP64A0389I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0390I300, best cost 25.9455 + 5211.04 = 5236.99 over 498 frames.
+M07UP64A0390I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I302, best cost 42.162 + 5234.11 = 5276.27 over 498 frames.
+M07UP64A0391I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I303, best cost 28.5795 + 5296.47 = 5325.04 over 498 frames.
+M07UP64A0391I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0392I301, best cost 11.0682 + 4597.44 = 4608.51 over 498 frames.
+M07UP64A0392I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0393I41, best cost 15.6303 + 3439.91 = 3455.54 over 298 frames.
+M07UP64A0393I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0396I43, best cost 15.192 + 3578.51 = 3593.7 over 300 frames.
+M07UP64A0396I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0399I302, best cost 25.7691 + 5418.89 = 5444.66 over 498 frames.
+M07UP64A0399I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I300, best cost 36.8997 + 5687.21 = 5724.11 over 498 frames.
+M07UP64A0400I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I426, best cost 18.5848 + 3277.93 = 3296.51 over 298 frames.
+M07UP64A0400I426 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0401I43, best cost 14.8223 + 3395.28 = 3410.1 over 300 frames.
+M07UP64A0401I43 nahiin 
+LOG (lattice-scale:main():lattice-scale.cc:90) Done 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0674I303, best cost 18.2978 + 5635.52 = 5653.82 over 498 frames.
+M07UP66A0674I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0676I303, best cost 17.6451 + 5744.87 = 5762.52 over 498 frames.
+M07UP66A0676I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0684I43, best cost 18.4404 + 3215.42 = 3233.86 over 298 frames.
+M07UP66A0684I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0685I42, best cost 22.3016 + 3314.88 = 3337.18 over 298 frames.
+M07UP66A0685I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0687I301, best cost 15.5105 + 4808.04 = 4823.55 over 498 frames.
+M07UP66A0687I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0688I410, best cost 18.3366 + 2958.82 = 2977.16 over 298 frames.
+M07UP66A0688I410 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0692I301, best cost 23.2518 + 5407.28 = 5430.53 over 498 frames.
+M07UP66A0692I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I42, best cost 14.2895 + 3368.65 = 3382.94 over 298 frames.
+M07UP72A0730I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I46, best cost 18.5671 + 3276.64 = 3295.21 over 298 frames.
+M07UP72A0730I46 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0731I42, best cost 18.2447 + 3581.43 = 3599.67 over 298 frames.
+M07UP72A0731I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0922I300, best cost 15.8508 + 5755.65 = 5771.5 over 498 frames.
+M07UP73A0922I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0923I41, best cost 13.3538 + 3384.38 = 3397.74 over 298 frames.
+M07UP73A0923I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0924I41, best cost 15.1098 + 3253.57 = 3268.68 over 298 frames.
+M07UP73A0924I41 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0925I42, best cost 13.4149 + 2950.65 = 2964.07 over 298 frames.
+M07UP73A0925I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0927I43, best cost 22.2226 + 3134.45 = 3156.67 over 298 frames.
+M07UP73A0927I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0929I42, best cost 23.1274 + 3395.14 = 3418.27 over 298 frames.
+M07UP73A0929I42 haan 
+LOG (lattice-add-penalty:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0930I43, best cost 21.8487 + 3188.8 = 3210.65 over 298 frames.
+M07UP73A0930I43 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0931I49, best cost 17.0225 + 3358.94 = 3375.96 over 298 frames.
+M07UP73A0931I49 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0937I42, best cost 11.8116 + 3173.06 = 3184.88 over 298 frames.
+M07UP73A0937I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0938I42, best cost 19.6999 + 3108.51 = 3128.21 over 298 frames.
+M07UP73A0938I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0802I303, best cost 30.8806 + 5167.25 = 5198.13 over 498 frames.
+M07UP74A0802I303 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0813I300, best cost 20.0082 + 5055.5 = 5075.51 over 498 frames.
+M07UP74A0813I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0814I301, best cost 19.8929 + 5002.64 = 5022.53 over 504 frames.
+M07UP74A0814I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0817I42, best cost 19.0737 + 3113.23 = 3132.3 over 300 frames.
+M07UP74A0817I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0755I303, best cost 30.3952 + 5376.09 = 5406.49 over 498 frames.
+M07UP75A0755I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0758I300, best cost 23.3317 + 5316.31 = 5339.65 over 498 frames.
+M07UP75A0758I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I302, best cost 27.1322 + 5579.75 = 5606.88 over 498 frames.
+M07UP75A0764I302 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I42, best cost 17.0077 + 3416.41 = 3433.41 over 298 frames.
+M07UP75A0764I42 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0768I40, best cost 15.0295 + 3224.07 = 3239.1 over 298 frames.
+M07UP75A0768I40 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0769I301, best cost 25.6646 + 5128.28 = 5153.94 over 498 frames.
+M07UP75A0769I301 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0770I303, best cost 28.7772 + 5259.09 = 5287.86 over 498 frames.
+M07UP75A0770I303 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I42, best cost 16.6316 + 3199.59 = 3216.22 over 298 frames.
+M07UP75A0771I42 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I43, best cost 15.4134 + 3268.04 = 3283.46 over 298 frames.
+M07UP75A0771I43 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0772I300, best cost 14.3232 + 5055.68 = 5070.01 over 498 frames.
+M07UP75A0772I300 haan 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0773I41, best cost 15.5272 + 3096.9 = 3112.43 over 298 frames.
+M07UP75A0773I41 nahiin 
+LOG (lattice-best-path:main():lattice-best-path.cc:124) Overall cost per frame is 10.9259 = 0.0498322 [graph] + 10.8761 [acoustic] over 207364 frames.
+LOG (lattice-best-path:main():lattice-best-path.cc:128) Done 553 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Thu Jul 21 15:05:38 IST 2016, elapsed time 0 seconds

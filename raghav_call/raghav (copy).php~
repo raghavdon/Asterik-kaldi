@@ -1,0 +1,181 @@
+#!/usr/bin/php -q                                 
+<?php
+require('phpagi.php');
+$mypath="/home/raghav/ex/raghav_call";
+
+
+require "${mypath}/raghav_fun.inc";
+
+
+
+
+	$agi 		= new AGI();
+	$extension  = $agi->request['agi_extension'];
+	$channel    = $agi->request['agi_channel'];
+	$callerid   = $agi->request['agi_callerid'];
+	$callstatus	= 0;
+	$date		= date('Ymd');	
+	$timestamp	= date('His');
+	$starttime 	= "$date$timestamp";
+	$uniqueid 	= "$extension"."_"."$channel"."_"."$callerid"."_"."$starttime";
+	$fname		= "$date"."_"."$timestamp"."_"."$callerid";	// File Name with <Date Time Stamp and Cal
+	$dbschema	= "Agri_ASR";
+	$max_attempts	= 5;
+
+$dbconn = raghav_database_connect();
+
+
+if (!file_exists("$mypath/record")) {
+    mkdir("$mypath/record", 0777, true);
+}
+
+raghav_log("*******************************************");
+raghav_log("Recognition Test Call Date & Time : ".date('d/m/Y H:i:s'));
+raghav_log("Channel: $channel, Extension: $extension, Caller ID: $callerid");
+
+
+
+
+$agi->stream_file("$mypath/don/intro");
+
+
+############################################# district recognisation  ########################
+
+#$district=raghav_district_recognisation();
+$district=Kannuj;
+$market=Kannauj;
+############################################# commodity recognisation  ########################
+
+
+
+
+raghav_log("commodity recognisation :");
+$attempt=1;
+
+$repeat=false;
+
+do{
+
+if($repeat==false){
+	$agi->stream_file("$mypath/don/say_comm_like");
+	$agi->stream_file("$mypath/don/for_example");
+	raghav_log("say commodity again");
+	$agi->stream_file("$mypath/don/Wheat_Other");
+	sleep(0.1);
+	$agi->stream_file("$mypath/don/or");
+	sleep(0.1);
+	$agi->stream_file("$mypath/don/Bajra_Other");
+	sleep(0.6);
+ }
+
+else{
+	$agi->stream_file("$mypath/don/say_commodity");
+	raghav_log("say commodity again");
+	sleep(0.6);
+ }
+
+$utterance = date('His').substr((string)microtime(), 2, 3);
+
+raghav_log("commodity Recording Start");
+
+$recodord_path="$mypath/record/$utterance";
+if (!file_exists($recodord_path)) {
+    mkdir($recodord_path, 0777, true);
+}
+
+$agi->record_file("$recodord_path/$utterance","wav","0",3000,NULL,true,2);
+
+raghav_log("commodity Recording END");
+
+$crop=shell_exec('sh '.$mypath.'/online_speech.sh '.$recodord_path.' '.$utterance.'.wav comodity');
+
+list($u1, $u2,$u3) = explode("\n", $crop);
+
+raghav_log("Recognized $u2 with  Score: $u3");
+
+$valid_word=NULL;
+
+if(strpos($u2, 'no final-state reached') !== false || $u3 < 0.5){
+
+raghav_log("Score Less than 0.4, Repeating...");
+
+$repeat=true;
+
+$attempt++;
+$agi->stream_file("$mypath/don/sorry");
+$agi->stream_file("$mypath/don/we_are_not_able_hear_you_correctly");
+raghav_log("we_are_not_able_hear_you_correctly");
+
+}
+
+
+else {
+raghav_log("query for valid word");
+$valid_word = raghav_validate_recognized_word($u2, "commodity");
+	
+	if($valid_word !=NULL){
+		$agi->stream_file("$mypath/don/yousaid");
+		$agi->stream_file("$mypath/don/${valid_word}");
+		raghav_log("yousaid: $valid_word----- pls say yes or no");
+		$confirmation = raghav_confirmation();
+		raghav_log("confirmation : $confirmation");
+			if ($confirmation == "haan")
+				{
+				$repeat = false;
+				}
+			else if ($feedback == "nahiin")
+				{
+				$attempt++;
+				$repeat = true;
+				}
+			else{
+				$repeat=true;
+				$attempt++;
+				$agi->stream_file("$mypath/don/sorry");
+				$agi->stream_file("$mypath/don/we_are_not_able_hear_you_correctly");
+
+	  		    }
+		}
+	else{
+		
+		$agi->stream_file("$mypath/don/sorry");
+		$agi->stream_file("$mypath/don/in_this_district_commodity_information_not_reported");
+		raghav_log("commodity information not reported do you need other commodity price ");
+		$agi->stream_file("$mypath/don/do_you_need_other_commodity_price");
+		raghav_log("yousaid: $$valid_word----- pls say yes or no");
+		$confirmation = raghav_confirmation();
+		raghav_log("confirmation : $confirmation");
+			if ($confirmation == "haan")
+				{
+				$attempt++;
+				$repeat = true;
+				}
+			else if ($feedback == "nahiin")
+				{
+				
+				raghav_ending_procedure();
+				}
+			else{
+				$repeat=true;
+				$attempt++;
+				$agi->stream_file("$mypath/don/sorry");
+				$agi->stream_file("$mypath/don/we_are_not_able_hear_you_correctly");
+
+	  		    }
+
+
+	    }
+}
+
+if ($attempt>=$max_attempts)
+				{
+			$agi->stream_file("$mypath/don/you_have_reached_maximum_try_limit_please_try_again_later");
+			raghav_ending_procedure();
+				}
+}while($repeat);
+
+$commodity=$u2;
+
+raghav_fetch_and_play_price($district, $commodity, $market);
+#$agi->stream_file("$mypath/don/you_have_reached_maximum_try_limit_please_try_again_later");
+?>

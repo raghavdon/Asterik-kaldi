@@ -1,0 +1,20 @@
+# acc-tree-stats --ci-phones=1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32:33:34:35:36:37:38:39:40:41:42:43:44:45:46:47:48:49:50:51:52:53:54:55:56:57:58:59:60:61:62:63:64:65:66:67:68:69:70 exp/mono_ali/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono_ali/ali.3.gz|" exp/tri1_1600_25600/3.treeacc 
+# Started at Thu Jul 21 01:33:26 IST 2016
+#
+acc-tree-stats --ci-phones=1:2:3:4:5:6:7:8:9:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32:33:34:35:36:37:38:39:40:41:42:43:44:45:46:47:48:49:50:51:52:53:54:55:56:57:58:59:60:61:62:63:64:65:66:67:68:69:70 exp/mono_ali/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono_ali/ali.3.gz|' exp/tri1_1600_25600/3.treeacc 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- 
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 1000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 2000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 3000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 4000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 5000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 6000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 7000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 8000 utterances.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:101) Processed 9000 utterances.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 9603 utterances, errors on 0
+LOG (acc-tree-stats:main():acc-tree-stats.cc:118) Accumulated stats for 9602 files, 1 failed due to no alignment, 0 failed for other reasons.
+LOG (acc-tree-stats:main():acc-tree-stats.cc:121) Number of separate stats (context-dependent states) is 10042
+# Accounting: time=49 threads=1
+# Ended (code 0) at Thu Jul 21 01:34:15 IST 2016, elapsed time 49 seconds

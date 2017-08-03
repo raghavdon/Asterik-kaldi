@@ -1,0 +1,36 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 61 exp/tri2__1600_25600_ali/final.mdl - |" "ark:gunzip -c exp/tri2_1600_25600/fsts.3.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |" "ark:|gzip -c >exp/tri2__1600_25600_ali/ali.3.gz" 
+# Started at Thu Jul 21 04:55:21 IST 2016
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 61 exp/tri2__1600_25600_ali/final.mdl - |' 'ark:gunzip -c exp/tri2_1600_25600/fsts.3.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |' 'ark:|gzip -c >exp/tri2__1600_25600_ali/ali.3.gz' 
+gmm-boost-silence --boost=1.0 61 exp/tri2__1600_25600_ali/final.mdl - 
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train/split3/3/utt2spk scp:data/train/split3/3/cmvn.scp scp:data/train/split3/3/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- 
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP48A0020I416 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:475) Did not successfully decode file M07UP48A0020I416, len = 298
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP48A0023I41 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP51A0041I42 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP52A0201I302 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP52A0206I40 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP53A0084I413 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP54A1272I503 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP54A1288I506 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP55A0470I421 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP56A0710I506 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP60A0955I310 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP61A0982I416 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP64A0390I414 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP73A0932I508 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP73A0938I46 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP75A0758I417 with beam 40
+WARNING (gmm-align-compiled:AlignUtteranceWrapper():decoder-wrappers.cc:466) Retrying utterance M07UP75A0773I420 with beam 40
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 9603 utterances, errors on 0
+LOG (transform-feats:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.6153 over 3.5136e+06 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 9603 utterances; 0 had errors.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:129) Overall log-likelihood per frame is -46.7181 over 3513298 frames.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:131) Retried 17 out of 9603 utterances.
+LOG (gmm-align-compiled:main():gmm-align-compiled.cc:133) Done 9602, errors on 1
+# Accounting: time=566 threads=1
+# Ended (code 0) at Thu Jul 21 05:04:47 IST 2016, elapsed time 566 seconds

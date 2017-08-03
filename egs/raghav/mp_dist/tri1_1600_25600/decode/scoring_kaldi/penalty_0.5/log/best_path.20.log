@@ -1,0 +1,1118 @@
+# lattice-scale --inv-acoustic-scale=20 "ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri1_1600_25600/graph/words.txt | cat > exp/tri1_1600_25600/decode/scoring_kaldi/penalty_0.5/20.txt 
+# Started at Mon Jul 25 02:12:09 IST 2016
+#
+lattice-best-path --word-symbol-table=exp/tri1_1600_25600/graph/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- 
+lattice-scale --inv-acoustic-scale=20 'ark:gunzip -c exp/tri1_1600_25600/decode/lat.*.gz|' ark:- 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I42, best cost 20.1643 + 1517.92 = 1538.08 over 300 frames.
+F07UP02A0332I42 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP02A0332I43, best cost 16.1415 + 1435.91 = 1452.05 over 298 frames.
+F07UP02A0332I43 bhopaala 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP06A0432I42, best cost 24.026 + 1329.15 = 1353.18 over 300 frames.
+F07UP06A0432I42 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0094I427, best cost 13.3068 + 1380.06 = 1393.37 over 298 frames.
+F07UP07A0094I427 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP07A0096I44, best cost 13.9056 + 1512.29 = 1526.19 over 298 frames.
+F07UP07A0096I44 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP09A0491I46, best cost 11.8927 + 1559.12 = 1571.02 over 298 frames.
+F07UP09A0491I46 shahadxola 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP11A1331I301, best cost 15.6555 + 2229.49 = 2245.15 over 498 frames.
+F07UP11A1331I301 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP19A0344I46, best cost 18.0219 + 1366.86 = 1384.89 over 298 frames.
+F07UP19A0344I46 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP21A0612I41, best cost 20.2604 + 1404.94 = 1425.2 over 298 frames.
+F07UP21A0612I41 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I429, best cost 16.4629 + 1445.29 = 1461.76 over 298 frames.
+F07UP22A1336I429 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1336I501, best cost 17.6964 + 1860.42 = 1878.12 over 398 frames.
+F07UP22A1336I501 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I301, best cost 14.8964 + 2232.88 = 2247.78 over 498 frames.
+F07UP22A1343I301 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1343I47, best cost 17.6902 + 1553.33 = 1571.02 over 298 frames.
+F07UP22A1343I47 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1345I47, best cost 14.789 + 1363.86 = 1378.65 over 298 frames.
+F07UP22A1345I47 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP22A1346I435, best cost 20.7212 + 1515.91 = 1536.63 over 300 frames.
+F07UP22A1346I435 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP23A0248I41, best cost 16.6723 + 1604.67 = 1621.34 over 298 frames.
+F07UP23A0248I41 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I302, best cost 19.6029 + 2532.86 = 2552.47 over 498 frames.
+F07UP24A0182I302 chindawaadxqaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0182I41, best cost 17.744 + 1556.25 = 1574 over 298 frames.
+F07UP24A0182I41 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I302, best cost 14.5949 + 2674.17 = 2688.76 over 498 frames.
+F07UP24A0183I302 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP24A0183I47, best cost 16.5724 + 1520.28 = 1536.85 over 298 frames.
+F07UP24A0183I47 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1212I41, best cost 12.0539 + 1597.28 = 1609.34 over 298 frames.
+F07UP25A1212I41 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP25A1215I42, best cost 16.1069 + 1551.4 = 1567.51 over 298 frames.
+F07UP25A1215I42 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP26A0256I43, best cost 13.6035 + 1549.41 = 1563.02 over 298 frames.
+F07UP26A0256I43 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I300, best cost 17.3525 + 2668.98 = 2686.33 over 498 frames.
+F07UP28A0226I300 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0226I45, best cost 12.7742 + 1582.86 = 1595.64 over 298 frames.
+F07UP28A0226I45 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0227I301, best cost 27.5702 + 2637.49 = 2665.06 over 498 frames.
+F07UP28A0227I301 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP28A0228I303, best cost 16.6443 + 2741.63 = 2758.28 over 498 frames.
+F07UP28A0228I303 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I41, best cost 19.0708 + 1406.6 = 1425.67 over 298 frames.
+F07UP29A0523I41 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP29A0523I44, best cost 20.2934 + 1355.98 = 1376.28 over 298 frames.
+F07UP29A0523I44 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP31A1293I42, best cost 14.9809 + 1594.35 = 1609.33 over 298 frames.
+F07UP31A1293I42 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP34A0567I44, best cost 18.3173 + 1472.07 = 1490.39 over 300 frames.
+F07UP34A0567I44 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP35A0453I300, best cost 29.7481 + 2278.61 = 2308.36 over 498 frames.
+F07UP35A0453I300 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP37A0304I300, best cost 18.5128 + 2290.9 = 2309.42 over 498 frames.
+F07UP37A0304I300 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP38A0101I41, best cost 21.5266 + 1504.93 = 1526.46 over 298 frames.
+F07UP38A0101I41 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I40, best cost 12.7939 + 1314.92 = 1327.71 over 298 frames.
+F07UP41A0286I40 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP41A0286I42, best cost 11.1756 + 1236.78 = 1247.96 over 298 frames.
+F07UP41A0286I42 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP52A0208I44, best cost 12.4463 + 1568.23 = 1580.68 over 298 frames.
+F07UP52A0208I44 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP54A1284I430, best cost 15.292 + 1413.98 = 1429.27 over 298 frames.
+F07UP54A1284I430 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP57A0408I41, best cost 18.6662 + 1548.41 = 1567.08 over 298 frames.
+F07UP57A0408I41 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0943I300, best cost 22.9394 + 2698.92 = 2721.86 over 498 frames.
+F07UP60A0943I300 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0944I303, best cost 19.7008 + 2217.81 = 2237.51 over 498 frames.
+F07UP60A0944I303 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I300, best cost 26.7462 + 2390.13 = 2416.87 over 498 frames.
+F07UP60A0949I300 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I302, best cost 25.1615 + 2241.16 = 2266.32 over 498 frames.
+F07UP60A0949I302 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0949I303, best cost 25.3943 + 2246.4 = 2271.8 over 498 frames.
+F07UP60A0949I303 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0953I41, best cost 18.3266 + 1381.04 = 1399.36 over 298 frames.
+F07UP60A0953I41 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0962I427, best cost 14.9115 + 1492.18 = 1507.09 over 298 frames.
+F07UP60A0962I427 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP60A0963I46, best cost 24.3846 + 1550.5 = 1574.89 over 298 frames.
+F07UP60A0963I46 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0395I300, best cost 19.2861 + 2365.82 = 2385.1 over 498 frames.
+F07UP64A0395I300 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0397I301, best cost 15.2262 + 2586.55 = 2601.78 over 498 frames.
+F07UP64A0397I301 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP64A0402I41, best cost 16.941 + 1414.63 = 1431.58 over 298 frames.
+F07UP64A0402I41 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP72A0728I300, best cost 20.8884 + 2538.17 = 2559.06 over 498 frames.
+F07UP72A0728I300 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0756I300, best cost 27.3788 + 2359.72 = 2387.1 over 498 frames.
+F07UP75A0756I300 kharagona 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance F07UP75A0763I435, best cost 12.0543 + 1357.89 = 1369.94 over 300 frames.
+F07UP75A0763I435 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0057I427, best cost 14.0397 + 1597.88 = 1611.92 over 298 frames.
+M07UP01A0057I427 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I412, best cost 18.4312 + 1512.31 = 1530.74 over 298 frames.
+M07UP01A0062I412 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0062I45, best cost 18.2725 + 1431.2 = 1449.47 over 300 frames.
+M07UP01A0062I45 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0063I43, best cost 17.1415 + 1520.64 = 1537.78 over 298 frames.
+M07UP01A0063I43 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0069I413, best cost 15.5963 + 1468.89 = 1484.49 over 298 frames.
+M07UP01A0069I413 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I420, best cost 16.5035 + 1438.56 = 1455.06 over 298 frames.
+M07UP01A0160I420 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I430, best cost 15.9337 + 1494.73 = 1510.66 over 298 frames.
+M07UP01A0160I430 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP01A0160I47, best cost 12.9066 + 1522.86 = 1535.76 over 298 frames.
+M07UP01A0160I47 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0321I47, best cost 17.4651 + 1421.06 = 1438.53 over 300 frames.
+M07UP02A0321I47 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0323I300, best cost 11.1114 + 2321.56 = 2332.67 over 498 frames.
+M07UP02A0323I300 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0325I43, best cost 13.9864 + 1552.03 = 1566.02 over 298 frames.
+M07UP02A0325I43 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0329I43, best cost 18.8974 + 1360.95 = 1379.85 over 298 frames.
+M07UP02A0329I43 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0330I303, best cost 17.0704 + 2090.02 = 2107.09 over 498 frames.
+M07UP02A0330I303 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0333I45, best cost 21.0172 + 1445.83 = 1466.85 over 298 frames.
+M07UP02A0333I45 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0335I301, best cost 15.8213 + 2521.07 = 2536.89 over 498 frames.
+M07UP02A0335I301 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0336I44, best cost 16.4865 + 1428.28 = 1444.77 over 290 frames.
+M07UP02A0336I44 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I41, best cost 19.1882 + 1577.2 = 1596.39 over 298 frames.
+M07UP02A0337I41 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP02A0337I44, best cost 14.1218 + 1364.05 = 1378.17 over 298 frames.
+M07UP02A0337I44 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1227I45, best cost 15.9791 + 1517.56 = 1533.54 over 298 frames.
+M07UP04A1227I45 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1230I303, best cost 40.6248 + 2437.25 = 2477.87 over 498 frames.
+M07UP04A1230I303 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I41, best cost 13.7275 + 1553.36 = 1567.08 over 298 frames.
+M07UP04A1235I41 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1235I46, best cost 17.1836 + 1334.05 = 1351.24 over 298 frames.
+M07UP04A1235I46 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1236I303, best cost 29.0435 + 2421.35 = 2450.39 over 498 frames.
+M07UP04A1236I303 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1239I301, best cost 24.8125 + 2230.53 = 2255.35 over 498 frames.
+M07UP04A1239I301 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1242I410, best cost 17.788 + 1456.48 = 1474.27 over 298 frames.
+M07UP04A1242I410 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I300, best cost 28.4056 + 2588.98 = 2617.39 over 498 frames.
+M07UP04A1243I300 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1243I435, best cost 19.0814 + 1429.25 = 1448.33 over 300 frames.
+M07UP04A1243I435 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1244I44, best cost 16.2279 + 1671.83 = 1688.05 over 298 frames.
+M07UP04A1244I44 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP04A1245I48, best cost 19.7252 + 1606.32 = 1626.04 over 298 frames.
+M07UP04A1245I48 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0903I43, best cost 20.3163 + 1403.27 = 1423.59 over 298 frames.
+M07UP05A0903I43 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0910I300, best cost 27.0119 + 2191.58 = 2218.59 over 498 frames.
+M07UP05A0910I300 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0911I42, best cost 13.9319 + 1503.79 = 1517.72 over 298 frames.
+M07UP05A0911I42 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I300, best cost 18.9088 + 2210.69 = 2229.6 over 498 frames.
+M07UP05A0914I300 raayeseena 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0914I302, best cost 33.5339 + 2302.27 = 2335.8 over 498 frames.
+M07UP05A0914I302 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0915I301, best cost 16.6026 + 2228.82 = 2245.42 over 498 frames.
+M07UP05A0915I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0916I43, best cost 25.2414 + 1446.35 = 1471.59 over 298 frames.
+M07UP05A0916I43 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP05A0920I411, best cost 14.9592 + 1418.96 = 1433.92 over 298 frames.
+M07UP05A0920I411 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0427I301, best cost 16.4159 + 2020.87 = 2037.28 over 498 frames.
+M07UP06A0427I301 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0428I41, best cost 10.0388 + 1533.15 = 1543.19 over 298 frames.
+M07UP06A0428I41 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0429I411, best cost 12.7935 + 1366.46 = 1379.26 over 298 frames.
+M07UP06A0429I411 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I301, best cost 25.0942 + 2235.65 = 2260.75 over 498 frames.
+M07UP06A0433I301 chindawaadxqaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I40, best cost 17.0676 + 1453.59 = 1470.65 over 298 frames.
+M07UP06A0433I40 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0433I41, best cost 21.739 + 1538.52 = 1560.26 over 298 frames.
+M07UP06A0433I41 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0437I42, best cost 11.6114 + 1351.49 = 1363.1 over 298 frames.
+M07UP06A0437I42 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0438I41, best cost 15.3569 + 1374.89 = 1390.24 over 298 frames.
+M07UP06A0438I41 niimaca 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I41, best cost 15.0147 + 1544.05 = 1559.07 over 298 frames.
+M07UP06A0442I41 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0442I42, best cost 14.9455 + 1471.06 = 1486 over 300 frames.
+M07UP06A0442I42 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0444I43, best cost 18.7437 + 1316.21 = 1334.95 over 298 frames.
+M07UP06A0444I43 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0445I301, best cost 20.6582 + 2415.1 = 2435.75 over 490 frames.
+M07UP06A0445I301 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP06A0447I41, best cost 16.9099 + 1359.53 = 1376.44 over 298 frames.
+M07UP06A0447I41 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I42, best cost 13.036 + 1349.49 = 1362.53 over 298 frames.
+M07UP07A0134I42 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0134I436, best cost 14.7499 + 1460.27 = 1475.02 over 298 frames.
+M07UP07A0134I436 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I410, best cost 16.4151 + 1560.61 = 1577.02 over 298 frames.
+M07UP07A0136I410 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0136I438, best cost 20.047 + 1513.39 = 1533.44 over 298 frames.
+M07UP07A0136I438 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0138I414, best cost 9.20525 + 1260.12 = 1269.33 over 298 frames.
+M07UP07A0138I414 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0139I42, best cost 12.3606 + 1469.23 = 1481.59 over 298 frames.
+M07UP07A0139I42 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0142I43, best cost 12.7458 + 1575.03 = 1587.78 over 298 frames.
+M07UP07A0142I43 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0143I45, best cost 12.807 + 1486.15 = 1498.96 over 298 frames.
+M07UP07A0143I45 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP07A0145I436, best cost 14.2174 + 1333.72 = 1347.94 over 298 frames.
+M07UP07A0145I436 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0483I300, best cost 12.7295 + 2181.23 = 2193.96 over 498 frames.
+M07UP09A0483I300 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0485I43, best cost 22.6717 + 1453.19 = 1475.86 over 298 frames.
+M07UP09A0485I43 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0488I43, best cost 17.997 + 1556.64 = 1574.64 over 298 frames.
+M07UP09A0488I43 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0489I300, best cost 20.3525 + 2294.44 = 2314.79 over 498 frames.
+M07UP09A0489I300 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0490I301, best cost 20.3147 + 2200.91 = 2221.23 over 498 frames.
+M07UP09A0490I301 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0494I300, best cost 18.8157 + 2279.12 = 2297.93 over 498 frames.
+M07UP09A0494I300 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I301, best cost 20.1377 + 2247.13 = 2267.27 over 498 frames.
+M07UP09A0495I301 betuula 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0495I41, best cost 16.8362 + 1482.39 = 1499.23 over 298 frames.
+M07UP09A0495I41 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0496I303, best cost 17.4195 + 2169.03 = 2186.45 over 498 frames.
+M07UP09A0496I303 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0499I43, best cost 11.9074 + 1280.66 = 1292.56 over 298 frames.
+M07UP09A0499I43 indoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I42, best cost 11.0074 + 1550.06 = 1561.07 over 298 frames.
+M07UP09A0500I42 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0500I44, best cost 18.8679 + 1392.56 = 1411.42 over 298 frames.
+M07UP09A0500I44 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0503I301, best cost 15.3887 + 2379.57 = 2394.96 over 498 frames.
+M07UP09A0503I301 niimaca 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I300, best cost 23.988 + 2569.12 = 2593.11 over 498 frames.
+M07UP09A0505I300 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP09A0505I504, best cost 20.7072 + 1471.47 = 1492.18 over 298 frames.
+M07UP09A0505I504 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1317I41, best cost 15.6842 + 1343.9 = 1359.58 over 298 frames.
+M07UP11A1317I41 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1319I300, best cost 30.2044 + 2227.31 = 2257.51 over 498 frames.
+M07UP11A1319I300 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1328I301, best cost 28.6467 + 2219.7 = 2248.35 over 498 frames.
+M07UP11A1328I301 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1337I301, best cost 21.002 + 2247.83 = 2268.83 over 498 frames.
+M07UP11A1337I301 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1349I303, best cost 22.8384 + 2520.01 = 2542.85 over 498 frames.
+M07UP11A1349I303 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1351I302, best cost 26.293 + 2325.25 = 2351.55 over 498 frames.
+M07UP11A1351I302 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I427, best cost 14.2733 + 1365.09 = 1379.37 over 298 frames.
+M07UP11A1352I427 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP11A1352I429, best cost 14.6614 + 1352.69 = 1367.35 over 298 frames.
+M07UP11A1352I429 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I300, best cost 18.7099 + 2499.57 = 2518.28 over 498 frames.
+M07UP13A0882I300 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0882I301, best cost 24.154 + 2567.61 = 2591.76 over 498 frames.
+M07UP13A0882I301 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0884I303, best cost 22.6271 + 2543.32 = 2565.95 over 498 frames.
+M07UP13A0884I303 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0888I41, best cost 13.3946 + 1458.42 = 1471.81 over 298 frames.
+M07UP13A0888I41 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0889I41, best cost 20.9512 + 1629.85 = 1650.8 over 298 frames.
+M07UP13A0889I41 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0890I43, best cost 15.4672 + 1647.67 = 1663.13 over 298 frames.
+M07UP13A0890I43 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I302, best cost 30.4448 + 2429.06 = 2459.51 over 498 frames.
+M07UP13A0897I302 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0897I41, best cost 16.7269 + 1413.67 = 1430.4 over 298 frames.
+M07UP13A0897I41 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0898I303, best cost 23.4076 + 2501.67 = 2525.08 over 498 frames.
+M07UP13A0898I303 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP13A0900I436, best cost 12.4493 + 1446.84 = 1459.29 over 298 frames.
+M07UP13A0900I436 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0572I301, best cost 21.2212 + 2216.4 = 2237.62 over 498 frames.
+M07UP14A0572I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0576I41, best cost 18.4221 + 1494.89 = 1513.31 over 298 frames.
+M07UP14A0576I41 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0583I300, best cost 24.2305 + 2502.24 = 2526.47 over 498 frames.
+M07UP14A0583I300 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0588I41, best cost 18.9082 + 1481.39 = 1500.29 over 300 frames.
+M07UP14A0588I41 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I300, best cost 21.3535 + 2321.1 = 2342.46 over 498 frames.
+M07UP14A0590I300 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0590I43, best cost 20.1291 + 1482.56 = 1502.69 over 298 frames.
+M07UP14A0590I43 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I302, best cost 15.963 + 2241.19 = 2257.15 over 498 frames.
+M07UP14A0591I302 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP14A0591I303, best cost 13.1098 + 2536.69 = 2549.8 over 498 frames.
+M07UP14A0591I303 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0362I47, best cost 15.6508 + 1444.05 = 1459.7 over 298 frames.
+M07UP18A0362I47 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I300, best cost 23.495 + 2294.22 = 2317.72 over 498 frames.
+M07UP18A0363I300 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0363I302, best cost 21.8993 + 2225.07 = 2246.97 over 498 frames.
+M07UP18A0363I302 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0365I42, best cost 16.2075 + 1399.35 = 1415.56 over 298 frames.
+M07UP18A0365I42 bhopaala 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0366I41, best cost 18.6789 + 1452.77 = 1471.45 over 298 frames.
+M07UP18A0366I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0367I43, best cost 14.8239 + 1470.89 = 1485.71 over 298 frames.
+M07UP18A0367I43 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I301, best cost 27.9423 + 2463.11 = 2491.05 over 498 frames.
+M07UP18A0368I301 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0368I49, best cost 15.2465 + 1485.24 = 1500.49 over 298 frames.
+M07UP18A0368I49 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0369I48, best cost 22.812 + 1612.45 = 1635.27 over 298 frames.
+M07UP18A0369I48 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0371I300, best cost 21.0585 + 2589.71 = 2610.77 over 498 frames.
+M07UP18A0371I300 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I300, best cost 22.2836 + 2759.27 = 2781.55 over 498 frames.
+M07UP18A0374I300 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0374I48, best cost 18.5922 + 1588.64 = 1607.23 over 298 frames.
+M07UP18A0374I48 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0375I45, best cost 16.674 + 1563.18 = 1579.85 over 298 frames.
+M07UP18A0375I45 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I43, best cost 16.7401 + 1386.34 = 1403.08 over 298 frames.
+M07UP18A0376I43 raayeseena 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0376I49, best cost 15.8616 + 1393.58 = 1409.44 over 298 frames.
+M07UP18A0376I49 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0378I302, best cost 24.8294 + 2742.28 = 2767.11 over 498 frames.
+M07UP18A0378I302 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP18A0380I300, best cost 21.1387 + 2489.17 = 2510.31 over 498 frames.
+M07UP18A0380I300 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0341I48, best cost 11.8886 + 1303.23 = 1315.12 over 298 frames.
+M07UP19A0341I48 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I300, best cost 23.5411 + 2718.64 = 2742.18 over 490 frames.
+M07UP19A0345I300 widishaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0345I45, best cost 17.2771 + 1397.8 = 1415.07 over 298 frames.
+M07UP19A0345I45 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0346I301, best cost 24.8668 + 2607.07 = 2631.94 over 498 frames.
+M07UP19A0346I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0348I301, best cost 29.6532 + 2305.62 = 2335.27 over 498 frames.
+M07UP19A0348I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I301, best cost 23.8813 + 2668.61 = 2692.49 over 498 frames.
+M07UP19A0354I301 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0354I303, best cost 24.9894 + 2591.04 = 2616.03 over 498 frames.
+M07UP19A0354I303 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0356I43, best cost 20.2628 + 1450.16 = 1470.43 over 298 frames.
+M07UP19A0356I43 baalaaghaatxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0357I300, best cost 17.9156 + 2405.8 = 2423.72 over 498 frames.
+M07UP19A0357I300 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0358I303, best cost 24.7312 + 2276.76 = 2301.49 over 498 frames.
+M07UP19A0358I303 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP19A0359I40, best cost 12.5537 + 1352.65 = 1365.21 over 298 frames.
+M07UP19A0359I40 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0734I300, best cost 25.1002 + 2376.28 = 2401.38 over 498 frames.
+M07UP20A0734I300 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I44, best cost 17.1036 + 1384.98 = 1402.08 over 298 frames.
+M07UP20A0739I44 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0739I45, best cost 12.8365 + 1341.61 = 1354.45 over 300 frames.
+M07UP20A0739I45 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0740I302, best cost 21.5679 + 2299.37 = 2320.94 over 498 frames.
+M07UP20A0740I302 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0742I302, best cost 16.5902 + 2107.19 = 2123.78 over 498 frames.
+M07UP20A0742I302 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0750I40, best cost 22.3163 + 1454.44 = 1476.76 over 298 frames.
+M07UP20A0750I40 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP20A0753I43, best cost 18.0152 + 1582.54 = 1600.55 over 298 frames.
+M07UP20A0753I43 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0593I302, best cost 23.6535 + 2532.08 = 2555.73 over 498 frames.
+M07UP21A0593I302 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0598I41, best cost 23.0898 + 1413.96 = 1437.05 over 298 frames.
+M07UP21A0598I41 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I300, best cost 30.167 + 2455.61 = 2485.78 over 498 frames.
+M07UP21A0600I300 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0600I42, best cost 26.0358 + 1404.87 = 1430.91 over 298 frames.
+M07UP21A0600I42 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I301, best cost 32.9803 + 2472.87 = 2505.85 over 498 frames.
+M07UP21A0606I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0606I302, best cost 13.7135 + 2619.32 = 2633.03 over 498 frames.
+M07UP21A0606I302 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP21A0607I301, best cost 29.5705 + 2362.34 = 2391.91 over 498 frames.
+M07UP21A0607I301 shyopura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1323I47, best cost 10.8309 + 1255.54 = 1266.37 over 298 frames.
+M07UP22A1323I47 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1326I300, best cost 22.483 + 2349.96 = 2372.45 over 498 frames.
+M07UP22A1326I300 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1342I301, best cost 24.9608 + 2194.56 = 2219.52 over 498 frames.
+M07UP22A1342I301 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I43, best cost 16.7819 + 1622.36 = 1639.15 over 298 frames.
+M07UP22A1347I43 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1347I47, best cost 17.6575 + 1578.59 = 1596.24 over 300 frames.
+M07UP22A1347I47 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I301, best cost 22.297 + 2516.71 = 2539.01 over 498 frames.
+M07UP22A1355I301 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1355I47, best cost 17.4669 + 1426.15 = 1443.62 over 298 frames.
+M07UP22A1355I47 kharagona 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I300, best cost 24.829 + 2314.25 = 2339.08 over 498 frames.
+M07UP22A1357I300 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I45, best cost 15.0328 + 1358.79 = 1373.82 over 298 frames.
+M07UP22A1357I45 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP22A1357I47, best cost 12.5372 + 1410.22 = 1422.75 over 298 frames.
+M07UP22A1357I47 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0224I44, best cost 16.1492 + 1593.75 = 1609.9 over 298 frames.
+M07UP23A0224I44 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0233I43, best cost 13.5218 + 1318.6 = 1332.12 over 298 frames.
+M07UP23A0233I43 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0234I41, best cost 20.1179 + 1604.56 = 1624.67 over 298 frames.
+M07UP23A0234I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0235I42, best cost 16.2041 + 1598.67 = 1614.88 over 298 frames.
+M07UP23A0235I42 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0236I43, best cost 18.3712 + 1480.98 = 1499.35 over 298 frames.
+M07UP23A0236I43 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0239I40, best cost 10.1391 + 1556.57 = 1566.71 over 298 frames.
+M07UP23A0239I40 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP23A0242I42, best cost 18.5528 + 1531.8 = 1550.35 over 298 frames.
+M07UP23A0242I42 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0171I300, best cost 21.6599 + 2432.16 = 2453.82 over 498 frames.
+M07UP24A0171I300 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I45, best cost 15.0467 + 1502.42 = 1517.47 over 298 frames.
+M07UP24A0172I45 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0172I49, best cost 14.5549 + 1518.16 = 1532.72 over 298 frames.
+M07UP24A0172I49 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I44, best cost 17.2756 + 1343.6 = 1360.88 over 298 frames.
+M07UP24A0173I44 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0173I46, best cost 11.4174 + 1287.37 = 1298.79 over 298 frames.
+M07UP24A0173I46 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0175I301, best cost 26.5131 + 2317.51 = 2344.02 over 498 frames.
+M07UP24A0175I301 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0177F606, best cost 35.9806 + 4491.1 = 4527.08 over 998 frames.
+M07UP24A0177F606 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0179I302, best cost 19.131 + 2317.98 = 2337.11 over 498 frames.
+M07UP24A0179I302 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I301, best cost 19.7659 + 2638.35 = 2658.11 over 498 frames.
+M07UP24A0181I301 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I42, best cost 10.9858 + 1508.24 = 1519.23 over 298 frames.
+M07UP24A0181I42 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0181I48, best cost 15.0329 + 1480.65 = 1495.68 over 298 frames.
+M07UP24A0181I48 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0185I303, best cost 23.0234 + 2464.04 = 2487.07 over 498 frames.
+M07UP24A0185I303 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0188I302, best cost 20.5428 + 2379.92 = 2400.46 over 498 frames.
+M07UP24A0188I302 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP24A0191I300, best cost 18.4559 + 2237.69 = 2256.15 over 498 frames.
+M07UP24A0191I300 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I302, best cost 25.5913 + 2607.73 = 2633.32 over 498 frames.
+M07UP25A1205I302 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1205I43, best cost 18.4018 + 1541.55 = 1559.95 over 298 frames.
+M07UP25A1205I43 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1206I45, best cost 23.7998 + 1499.33 = 1523.13 over 298 frames.
+M07UP25A1206I45 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1209I41, best cost 17.3156 + 1474.11 = 1491.43 over 298 frames.
+M07UP25A1209I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1216I41, best cost 15.7532 + 1612.44 = 1628.19 over 298 frames.
+M07UP25A1216I41 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I300, best cost 34.1643 + 2413.12 = 2447.29 over 498 frames.
+M07UP25A1220I300 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1220I42, best cost 19.7934 + 1456.16 = 1475.95 over 298 frames.
+M07UP25A1220I42 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP25A1261I302, best cost 21.4175 + 2638.31 = 2659.73 over 500 frames.
+M07UP25A1261I302 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0214I42, best cost 12.6862 + 1626.16 = 1638.85 over 298 frames.
+M07UP26A0214I42 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0255I48, best cost 18.5792 + 1445.58 = 1464.16 over 300 frames.
+M07UP26A0255I48 widishaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0257I47, best cost 14.9011 + 1308.39 = 1323.29 over 298 frames.
+M07UP26A0257I47 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0258I414, best cost 17.3476 + 1403.61 = 1420.96 over 298 frames.
+M07UP26A0258I414 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0261I47, best cost 12.9237 + 1431.16 = 1444.09 over 298 frames.
+M07UP26A0261I47 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0262I41, best cost 14.9569 + 1557.21 = 1572.17 over 298 frames.
+M07UP26A0262I41 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0263I43, best cost 17.3898 + 1337.06 = 1354.45 over 298 frames.
+M07UP26A0263I43 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0267I44, best cost 13.6418 + 1417.94 = 1431.59 over 298 frames.
+M07UP26A0267I44 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0269I47, best cost 15.9543 + 1562.14 = 1578.09 over 298 frames.
+M07UP26A0269I47 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0270I42, best cost 16.7402 + 1512.51 = 1529.25 over 298 frames.
+M07UP26A0270I42 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP26A0272I44, best cost 10.8537 + 1247.96 = 1258.81 over 298 frames.
+M07UP26A0272I44 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0641I438, best cost 15.0069 + 1399.3 = 1414.3 over 298 frames.
+M07UP27A0641I438 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I41, best cost 14.4378 + 1406.37 = 1420.81 over 298 frames.
+M07UP27A0647I41 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0647I43, best cost 18.1369 + 1437.26 = 1455.4 over 298 frames.
+M07UP27A0647I43 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP27A0657I303, best cost 20.3552 + 2443.56 = 2463.91 over 498 frames.
+M07UP27A0657I303 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0216I301, best cost 11.3729 + 2524 = 2535.37 over 498 frames.
+M07UP28A0216I301 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0218I300, best cost 23.3852 + 2385.03 = 2408.42 over 498 frames.
+M07UP28A0218I300 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I40, best cost 14.0268 + 1434.55 = 1448.57 over 298 frames.
+M07UP28A0219I40 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0219I505, best cost 10.5836 + 1442.46 = 1453.05 over 300 frames.
+M07UP28A0219I505 shahadxola 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I302, best cost 16.5449 + 2493.05 = 2509.6 over 498 frames.
+M07UP28A0225I302 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I40, best cost 23.1313 + 1418.09 = 1441.22 over 298 frames.
+M07UP28A0225I40 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP28A0225I41, best cost 13.0166 + 1668.9 = 1681.92 over 298 frames.
+M07UP28A0225I41 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0506I301, best cost 20.438 + 2238.74 = 2259.18 over 498 frames.
+M07UP29A0506I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I42, best cost 21.7677 + 1474.76 = 1496.53 over 298 frames.
+M07UP29A0509I42 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0509I45, best cost 14.1169 + 1440.19 = 1454.31 over 298 frames.
+M07UP29A0509I45 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I303, best cost 19.6331 + 2326.97 = 2346.61 over 500 frames.
+M07UP29A0510I303 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0510I44, best cost 15.5292 + 1339.08 = 1354.61 over 298 frames.
+M07UP29A0510I44 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I301, best cost 16.5254 + 2410.02 = 2426.55 over 498 frames.
+M07UP29A0511I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0511I42, best cost 15.3315 + 1534.1 = 1549.43 over 298 frames.
+M07UP29A0511I42 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0513I44, best cost 10.7738 + 1414.43 = 1425.21 over 298 frames.
+M07UP29A0513I44 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0514I41, best cost 15.8331 + 1465.92 = 1481.75 over 298 frames.
+M07UP29A0514I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0516I41, best cost 11.292 + 1576.95 = 1588.24 over 298 frames.
+M07UP29A0516I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0517I303, best cost 20.3633 + 2404.16 = 2424.53 over 498 frames.
+M07UP29A0517I303 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I42, best cost 15.8773 + 1352.98 = 1368.85 over 298 frames.
+M07UP29A0520I42 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0520I45, best cost 19.4298 + 1487.42 = 1506.85 over 298 frames.
+M07UP29A0520I45 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I303, best cost 25.435 + 2328.29 = 2353.72 over 498 frames.
+M07UP29A0521I303 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP29A0521I47, best cost 16.8042 + 1358.54 = 1375.35 over 298 frames.
+M07UP29A0521I47 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1290I43, best cost 13.5397 + 1407.77 = 1421.31 over 298 frames.
+M07UP31A1290I43 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1291I42, best cost 20.9632 + 1439.53 = 1460.49 over 298 frames.
+M07UP31A1291I42 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1292I301, best cost 22.0584 + 2346.95 = 2369 over 498 frames.
+M07UP31A1292I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I302, best cost 32.766 + 2282 = 2314.77 over 498 frames.
+M07UP31A1294I302 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1294I43, best cost 20.2495 + 1461.1 = 1481.35 over 298 frames.
+M07UP31A1294I43 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1296I500, best cost 24.1436 + 2119.64 = 2143.78 over 498 frames.
+M07UP31A1296I500 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1300I300, best cost 25.1263 + 2671.97 = 2697.1 over 498 frames.
+M07UP31A1300I300 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1302I301, best cost 29.8919 + 2350.16 = 2380.05 over 498 frames.
+M07UP31A1302I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I302, best cost 32.1582 + 2407.36 = 2439.51 over 498 frames.
+M07UP31A1306I302 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I303, best cost 19.8951 + 2724.62 = 2744.52 over 498 frames.
+M07UP31A1306I303 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1306I43, best cost 13.6118 + 1324.85 = 1338.46 over 298 frames.
+M07UP31A1306I43 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1307I430, best cost 23.3271 + 1434.61 = 1457.93 over 298 frames.
+M07UP31A1307I430 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1308I435, best cost 19.0009 + 1424.27 = 1443.27 over 298 frames.
+M07UP31A1308I435 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1309I44, best cost 15.2765 + 1613.74 = 1629.02 over 298 frames.
+M07UP31A1309I44 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP31A1310I45, best cost 18.5849 + 1538.12 = 1556.71 over 298 frames.
+M07UP31A1310I45 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0551I43, best cost 13.8255 + 1548.2 = 1562.03 over 300 frames.
+M07UP34A0551I43 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0554I301, best cost 19.8983 + 2331.47 = 2351.37 over 498 frames.
+M07UP34A0554I301 baalaaghaatxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0555I300, best cost 25.0302 + 2668.53 = 2693.56 over 498 frames.
+M07UP34A0555I300 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0558I42, best cost 17.2689 + 1508.38 = 1525.65 over 298 frames.
+M07UP34A0558I42 baalaaghaatxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I303, best cost 27.0896 + 2396.13 = 2423.22 over 498 frames.
+M07UP34A0559I303 ujjeina 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0559I44, best cost 20.3602 + 1443.4 = 1463.76 over 298 frames.
+M07UP34A0559I44 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0561I300, best cost 24.0125 + 2663.19 = 2687.2 over 498 frames.
+M07UP34A0561I300 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0563I303, best cost 36.779 + 2279.42 = 2316.2 over 498 frames.
+M07UP34A0563I303 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0564I43, best cost 15.457 + 1443.91 = 1459.37 over 298 frames.
+M07UP34A0564I43 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP34A0566I301, best cost 24.1291 + 2257.64 = 2281.77 over 498 frames.
+M07UP34A0566I301 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0443I41, best cost 17.3184 + 1500.05 = 1517.36 over 298 frames.
+M07UP35A0443I41 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0446I301, best cost 19.3558 + 2454.48 = 2473.84 over 498 frames.
+M07UP35A0446I301 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0448I301, best cost 27.534 + 2218.62 = 2246.16 over 498 frames.
+M07UP35A0448I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0450I301, best cost 27.4426 + 2629.08 = 2656.52 over 498 frames.
+M07UP35A0450I301 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0452I303, best cost 33.3244 + 2254.25 = 2287.58 over 498 frames.
+M07UP35A0452I303 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I303, best cost 29.894 + 2230.42 = 2260.32 over 498 frames.
+M07UP35A0455I303 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0455I426, best cost 22.1751 + 1523.71 = 1545.89 over 298 frames.
+M07UP35A0455I426 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0456I43, best cost 20.8355 + 1462.09 = 1482.92 over 298 frames.
+M07UP35A0456I43 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0457I41, best cost 17.7233 + 1540.42 = 1558.15 over 298 frames.
+M07UP35A0457I41 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP35A0459I303, best cost 16.6532 + 2327.75 = 2344.4 over 498 frames.
+M07UP35A0459I303 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I301, best cost 32.755 + 2417.32 = 2450.07 over 498 frames.
+M07UP36A0825I301 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0825I40, best cost 17.0534 + 1420.66 = 1437.71 over 298 frames.
+M07UP36A0825I40 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0827I300, best cost 32.1169 + 2199.41 = 2231.52 over 498 frames.
+M07UP36A0827I300 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0829I302, best cost 28.0928 + 2411.74 = 2439.83 over 498 frames.
+M07UP36A0829I302 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0832I302, best cost 22.9841 + 2458.69 = 2481.68 over 498 frames.
+M07UP36A0832I302 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP36A0840I41, best cost 15.4541 + 1343.58 = 1359.03 over 298 frames.
+M07UP36A0840I41 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0301I42, best cost 8.65269 + 1272.34 = 1280.99 over 298 frames.
+M07UP37A0301I42 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0302I45, best cost 10.4312 + 1594.24 = 1604.67 over 298 frames.
+M07UP37A0302I45 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0306I47, best cost 16.0827 + 1602.65 = 1618.73 over 298 frames.
+M07UP37A0306I47 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0307I303, best cost 15.3327 + 2561.4 = 2576.73 over 498 frames.
+M07UP37A0307I303 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I40, best cost 8.94234 + 1655.44 = 1664.38 over 298 frames.
+M07UP37A0309I40 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0309I44, best cost 15.3676 + 1587.67 = 1603.04 over 300 frames.
+M07UP37A0309I44 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I43, best cost 17.0341 + 1430.22 = 1447.26 over 298 frames.
+M07UP37A0311I43 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I44, best cost 18.5644 + 1414.34 = 1432.91 over 298 frames.
+M07UP37A0311I44 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0311I48, best cost 12.5573 + 1297.87 = 1310.42 over 300 frames.
+M07UP37A0311I48 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0313I427, best cost 15.3472 + 1461.21 = 1476.56 over 298 frames.
+M07UP37A0313I427 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0314I300, best cost 18.7681 + 2582.74 = 2601.51 over 498 frames.
+M07UP37A0314I300 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0316I305, best cost 15.5679 + 2680.06 = 2695.62 over 498 frames.
+M07UP37A0316I305 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I47, best cost 12.2854 + 1410.87 = 1423.15 over 298 frames.
+M07UP37A0317I47 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0317I48, best cost 14.9771 + 1596.67 = 1611.65 over 298 frames.
+M07UP37A0317I48 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP37A0319I301, best cost 21.2983 + 2679.53 = 2700.83 over 498 frames.
+M07UP37A0319I301 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0103I43, best cost 14.8341 + 1436.45 = 1451.29 over 298 frames.
+M07UP38A0103I43 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP38A0107I43, best cost 12.179 + 1461.54 = 1473.71 over 298 frames.
+M07UP38A0107I43 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0774I301, best cost 21.3116 + 2216.08 = 2237.39 over 498 frames.
+M07UP39A0774I301 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0776I302, best cost 12.8974 + 2191.69 = 2204.58 over 498 frames.
+M07UP39A0776I302 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I300, best cost 14.8185 + 2315.65 = 2330.47 over 498 frames.
+M07UP39A0777I300 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0777I423, best cost 13.2326 + 1315.19 = 1328.42 over 298 frames.
+M07UP39A0777I423 niimaca 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0778I303, best cost 26.6798 + 2436.91 = 2463.59 over 498 frames.
+M07UP39A0778I303 indoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP39A0781I501, best cost 12.0581 + 1895.19 = 1907.25 over 398 frames.
+M07UP39A0781I501 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I301, best cost 16.3292 + 2747.94 = 2764.27 over 498 frames.
+M07UP41A0273I301 bhindxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0273I47, best cost 13.763 + 1494.93 = 1508.69 over 298 frames.
+M07UP41A0273I47 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0275I300, best cost 22.1716 + 2239.97 = 2262.14 over 498 frames.
+M07UP41A0275I300 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I300, best cost 20.7208 + 2489.19 = 2509.91 over 498 frames.
+M07UP41A0277I300 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0277I43, best cost 16.6145 + 1568.73 = 1585.35 over 298 frames.
+M07UP41A0277I43 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I301, best cost 17.7876 + 2462.43 = 2480.22 over 498 frames.
+M07UP41A0279I301 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I302, best cost 19.7998 + 2369.5 = 2389.3 over 498 frames.
+M07UP41A0279I302 indoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0279I47, best cost 15.4022 + 1605.64 = 1621.04 over 298 frames.
+M07UP41A0279I47 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I42, best cost 13.6716 + 1453.9 = 1467.58 over 298 frames.
+M07UP41A0280I42 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0280I45, best cost 17.2708 + 1578.64 = 1595.91 over 298 frames.
+M07UP41A0280I45 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0283I48, best cost 12.5857 + 1310.3 = 1322.88 over 298 frames.
+M07UP41A0283I48 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I303, best cost 25.3392 + 2430.83 = 2456.17 over 498 frames.
+M07UP41A0289I303 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0289I44, best cost 15.6106 + 1395.43 = 1411.04 over 300 frames.
+M07UP41A0289I44 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0290I47, best cost 15.9838 + 1416.52 = 1432.5 over 298 frames.
+M07UP41A0290I47 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I43, best cost 16.2881 + 1349.72 = 1366 over 298 frames.
+M07UP41A0291I43 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP41A0291I46, best cost 16.1591 + 1403.47 = 1419.63 over 298 frames.
+M07UP41A0291I46 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0111I46, best cost 18.1713 + 1380.83 = 1399 over 298 frames.
+M07UP42A0111I46 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0116I430, best cost 12.9966 + 1518.24 = 1531.23 over 298 frames.
+M07UP42A0116I430 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I419, best cost 16.5998 + 1424.37 = 1440.97 over 298 frames.
+M07UP42A0117I419 pannaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0117I423, best cost 12.9442 + 1501.36 = 1514.31 over 298 frames.
+M07UP42A0117I423 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I300, best cost 22.9496 + 2570.48 = 2593.43 over 498 frames.
+M07UP42A0119I300 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0119I46, best cost 18.9158 + 1558.72 = 1577.63 over 298 frames.
+M07UP42A0119I46 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I418, best cost 16.3456 + 1430.49 = 1446.84 over 298 frames.
+M07UP42A0120I418 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I424, best cost 17.2239 + 1454.15 = 1471.37 over 298 frames.
+M07UP42A0120I424 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0120I429, best cost 16.9812 + 1517.22 = 1534.2 over 298 frames.
+M07UP42A0120I429 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I302, best cost 16.5669 + 2499.15 = 2515.72 over 498 frames.
+M07UP42A0122I302 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I424, best cost 18.4852 + 1541.08 = 1559.57 over 298 frames.
+M07UP42A0122I424 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0122I46, best cost 23.6027 + 1499.43 = 1523.04 over 298 frames.
+M07UP42A0122I46 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I42, best cost 17.5971 + 1505.86 = 1523.46 over 298 frames.
+M07UP42A0123I42 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0123I424, best cost 13.6898 + 1560.95 = 1574.64 over 298 frames.
+M07UP42A0123I424 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0124I45, best cost 16.1901 + 1437.85 = 1454.04 over 298 frames.
+M07UP42A0124I45 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP42A0126I437, best cost 16.5749 + 1518.69 = 1535.26 over 298 frames.
+M07UP42A0126I437 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0148I300, best cost 22.1409 + 2634.28 = 2656.42 over 498 frames.
+M07UP43A0148I300 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0151I42, best cost 18.6661 + 1607.93 = 1626.6 over 298 frames.
+M07UP43A0151I42 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I43, best cost 14.1152 + 1310.05 = 1324.16 over 298 frames.
+M07UP43A0154I43 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0154I44, best cost 15.8381 + 1364.25 = 1380.09 over 298 frames.
+M07UP43A0154I44 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP43A0158I41, best cost 14.2983 + 1527.15 = 1541.45 over 298 frames.
+M07UP43A0158I41 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0614I48, best cost 16.5485 + 1526.74 = 1543.29 over 298 frames.
+M07UP45A0614I48 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0616I43, best cost 18.6822 + 1448.47 = 1467.15 over 298 frames.
+M07UP45A0616I43 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I41, best cost 18.315 + 1456.95 = 1475.26 over 298 frames.
+M07UP45A0624I41 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0624I44, best cost 22.0594 + 1432.08 = 1454.14 over 298 frames.
+M07UP45A0624I44 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0625I41, best cost 14.6351 + 1510.22 = 1524.85 over 298 frames.
+M07UP45A0625I41 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0627I43, best cost 13.9115 + 1313.79 = 1327.7 over 298 frames.
+M07UP45A0627I43 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0628I41, best cost 16.9723 + 1486.66 = 1503.63 over 298 frames.
+M07UP45A0628I41 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0629I303, best cost 20.4593 + 2636.15 = 2656.61 over 498 frames.
+M07UP45A0629I303 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0634I48, best cost 17.7145 + 1410.23 = 1427.94 over 298 frames.
+M07UP45A0634I48 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0635I42, best cost 20.0205 + 1494.83 = 1514.85 over 298 frames.
+M07UP45A0635I42 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP45A0636I300, best cost 12.5284 + 2173.09 = 2185.61 over 498 frames.
+M07UP45A0636I300 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I417, best cost 19.7619 + 1450.82 = 1470.58 over 298 frames.
+M07UP48A0013I417 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0013I43, best cost 13.9526 + 1483.76 = 1497.71 over 298 frames.
+M07UP48A0013I43 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0014I44, best cost 12.0528 + 1480.53 = 1492.58 over 298 frames.
+M07UP48A0014I44 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0015I422, best cost 17.235 + 1458.68 = 1475.92 over 298 frames.
+M07UP48A0015I422 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0018I422, best cost 12.2873 + 1552.99 = 1565.27 over 298 frames.
+M07UP48A0018I422 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0020I43, best cost 12.5426 + 1362.47 = 1375.01 over 298 frames.
+M07UP48A0020I43 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0021I45, best cost 16.4603 + 1345.15 = 1361.61 over 298 frames.
+M07UP48A0021I45 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0024I49, best cost 17.1649 + 1543.94 = 1561.1 over 304 frames.
+M07UP48A0024I49 niimaca 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0028I45, best cost 12.7156 + 1528.31 = 1541.03 over 298 frames.
+M07UP48A0028I45 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP48A0031I44, best cost 17.5928 + 1547.9 = 1565.49 over 298 frames.
+M07UP48A0031I44 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0861I41, best cost 15.2986 + 1356.69 = 1371.99 over 300 frames.
+M07UP49A0861I41 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0863I300, best cost 28.3826 + 2499.87 = 2528.26 over 498 frames.
+M07UP49A0863I300 satanaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0866I504, best cost 17.3513 + 1624.67 = 1642.03 over 298 frames.
+M07UP49A0866I504 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0869I301, best cost 22.3534 + 2455.67 = 2478.03 over 498 frames.
+M07UP49A0869I301 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP49A0880I43, best cost 21.5723 + 1438.38 = 1459.96 over 298 frames.
+M07UP49A0880I43 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0032I301, best cost 16.1267 + 2253.6 = 2269.72 over 430 frames.
+M07UP51A0032I301 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I42, best cost 19.3112 + 1509.03 = 1528.34 over 298 frames.
+M07UP51A0033I42 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0033I48, best cost 17.6922 + 1569.45 = 1587.15 over 298 frames.
+M07UP51A0033I48 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0035I302, best cost 27.1766 + 2441.07 = 2468.25 over 498 frames.
+M07UP51A0035I302 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I300, best cost 17.866 + 2544.22 = 2562.09 over 498 frames.
+M07UP51A0036I300 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I44, best cost 17.5543 + 1434.43 = 1451.98 over 298 frames.
+M07UP51A0036I44 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I45, best cost 17.276 + 1446.98 = 1464.25 over 298 frames.
+M07UP51A0036I45 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0036I48, best cost 17.4842 + 1468.35 = 1485.83 over 298 frames.
+M07UP51A0036I48 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0038I48, best cost 18.1617 + 1514.5 = 1532.67 over 298 frames.
+M07UP51A0038I48 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0041I300, best cost 17.1921 + 2144.36 = 2161.55 over 498 frames.
+M07UP51A0041I300 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0042I302, best cost 27.4585 + 2285.35 = 2312.81 over 498 frames.
+M07UP51A0042I302 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I410, best cost 13.1266 + 1464.33 = 1477.46 over 298 frames.
+M07UP51A0043I410 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I44, best cost 17.6339 + 1520.16 = 1537.79 over 298 frames.
+M07UP51A0043I44 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0043I45, best cost 20.2318 + 1380.84 = 1401.07 over 298 frames.
+M07UP51A0043I45 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0044I303, best cost 36.2865 + 2317.05 = 2353.34 over 498 frames.
+M07UP51A0044I303 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0045I412, best cost 22.4899 + 1516.57 = 1539.06 over 298 frames.
+M07UP51A0045I412 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I412, best cost 16.702 + 1362.28 = 1378.98 over 298 frames.
+M07UP51A0046I412 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0046I43, best cost 20.3841 + 1473.37 = 1493.75 over 298 frames.
+M07UP51A0046I43 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I44, best cost 16.722 + 1570.44 = 1587.16 over 298 frames.
+M07UP51A0049I44 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0049I48, best cost 19.9342 + 1577.6 = 1597.54 over 298 frames.
+M07UP51A0049I48 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I300, best cost 24.0539 + 2304.22 = 2328.27 over 498 frames.
+M07UP51A0050I300 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I42, best cost 23.1304 + 1448.43 = 1471.56 over 298 frames.
+M07UP51A0050I42 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0050I45, best cost 12.3439 + 1481.9 = 1494.24 over 298 frames.
+M07UP51A0050I45 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I301, best cost 19.3664 + 2237.19 = 2256.55 over 498 frames.
+M07UP51A0052I301 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I303, best cost 19.546 + 2148.92 = 2168.47 over 498 frames.
+M07UP51A0052I303 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I412, best cost 15.2661 + 1347.09 = 1362.35 over 298 frames.
+M07UP51A0052I412 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0052I45, best cost 17.1931 + 1426.86 = 1444.06 over 298 frames.
+M07UP51A0052I45 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0053I302, best cost 22.5088 + 2310.62 = 2333.13 over 498 frames.
+M07UP51A0053I302 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I40, best cost 13.3747 + 1579.5 = 1592.88 over 298 frames.
+M07UP51A0054I40 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0054I47, best cost 13.1396 + 1570.29 = 1583.42 over 298 frames.
+M07UP51A0054I47 deewaasa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP51A0094I411, best cost 24.9378 + 1390.51 = 1415.45 over 298 frames.
+M07UP51A0094I411 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I300, best cost 24.864 + 2373.26 = 2398.13 over 498 frames.
+M07UP52A0193I300 betuula 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I302, best cost 28.7553 + 2314.23 = 2342.98 over 498 frames.
+M07UP52A0193I302 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0193I43, best cost 18.5776 + 1356.83 = 1375.41 over 298 frames.
+M07UP52A0193I43 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0195I45, best cost 15.5445 + 1568.02 = 1583.56 over 298 frames.
+M07UP52A0195I45 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I300, best cost 24.95 + 2419.47 = 2444.42 over 498 frames.
+M07UP52A0196I300 dxindxorii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0196I41, best cost 12.5616 + 1473.17 = 1485.74 over 292 frames.
+M07UP52A0196I41 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0199I41, best cost 14.2287 + 1637.53 = 1651.76 over 298 frames.
+M07UP52A0199I41 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I302, best cost 26.2713 + 2634.25 = 2660.52 over 498 frames.
+M07UP52A0202I302 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I40, best cost 14.3084 + 1594.5 = 1608.8 over 298 frames.
+M07UP52A0202I40 betuula 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0202I45, best cost 20.6256 + 1610.81 = 1631.44 over 298 frames.
+M07UP52A0202I45 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0205I43, best cost 18.5075 + 1487.34 = 1505.85 over 298 frames.
+M07UP52A0205I43 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I302, best cost 26.0592 + 2373.3 = 2399.36 over 498 frames.
+M07UP52A0206I302 dxindxorii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0206I40, best cost 11.5744 + 1579.28 = 1590.85 over 298 frames.
+M07UP52A0206I40 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0207I42, best cost 18.2373 + 1547.17 = 1565.41 over 298 frames.
+M07UP52A0207I42 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I300, best cost 24.9159 + 2585.65 = 2610.56 over 498 frames.
+M07UP52A0210I300 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I43, best cost 14.6132 + 1551.55 = 1566.16 over 298 frames.
+M07UP52A0210I43 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0210I603, best cost 35.6713 + 5212.55 = 5248.22 over 998 frames.
+M07UP52A0210I603 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0211I300, best cost 18.864 + 2738.59 = 2757.45 over 500 frames.
+M07UP52A0211I300 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP52A0213I45, best cost 14.2834 + 1290.99 = 1305.27 over 298 frames.
+M07UP52A0213I45 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0072I44, best cost 18.1583 + 1532.41 = 1550.57 over 298 frames.
+M07UP53A0072I44 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0076I413, best cost 20.0545 + 1494.9 = 1514.95 over 298 frames.
+M07UP53A0076I413 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0079I42, best cost 13.8811 + 1538.46 = 1552.34 over 298 frames.
+M07UP53A0079I42 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I41, best cost 16.5184 + 1269.33 = 1285.85 over 298 frames.
+M07UP53A0080I41 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I413, best cost 20.1518 + 1398.83 = 1418.99 over 298 frames.
+M07UP53A0080I413 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0080I42, best cost 15.9553 + 1369.43 = 1385.38 over 298 frames.
+M07UP53A0080I42 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0081I424, best cost 11.8435 + 1312.6 = 1324.44 over 298 frames.
+M07UP53A0081I424 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0083I419, best cost 15.3877 + 1481.74 = 1497.13 over 298 frames.
+M07UP53A0083I419 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0085I45, best cost 18.5658 + 1578.31 = 1596.87 over 300 frames.
+M07UP53A0085I45 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0088I413, best cost 19.5976 + 1534.73 = 1554.32 over 298 frames.
+M07UP53A0088I413 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP53A0090I410, best cost 16.7487 + 1602.9 = 1619.65 over 300 frames.
+M07UP53A0090I410 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1272I428, best cost 12.4597 + 1486.77 = 1499.23 over 298 frames.
+M07UP54A1272I428 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1280I300, best cost 23.1733 + 2484.28 = 2507.45 over 498 frames.
+M07UP54A1280I300 siidhii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP54A1290I45, best cost 16.8892 + 1528.43 = 1545.32 over 300 frames.
+M07UP54A1290I45 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0462I422, best cost 13.6867 + 1397.04 = 1410.72 over 298 frames.
+M07UP55A0462I422 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I303, best cost 20.2338 + 2281.32 = 2301.55 over 498 frames.
+M07UP55A0464I303 shaajaapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0464I42, best cost 19.4296 + 1486.34 = 1505.77 over 298 frames.
+M07UP55A0464I42 niimaca 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I300, best cost 31.9576 + 2440.1 = 2472.06 over 498 frames.
+M07UP55A0469I300 jhaabuaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0469I40, best cost 25.7089 + 1404.37 = 1430.08 over 298 frames.
+M07UP55A0469I40 haradaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0470I301, best cost 24.4408 + 2374.54 = 2398.99 over 498 frames.
+M07UP55A0470I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0474I40, best cost 14.4876 + 1597.58 = 1612.07 over 298 frames.
+M07UP55A0474I40 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0476I42, best cost 22.4048 + 1575.92 = 1598.32 over 298 frames.
+M07UP55A0476I42 mureinaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0477I301, best cost 24.8728 + 2355.39 = 2380.26 over 498 frames.
+M07UP55A0477I301 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP55A0480I300, best cost 17.1529 + 2498.5 = 2515.66 over 498 frames.
+M07UP55A0480I300 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0695I300, best cost 22.3022 + 2635.67 = 2657.97 over 498 frames.
+M07UP56A0695I300 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0699I301, best cost 25.0949 + 2382.38 = 2407.48 over 498 frames.
+M07UP56A0699I301 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0706I43, best cost 17.8035 + 1564.87 = 1582.68 over 298 frames.
+M07UP56A0706I43 gwaaliyara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0707I45, best cost 13.5566 + 1312.22 = 1325.77 over 298 frames.
+M07UP56A0707I45 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0708I47, best cost 26.2071 + 1502.17 = 1528.38 over 298 frames.
+M07UP56A0708I47 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP56A0710I421, best cost 21.162 + 1472.2 = 1493.37 over 298 frames.
+M07UP56A0710I421 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0404I43, best cost 15.6498 + 1408.18 = 1423.83 over 298 frames.
+M07UP57A0404I43 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0406I300, best cost 21.7969 + 2362.54 = 2384.34 over 498 frames.
+M07UP57A0406I300 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0409I42, best cost 15.4318 + 1354.87 = 1370.31 over 298 frames.
+M07UP57A0409I42 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0411I301, best cost 18.2393 + 2443.6 = 2461.83 over 498 frames.
+M07UP57A0411I301 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I301, best cost 20.2926 + 2263.78 = 2284.07 over 498 frames.
+M07UP57A0413I301 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I41, best cost 13.7623 + 1572.21 = 1585.97 over 298 frames.
+M07UP57A0413I41 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0413I507, best cost 11.628 + 1583.03 = 1594.66 over 298 frames.
+M07UP57A0413I507 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0416I301, best cost 26.9805 + 2587.12 = 2614.1 over 498 frames.
+M07UP57A0416I301 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I301, best cost 26.9191 + 2446.14 = 2473.06 over 498 frames.
+M07UP57A0417I301 shyopura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0417I42, best cost 13.1034 + 1578.05 = 1591.15 over 298 frames.
+M07UP57A0417I42 ujjeina 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP57A0418I303, best cost 16.9732 + 2524.6 = 2541.57 over 498 frames.
+M07UP57A0418I303 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I416, best cost 12.2471 + 1307.32 = 1319.56 over 298 frames.
+M07UP60A0942I416 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0942I418, best cost 15.4959 + 1404.24 = 1419.74 over 298 frames.
+M07UP60A0942I418 txikamagadxhq 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0944I42, best cost 17.2205 + 1478.88 = 1496.11 over 298 frames.
+M07UP60A0944I42 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0946I303, best cost 32.0064 + 2431.78 = 2463.79 over 498 frames.
+M07UP60A0946I303 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0954I303, best cost 13.5659 + 2101.54 = 2115.1 over 498 frames.
+M07UP60A0954I303 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I301, best cost 27.5178 + 2170.88 = 2198.4 over 498 frames.
+M07UP60A0955I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0955I302, best cost 15.5482 + 2124.13 = 2139.68 over 498 frames.
+M07UP60A0955I302 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0956I414, best cost 18.9758 + 1508.27 = 1527.25 over 298 frames.
+M07UP60A0956I414 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I412, best cost 19.4389 + 1412.56 = 1432 over 298 frames.
+M07UP60A0957I412 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP60A0957I413, best cost 14.685 + 1383.18 = 1397.87 over 298 frames.
+M07UP60A0957I413 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0966I300, best cost 20.253 + 2221.47 = 2241.72 over 498 frames.
+M07UP61A0966I300 raayeseena 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0968I301, best cost 17.4934 + 2182.29 = 2199.78 over 498 frames.
+M07UP61A0968I301 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0971I302, best cost 26.9614 + 2292.39 = 2319.35 over 498 frames.
+M07UP61A0971I302 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0972I44, best cost 17.844 + 1511.79 = 1529.63 over 298 frames.
+M07UP61A0972I44 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP61A0980I301, best cost 26.6587 + 2564.88 = 2591.54 over 498 frames.
+M07UP61A0980I301 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I300, best cost 29.6005 + 2510.53 = 2540.13 over 498 frames.
+M07UP64A0382I300 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0382I301, best cost 20.1093 + 2569.57 = 2589.68 over 498 frames.
+M07UP64A0382I301 mandasoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0386I42, best cost 16.0747 + 1499.78 = 1515.86 over 298 frames.
+M07UP64A0386I42 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0389I42, best cost 18.5934 + 1333.35 = 1351.95 over 298 frames.
+M07UP64A0389I42 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0390I300, best cost 23.4589 + 2338.37 = 2361.83 over 498 frames.
+M07UP64A0390I300 damoha 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I302, best cost 39.9136 + 2350.26 = 2390.18 over 498 frames.
+M07UP64A0391I302 indoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0391I303, best cost 27.9165 + 2383.17 = 2411.08 over 498 frames.
+M07UP64A0391I303 betuula 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0392I301, best cost 13.1772 + 2059.4 = 2072.57 over 498 frames.
+M07UP64A0392I301 baalaaghaatxa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0393I41, best cost 15.8467 + 1547.06 = 1562.91 over 298 frames.
+M07UP64A0393I41 riiwaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0396I43, best cost 14.8749 + 1607.97 = 1622.85 over 300 frames.
+M07UP64A0396I43 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0399I302, best cost 25.6203 + 2439.96 = 2465.58 over 498 frames.
+M07UP64A0399I302 siwanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I300, best cost 35.7414 + 2552.38 = 2588.12 over 498 frames.
+M07UP64A0400I300 saagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0400I426, best cost 20.0807 + 1457.87 = 1477.95 over 298 frames.
+M07UP64A0400I426 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP64A0401I43, best cost 14.0559 + 1526.5 = 1540.55 over 300 frames.
+M07UP64A0401I43 badxqawaanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0674I303, best cost 21.206 + 2517.68 = 2538.88 over 498 frames.
+M07UP66A0674I303 aliraajapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0676I303, best cost 17.5931 + 2581.46 = 2599.05 over 498 frames.
+M07UP66A0676I303 umariyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0684I43, best cost 17.6647 + 1439.91 = 1457.57 over 298 frames.
+M07UP66A0684I43 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0685I42, best cost 22.0887 + 1482.05 = 1504.14 over 298 frames.
+M07UP66A0685I42 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0687I301, best cost 13.5594 + 2153.51 = 2167.07 over 498 frames.
+M07UP66A0687I301 dhaara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0688I410, best cost 17.6831 + 1319.8 = 1337.48 over 298 frames.
+M07UP66A0688I410 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP66A0692I301, best cost 21.8829 + 2422.34 = 2444.22 over 498 frames.
+M07UP66A0692I301 hoshangaabaada 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I42, best cost 14.8606 + 1507.18 = 1522.04 over 298 frames.
+M07UP72A0730I42 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0730I46, best cost 18.5344 + 1453.52 = 1472.05 over 298 frames.
+M07UP72A0730I46 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP72A0731I42, best cost 19.2321 + 1596.77 = 1616 over 298 frames.
+M07UP72A0731I42 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0922I300, best cost 18.0218 + 2581.3 = 2599.32 over 498 frames.
+M07UP73A0922I300 chatarapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0923I41, best cost 13.7592 + 1516.52 = 1530.28 over 298 frames.
+M07UP73A0923I41 siihoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0924I41, best cost 17.2265 + 1452.69 = 1469.91 over 298 frames.
+M07UP73A0924I41 aliraajapura 
+LOG (lattice-scale:main():lattice-scale.cc:90) Done 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0925I42, best cost 13.6745 + 1306.31 = 1319.99 over 298 frames.
+M07UP73A0925I42 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0927I43, best cost 22.9491 + 1402.83 = 1425.78 over 298 frames.
+M07UP73A0927I43 kharagona 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0929I42, best cost 23.9247 + 1509.03 = 1532.95 over 298 frames.
+M07UP73A0929I42 raajagadxhqa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0930I43, best cost 24.4008 + 1425.91 = 1450.31 over 298 frames.
+M07UP73A0930I43 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0931I49, best cost 16.8781 + 1509.19 = 1526.07 over 298 frames.
+M07UP73A0931I49 datiyaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0937I42, best cost 12.3306 + 1415.18 = 1427.51 over 298 frames.
+M07UP73A0937I42 ratalaama 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP73A0938I42, best cost 17.2464 + 1394.64 = 1411.88 over 298 frames.
+M07UP73A0938I42 indoura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0802I303, best cost 29.696 + 2318.4 = 2348.09 over 498 frames.
+M07UP74A0802I303 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0813I300, best cost 20.4082 + 2266.04 = 2286.45 over 498 frames.
+M07UP74A0813I300 gunaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0814I301, best cost 20.2882 + 2238.58 = 2258.87 over 504 frames.
+M07UP74A0814I301 anuupapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP74A0817I42, best cost 18.8887 + 1396.29 = 1415.18 over 300 frames.
+M07UP74A0817I42 raayeseena 
+LOG (lattice-add-penalty:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 553 lattices.
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0755I303, best cost 30.8631 + 2415.37 = 2446.23 over 498 frames.
+M07UP75A0755I303 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0758I300, best cost 22.4696 + 2394.06 = 2416.53 over 498 frames.
+M07UP75A0758I300 katxanii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I302, best cost 27.5808 + 2499.15 = 2526.73 over 498 frames.
+M07UP75A0764I302 mandxalaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0764I42, best cost 19.5582 + 1527.31 = 1546.87 over 298 frames.
+M07UP75A0764I42 burahaanapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0768I40, best cost 14.5098 + 1433.13 = 1447.64 over 298 frames.
+M07UP75A0768I40 ashokanagara 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0769I301, best cost 24.909 + 2276.03 = 2300.94 over 498 frames.
+M07UP75A0769I301 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0770I303, best cost 29.4166 + 2358.21 = 2387.62 over 498 frames.
+M07UP75A0770I303 khandxawaa 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I42, best cost 15.8295 + 1421.84 = 1437.67 over 298 frames.
+M07UP75A0771I42 singaroulii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0771I43, best cost 16.0403 + 1449.44 = 1465.48 over 298 frames.
+M07UP75A0771I43 jabalapura 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0772I300, best cost 15.4385 + 2259.69 = 2275.13 over 498 frames.
+M07UP75A0772I300 shiwapurii 
+LOG (lattice-best-path:main():lattice-best-path.cc:99) For utterance M07UP75A0773I41, best cost 13.2975 + 1384.08 = 1397.38 over 298 frames.
+M07UP75A0773I41 shyopura 
+LOG (lattice-best-path:main():lattice-best-path.cc:124) Overall cost per frame is 4.92127 = 0.0504401 [graph] + 4.87083 [acoustic] over 207364 frames.
+LOG (lattice-best-path:main():lattice-best-path.cc:128) Done 553 lattices, failed for 0
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Jul 25 02:12:10 IST 2016, elapsed time 1 seconds

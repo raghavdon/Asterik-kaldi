@@ -1,0 +1,130 @@
+don_223725996: *******************************************
+don_223726009: Recognition Test Call Date & Time : 09/08/2016 22:37:26
+don_223726010: Channel: SIP/don-00000001, Extension: 1234, Caller ID: don
+don_223744704: *******************************************
+don_223744704: Recognition Test Call Date & Time : 09/08/2016 22:37:44
+don_223744704: Channel: SIP/don-00000002, Extension: 1234, Caller ID: don
+don_223807343: Please say  state
+don_223807343: state Recording Start
+don_223810843: state Recording END
+don_223813545: Recognized state uttarpradesh with  Score: 1.00
+don_223813545: district vaild word : uttarpradesh
+don_223817424: Please say  "haan" or "nahin"
+don_223817424: yes_no Recording Start
+don_223819867: yes_no Recording END
+don_223820478: Recognized haan with  Score: 1.00
+don_223820478: Confirmation : haan
+don_223820478: district recognisation :
+don_223820478: say_district
+don_223826193: district Recording Start
+don_223830675: Recognized ilaahaabaada with  Score: 1.00
+don_223831108: query : SELECT "AgmarkName" FROM "Agri_ASR"."DistrictMaster" WHERE "DistrictName" = 'ilaahaabaada'
+don_223831108: valid name :Allahabad
+don_223831108: district vaild word : Allahabad
+don_223834732: Please say  "haan" or "nahin"
+don_223834732: yes_no Recording Start
+don_223837023: yes_no Recording END
+don_223837427: Recognized haan with  Score: 1.00
+don_223837427: Confirmation : haan
+don_223837427: district code for district Allahabad
+don_223837448: SELECT "DistrictCode" FROM "Agri_ASR"."DistrictMaster" WHERE "AgmarkName"='Allahabad'
+don_223837448: query result : UPAH
+don_223837448: fecting market and district code for district code UPAH
+don_223837505: SELECT "DistrictCode","MarketCode" FROM "Agri_ASR"."MarketMaster" WHERE "DistrictCode" = 'UPAH'
+don_223837505: district recognisation returning : UPAH----- UPAHAJ 
+don_223837505: district recognisation returning : UPAH----- UPAHAL 
+don_223837505: district recognisation returning : UPAH----- UPAHJA 
+don_223837505: district recognisation returning : UPAH----- UPAHSI 
+don_223837505: commodity recognisation :
+don_223840964: say commodity 
+don_223845012: commodity Recording Start
+don_223848454: commodity Recording END
+don_223849265: Recognized pyaaja with  Score: 1.00
+don_223849265: query for valid word
+don_223849437: query : SELECT "CommodityName" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName" = 'pyaaja'
+don_223849437: valid name :Onion_Other
+don_223851352: yousaid: Onion_Other----- pls say yes or no
+don_223852853: Please say  "haan" or "nahin"
+don_223852853: yes_no Recording Start
+don_223855201: yes_no Recording END
+don_223855604: Recognized haan with  Score: 1.00
+don_223855604: confirmation : haan
+don_223855605: SELECT "CommodityCode" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName"='pyaaja'
+don_223855605: query result :CC0392 
+don_223855605: total market =0
+don_223855605: fetching for market UPAHAJ of district UPAH
+don_223855605: Fetching Price info from Database for  in 
+don_223855605: Fetching district code
+don_223855605: Fetching Price  UPAH, market code: UPAHAJ,commodity code: CC0392
+don_223855605: raghav_fetch_price
+don_223855822: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHAJ%' AND "CommodityCode" LIKE '%CC0392%'
+don_223855822: 0
+don_223855822: fetching for market UPAHAL of district UPAH
+don_223855822: Fetching Price info from Database for  in 
+don_223855822: Fetching district code
+don_223855822: Fetching Price  UPAH, market code: UPAHAL,commodity code: CC0392
+don_223855822: raghav_fetch_price
+don_223855823: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHAL%' AND "CommodityCode" LIKE '%CC0392%'
+don_223855823: 1
+don_223855823: fetching for market UPAHJA of district UPAH
+don_223855823: Fetching Price info from Database for  in 
+don_223855823: Fetching district code
+don_223855823: Fetching Price  UPAH, market code: UPAHJA,commodity code: CC0392
+don_223855823: raghav_fetch_price
+don_223855824: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHJA%' AND "CommodityCode" LIKE '%CC0392%'
+don_223855824: 2
+don_223855824: fetching for market UPAHSI of district UPAH
+don_223855824: Fetching Price info from Database for  in 
+don_223855824: Fetching district code
+don_223855824: Fetching Price  UPAH, market code: UPAHSI,commodity code: CC0392
+don_223855824: raghav_fetch_price
+don_223855825: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHSI%' AND "CommodityCode" LIKE '%CC0392%'
+don_223855825: 3
+don_223855825: No Price Info avaliable in Database for  in 
+don_223855825: Fetching Price for  in Neighbouring Districts in
+don_223903625: SELECT "NeighbourCode" FROM "Agri_ASR"."DistrictNeighbour" WHERE "DistrictCode" = '' AND "NeighbourCode" != ''
+don_223903625: No Price Info avaliable in Database for  in Neighbouring Districts
+don_223912110: yousaid: $Onion_Other----- pls say yes or no
+don_223913611: Please say  "haan" or "nahin"
+don_223913612: yes_no Recording Start
+don_223915930: yes_no Recording END
+don_223916346: Recognized haan with  Score: 1.00
+don_223916346: confirmation : haan
+don_223919548: say commodity again
+don_223919548: commodity Recording Start
+don_223922990: commodity Recording END
+don_223923667: Recognized aaluu with  Score: 1.00
+don_223923667: query for valid word
+don_223923668: query : SELECT "CommodityName" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName" = 'aaluu'
+don_223923668: valid name :Potato_Other
+don_223925332: yousaid: Potato_Other----- pls say yes or no
+don_223926833: Please say  "haan" or "nahin"
+don_223926833: yes_no Recording Start
+don_223928966: yes_no Recording END
+don_223929363: Recognized haan with  Score: 1.00
+don_223929363: confirmation : haan
+don_223929364: SELECT "CommodityCode" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName"='aaluu'
+don_223929364: query result :CC0496 
+don_223929364: total market =0
+don_223929364: fetching for market UPAHAJ of district UPAH
+don_223929364: Fetching Price info from Database for  in 
+don_223929364: Fetching district code
+don_223929364: Fetching Price  UPAH, market code: UPAHAJ,commodity code: CC0496
+don_223929364: raghav_fetch_price
+don_223929365: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHAJ%' AND "CommodityCode" LIKE '%CC0496%'
+don_223929365: 0
+don_223929365: fetching for market UPAHAL of district UPAH
+don_223929365: Fetching Price info from Database for  in 
+don_223929365: Fetching district code
+don_223929365: Fetching Price  UPAH, market code: UPAHAL,commodity code: CC0496
+don_223929365: raghav_fetch_price
+don_223929366: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHAL%' AND "CommodityCode" LIKE '%CC0496%'
+don_223929366: 1
+don_223929366: fetching for market UPAHJA of district UPAH
+don_223929366: Fetching Price info from Database for  in 
+don_223929366: Fetching district code
+don_223929366: Fetching Price  UPAH, market code: UPAHJA,commodity code: CC0496
+don_223929367: raghav_fetch_price
+don_223929367: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPAH%' AND "MarketCode" LIKE '%UPAHJA%' AND "CommodityCode" LIKE '%CC0496%'
+don_223929367: Number of Price Info avaliable in Database for  in : 1
+don_223929367: Model Price of Potato_Other at Jasra Market in Allahabad District is = Rs. 1530 per Quintal

@@ -1,0 +1,69 @@
+#!/usr/bin/php -q                                 
+<?php
+	
+function raghav_database_connect()
+	{
+		global $dbhost,$dbuser,$dbpass,$dbschema,$dbconn;
+		
+		$dbhost 	= '127.0.0.1';
+		$dbuser 	= 'raghav';
+		$dbpass 	= 'don123';
+		$dbschema	= "Agri_ASR";
+		$dbname		= 'raghav_speech';
+		
+		$dbconn = pg_pconnect("host=$dbhost dbname=$dbname user=$dbuser password=$dbpass");
+		
+		if (!$dbconn)				   					     
+		{
+			
+			return NULL;
+		}
+		else
+			return $dbconn;
+	}
+
+function raghav_districtname_from_districtcode($dctcode)
+	{
+		echo "raghav_districtname_from_districtcode";
+		
+		global $dbconn, $dbschema;
+		
+		$dbtablename	= "DistrictMaster";
+		
+		$dbcolumnname_1 = "\"DistrictName\"";
+		$dbcolumnname_2 = "\"DistrictCode\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'${dctcode}'";
+
+		
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+		
+		echo "$query";
+		$result = pg_query($dbconn, $query);
+		echo $result;
+		
+	
+		if (!$result) 
+		{
+			
+			exit("Query Failed: $query");
+		}
+	
+		$arr = pg_fetch_array($result, 0, PGSQL_NUM);
+			echo"ok";
+			echo $arr[0];
+		//#raghav_log("result: ${row[0]}");
+		$rtn=$arr[0];
+echo"papaaaa";
+			echo $rtn;
+		return $rtn;
+		
+		
+	}
+	
+
+
+?>
+

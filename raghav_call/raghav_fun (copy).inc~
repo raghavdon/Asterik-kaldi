@@ -1,0 +1,47 @@
+#!/usr/bin/php -q                                 
+<?php
+	
+
+function raghav_districtname_from_districtcode($dctcode)
+	{
+		raghav_fn_log("raghav_districtname_from_districtcode");
+		
+		global $dbconn, $dbschema;
+		
+		$dbtablename	= "DistrictMaster";
+		
+		$dbcolumnname_1 = "\"DistrictName\"";
+		$dbcolumnname_2 = "\"DistrictCode\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'${dctcode}'";
+
+		
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+		
+		raghav_fn_log($query);
+		$result = pg_query($dbconn, $query);
+		
+		
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		$row = pg_fetch_array($result, 0, PGSQL_NUM);
+			
+		//#raghav_log("result: ${row[0]}");
+		$rtn=$row[0];
+			
+		return $rtn;
+		
+		
+	}
+	
+
+
+?>
+

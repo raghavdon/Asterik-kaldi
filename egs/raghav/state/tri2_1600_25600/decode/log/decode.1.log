@@ -1,0 +1,385 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2_1600_25600/decode/lat.1.gz" 
+# Started at Mon Jul 25 00:37:42 IST 2016
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2_1600_25600/decode/lat.1.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- 
+F07UP02A0332I42 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP02A0332I42 is -4.44095 over 300 frames.
+F07UP02A0332I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP02A0332I43 is -4.09428 over 298 frames.
+F07UP06A0432I42 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP06A0432I42 is -3.4683 over 300 frames.
+F07UP07A0094I427 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP07A0094I427 is -3.90131 over 298 frames.
+F07UP07A0096I44 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP07A0096I44 is -4.62975 over 298 frames.
+F07UP09A0491I46 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP09A0491I46 is -4.66684 over 298 frames.
+F07UP11A1331I301 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP11A1331I301 is -3.51063 over 498 frames.
+F07UP19A0344I46 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP19A0344I46 is -3.56544 over 298 frames.
+F07UP21A0612I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP21A0612I41 is -3.88545 over 298 frames.
+F07UP22A1336I429 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1336I429 is -4.20165 over 298 frames.
+F07UP22A1336I501 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1336I501 is -3.78842 over 398 frames.
+F07UP22A1343I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1343I301 is -3.53192 over 498 frames.
+F07UP22A1343I47 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1343I47 is -4.71906 over 298 frames.
+F07UP22A1345I47 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1345I47 is -3.60391 over 298 frames.
+F07UP22A1346I435 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1346I435 is -4.66234 over 300 frames.
+F07UP23A0248I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP23A0248I41 is -5.18027 over 298 frames.
+F07UP24A0182I302 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0182I302 is -4.57472 over 498 frames.
+F07UP24A0182I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0182I41 is -4.86996 over 298 frames.
+F07UP24A0183I302 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0183I302 is -5.03728 over 498 frames.
+F07UP24A0183I47 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0183I47 is -4.56002 over 298 frames.
+F07UP25A1212I41 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP25A1212I41 is -5.05948 over 298 frames.
+F07UP25A1215I42 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP25A1215I42 is -4.61618 over 298 frames.
+F07UP26A0256I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP26A0256I43 is -4.58309 over 298 frames.
+F07UP28A0226I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0226I300 is -4.97903 over 498 frames.
+F07UP28A0226I45 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0226I45 is -4.8938 over 298 frames.
+F07UP28A0227I301 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0227I301 is -4.852 over 498 frames.
+F07UP28A0228I303 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0228I303 is -5.19101 over 498 frames.
+F07UP29A0523I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP29A0523I41 is -4.14431 over 298 frames.
+F07UP29A0523I44 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP29A0523I44 is -3.81102 over 298 frames.
+F07UP31A1293I42 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP31A1293I42 is -4.93221 over 298 frames.
+F07UP34A0567I44 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP34A0567I44 is -4.193 over 300 frames.
+F07UP35A0453I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP35A0453I300 is -3.70352 over 498 frames.
+F07UP37A0304I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP37A0304I300 is -3.59905 over 498 frames.
+F07UP38A0101I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP38A0101I41 is -4.58753 over 298 frames.
+F07UP41A0286I40 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP41A0286I40 is -3.30903 over 298 frames.
+F07UP41A0286I42 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP41A0286I42 is -2.84656 over 298 frames.
+F07UP52A0208I44 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP52A0208I44 is -4.75112 over 298 frames.
+F07UP54A1284I430 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP54A1284I430 is -4.00415 over 298 frames.
+F07UP57A0408I41 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP57A0408I41 is -4.75542 over 298 frames.
+F07UP60A0943I300 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0943I300 is -4.84782 over 498 frames.
+F07UP60A0944I303 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0944I303 is -3.34442 over 498 frames.
+F07UP60A0949I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I300 is -3.91104 over 498 frames.
+F07UP60A0949I302 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I302 is -3.42854 over 498 frames.
+F07UP60A0949I303 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I303 is -3.44508 over 498 frames.
+F07UP60A0953I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0953I41 is -3.65069 over 298 frames.
+F07UP60A0962I427 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0962I427 is -4.31289 over 298 frames.
+F07UP60A0963I46 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0963I46 is -4.75549 over 298 frames.
+F07UP64A0395I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0395I300 is -3.94916 over 498 frames.
+F07UP64A0397I301 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0397I301 is -4.63957 over 498 frames.
+F07UP64A0402I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0402I41 is -4.06474 over 298 frames.
+F07UP72A0728I300 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP72A0728I300 is -4.54853 over 498 frames.
+F07UP75A0756I300 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP75A0756I300 is -3.89993 over 498 frames.
+F07UP75A0763I435 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP75A0763I435 is -3.54207 over 300 frames.
+M07UP01A0057I427 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0057I427 is -5.17794 over 298 frames.
+M07UP01A0062I412 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0062I412 is -4.72052 over 298 frames.
+M07UP01A0062I45 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0062I45 is -3.96991 over 300 frames.
+M07UP01A0063I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0063I43 is -4.98774 over 298 frames.
+M07UP01A0069I413 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0069I413 is -4.25435 over 298 frames.
+M07UP01A0160I420 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I420 is -4.2947 over 298 frames.
+M07UP01A0160I430 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I430 is -4.5859 over 298 frames.
+M07UP01A0160I47 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I47 is -4.81721 over 298 frames.
+M07UP02A0321I47 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0321I47 is -4.13995 over 300 frames.
+M07UP02A0323I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0323I300 is -3.81137 over 498 frames.
+M07UP02A0325I43 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0325I43 is -4.85417 over 298 frames.
+M07UP02A0329I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0329I43 is -3.63986 over 298 frames.
+M07UP02A0330I303 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0330I303 is -3.34589 over 498 frames.
+M07UP02A0333I45 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0333I45 is -4.10201 over 298 frames.
+M07UP02A0335I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0335I301 is -4.52515 over 498 frames.
+M07UP02A0336I44 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0336I44 is -4.33512 over 290 frames.
+M07UP02A0337I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0337I41 is -4.83692 over 298 frames.
+M07UP02A0337I44 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0337I44 is -3.69167 over 298 frames.
+M07UP04A1227I45 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1227I45 is -4.68958 over 298 frames.
+M07UP04A1230I303 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1230I303 is -4.1003 over 498 frames.
+M07UP04A1235I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1235I41 is -4.69885 over 298 frames.
+M07UP04A1235I46 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1235I46 is -3.6193 over 298 frames.
+M07UP04A1236I303 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1236I303 is -4.1864 over 498 frames.
+M07UP04A1239I301 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1239I301 is -3.57972 over 498 frames.
+M07UP04A1242I410 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1242I410 is -4.35722 over 298 frames.
+M07UP04A1243I300 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1243I300 is -4.69715 over 498 frames.
+M07UP04A1243I435 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1243I435 is -4.21285 over 300 frames.
+M07UP04A1244I44 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1244I44 is -5.22516 over 298 frames.
+M07UP04A1245I48 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1245I48 is -5.18436 over 298 frames.
+M07UP05A0903I43 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0903I43 is -3.81977 over 298 frames.
+M07UP05A0910I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0910I300 is -3.29706 over 498 frames.
+M07UP05A0911I42 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0911I42 is -4.44964 over 298 frames.
+M07UP05A0914I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0914I300 is -3.47065 over 498 frames.
+M07UP05A0914I302 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0914I302 is -3.90404 over 498 frames.
+M07UP05A0915I301 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0915I301 is -3.63522 over 498 frames.
+M07UP05A0916I43 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0916I43 is -4.23987 over 298 frames.
+M07UP05A0920I411 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0920I411 is -4.12945 over 298 frames.
+M07UP06A0427I301 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0427I301 is -2.71778 over 498 frames.
+M07UP06A0428I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0428I41 is -4.58125 over 298 frames.
+M07UP06A0429I411 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0429I411 is -3.74233 over 298 frames.
+M07UP06A0433I301 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I301 is -3.43241 over 498 frames.
+M07UP06A0433I40 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I40 is -4.15829 over 298 frames.
+M07UP06A0433I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I41 is -4.59425 over 298 frames.
+M07UP06A0437I42 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0437I42 is -3.56801 over 298 frames.
+M07UP06A0438I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0438I41 is -3.97548 over 298 frames.
+M07UP06A0442I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0442I41 is -4.63541 over 298 frames.
+M07UP06A0442I42 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0442I42 is -4.11281 over 300 frames.
+M07UP06A0444I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0444I43 is -3.65614 over 298 frames.
+M07UP06A0445I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0445I301 is -4.19106 over 490 frames.
+M07UP06A0447I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0447I41 is -3.72394 over 298 frames.
+M07UP07A0134I42 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0134I42 is -3.5912 over 298 frames.
+M07UP07A0134I436 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0134I436 is -4.50689 over 298 frames.
+M07UP07A0136I410 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0136I410 is -4.77489 over 298 frames.
+M07UP07A0136I438 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0136I438 is -4.67768 over 298 frames.
+M07UP07A0138I414 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0138I414 is -3.17356 over 298 frames.
+M07UP07A0139I42 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0139I42 is -4.28449 over 298 frames.
+M07UP07A0142I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0142I43 is -4.79333 over 298 frames.
+M07UP07A0143I45 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0143I45 is -4.69143 over 298 frames.
+M07UP07A0145I436 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0145I436 is -3.54907 over 298 frames.
+M07UP09A0483I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0483I300 is -3.30828 over 498 frames.
+M07UP09A0485I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0485I43 is -4.21991 over 298 frames.
+M07UP09A0488I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0488I43 is -4.93817 over 298 frames.
+M07UP09A0489I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0489I300 is -3.63764 over 498 frames.
+M07UP09A0490I301 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0490I301 is -3.22632 over 498 frames.
+M07UP09A0494I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0494I300 is -3.51496 over 498 frames.
+M07UP09A0495I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0495I301 is -3.52234 over 498 frames.
+M07UP09A0495I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0495I41 is -4.28751 over 298 frames.
+M07UP09A0496I303 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0496I303 is -3.41196 over 498 frames.
+M07UP09A0499I43 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0499I43 is -3.1156 over 298 frames.
+M07UP09A0500I42 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0500I42 is -4.61463 over 298 frames.
+M07UP09A0500I44 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0500I44 is -3.79089 over 298 frames.
+M07UP09A0503I301 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0503I301 is -4.02112 over 498 frames.
+M07UP09A0505I300 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0505I300 is -4.61666 over 498 frames.
+M07UP09A0505I504 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0505I504 is -4.43424 over 298 frames.
+M07UP11A1317I41 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1317I41 is -3.57798 over 298 frames.
+M07UP11A1319I300 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1319I300 is -3.59226 over 498 frames.
+M07UP11A1328I301 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1328I301 is -3.60013 over 498 frames.
+M07UP11A1337I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1337I301 is -3.54307 over 498 frames.
+M07UP11A1349I303 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1349I303 is -4.37974 over 498 frames.
+M07UP11A1351I302 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1351I302 is -3.81065 over 498 frames.
+M07UP11A1352I427 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1352I427 is -3.78078 over 298 frames.
+M07UP11A1352I429 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1352I429 is -3.75596 over 298 frames.
+M07UP13A0882I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0882I300 is -4.44132 over 498 frames.
+M07UP13A0882I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0882I301 is -4.60975 over 498 frames.
+M07UP13A0884I303 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0884I303 is -4.52503 over 498 frames.
+M07UP13A0888I41 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0888I41 is -4.30211 over 298 frames.
+M07UP13A0889I41 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0889I41 is -5.23751 over 298 frames.
+M07UP13A0890I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0890I43 is -5.46998 over 298 frames.
+M07UP13A0897I302 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0897I302 is -4.14042 over 498 frames.
+M07UP13A0897I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0897I41 is -4.14294 over 298 frames.
+M07UP13A0898I303 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0898I303 is -4.4863 over 498 frames.
+M07UP13A0900I436 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0900I436 is -4.24918 over 298 frames.
+M07UP14A0572I301 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0572I301 is -3.42807 over 498 frames.
+M07UP14A0576I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0576I41 is -4.3946 over 298 frames.
+M07UP14A0583I300 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0583I300 is -4.36299 over 498 frames.
+M07UP14A0588I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0588I41 is -4.18847 over 300 frames.
+M07UP14A0590I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0590I300 is -3.62156 over 498 frames.
+M07UP14A0590I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0590I43 is -4.24446 over 298 frames.
+M07UP14A0591I302 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0591I302 is -3.50217 over 498 frames.
+M07UP14A0591I303 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0591I303 is -4.46254 over 498 frames.
+M07UP18A0362I47 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0362I47 is -4.25018 over 298 frames.
+M07UP18A0363I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0363I300 is -3.6708 over 498 frames.
+M07UP18A0363I302 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0363I302 is -3.39681 over 498 frames.
+M07UP18A0365I42 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0365I42 is -4.08327 over 298 frames.
+M07UP18A0366I41 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0366I41 is -4.19272 over 298 frames.
+M07UP18A0367I43 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0367I43 is -4.21039 over 298 frames.
+M07UP18A0368I301 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0368I301 is -4.31713 over 498 frames.
+M07UP18A0368I49 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0368I49 is -4.30767 over 298 frames.
+M07UP18A0369I48 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0369I48 is -5.152 over 298 frames.
+M07UP18A0371I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0371I300 is -4.65352 over 498 frames.
+M07UP18A0374I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0374I300 is -5.32369 over 498 frames.
+M07UP18A0374I48 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0374I48 is -4.72691 over 298 frames.
+M07UP18A0375I45 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0375I45 is -4.71586 over 298 frames.
+M07UP18A0376I43 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0376I43 is -3.70377 over 298 frames.
+M07UP18A0376I49 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0376I49 is -4.06489 over 298 frames.
+M07UP18A0378I302 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0378I302 is -5.04721 over 498 frames.
+M07UP18A0380I300 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0380I300 is -4.35131 over 498 frames.
+M07UP19A0341I48 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0341I48 is -3.32179 over 298 frames.
+M07UP19A0345I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0345I300 is -5.1605 over 490 frames.
+M07UP19A0345I45 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0345I45 is -3.93878 over 298 frames.
+M07UP19A0346I301 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0346I301 is -4.67511 over 498 frames.
+M07UP19A0348I301 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0348I301 is -3.69938 over 498 frames.
+M07UP19A0354I301 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0354I301 is -4.88836 over 498 frames.
+M07UP19A0354I303 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0354I303 is -4.65219 over 498 frames.
+M07UP19A0356I43 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0356I43 is -4.13486 over 298 frames.
+M07UP19A0357I300 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0357I300 is -3.97119 over 498 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 185 utterances, errors on 0
+M07UP19A0358I303 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0358I303 is -3.561 over 498 frames.
+M07UP19A0359I40 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0359I40 is -3.67122 over 298 frames.
+M07UP20A0734I300 eempii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0734I300 is -3.94589 over 498 frames.
+M07UP20A0739I44 uttarpradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0739I44 is -3.7254 over 298 frames.
+M07UP20A0739I45 madhyapradesh 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0739I45 is -3.42261 over 300 frames.
+LOG (transform-feats:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.6153 over 69428 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 185 utterances; 0 had errors.
+M07UP20A0740I302 yuupii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0740I302 is -3.78206 over 498 frames.
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:175) Time taken 84.9257s: real-time factor assuming 100 frames/sec is 0.122322
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:178) Done 185 utterances, failed for 0
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:180) Overall log-likelihood per frame is -4.14474 over 69428 frames.
+# Accounting: time=85 threads=1
+# Ended (code 0) at Mon Jul 25 00:39:07 IST 2016, elapsed time 85 seconds

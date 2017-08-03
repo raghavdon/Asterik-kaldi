@@ -1,0 +1,385 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2_1600_25600/decode/lat.1.gz" 
+# Started at Thu Jul 21 14:55:09 IST 2016
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2_1600_25600/decode/lat.1.gz' 
+transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split3/1/utt2spk scp:data/test/split3/1/cmvn.scp scp:data/test/split3/1/feats.scp ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+F07UP02A0332I42 ataroulii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP02A0332I42 is -4.32479 over 300 frames.
+F07UP02A0332I43 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP02A0332I43 is -3.94933 over 298 frames.
+F07UP06A0432I42 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP06A0432I42 is -3.36565 over 300 frames.
+F07UP07A0094I427 ouraiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP07A0094I427 is -3.69463 over 298 frames.
+F07UP07A0096I44 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP07A0096I44 is -4.56839 over 298 frames.
+F07UP09A0491I46 shaahapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP09A0491I46 is -4.56791 over 298 frames.
+F07UP11A1331I301 gaajiipura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP11A1331I301 is -3.40506 over 498 frames.
+F07UP19A0344I46 sambhala 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP19A0344I46 is -3.45931 over 298 frames.
+F07UP21A0612I41 ilaahaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP21A0612I41 is -3.67498 over 298 frames.
+F07UP22A1336I429 deewariyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1336I429 is -3.91743 over 298 frames.
+F07UP22A1336I501 deewariyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1336I501 is -3.7208 over 398 frames.
+F07UP22A1343I301 gorakhapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1343I301 is -3.41181 over 498 frames.
+F07UP22A1343I47 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1343I47 is -4.5212 over 298 frames.
+F07UP22A1345I47 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1345I47 is -3.43118 over 298 frames.
+F07UP22A1346I435 akbarapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP22A1346I435 is -4.55569 over 300 frames.
+F07UP23A0248I41 kaasaganja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP23A0248I41 is -5.01705 over 298 frames.
+F07UP24A0182I302 itxaawaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0182I302 is -4.45041 over 498 frames.
+F07UP24A0182I41 phateehapurasiikarii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0182I41 is -4.7431 over 298 frames.
+F07UP24A0183I302 itxaawaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0183I302 is -4.97337 over 498 frames.
+F07UP24A0183I47 maadhougadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP24A0183I47 is -4.39988 over 298 frames.
+F07UP25A1212I41 ambeedxakaranagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP25A1212I41 is -4.91115 over 298 frames.
+F07UP25A1215I42 pheijaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP25A1215I42 is -4.50146 over 298 frames.
+F07UP26A0256I43 mohammadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP26A0256I43 is -4.43774 over 298 frames.
+F07UP28A0226I300 khurajaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0226I300 is -4.95894 over 498 frames.
+F07UP28A0226I45 beewara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0226I45 is -4.79316 over 298 frames.
+F07UP28A0227I301 meinapurii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0227I301 is -4.79355 over 498 frames.
+F07UP28A0228I303 sikohaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP28A0228I303 is -5.12103 over 498 frames.
+F07UP29A0523I41 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP29A0523I41 is -4.0745 over 298 frames.
+F07UP29A0523I44 anuupashahara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP29A0523I44 is -3.76743 over 298 frames.
+F07UP31A1293I42 baliiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP31A1293I42 is -4.85427 over 298 frames.
+F07UP34A0567I44 phateehapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP34A0567I44 is -4.0599 over 300 frames.
+F07UP35A0453I300 haapudxqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP35A0453I300 is -3.62505 over 498 frames.
+F07UP37A0304I300 haatharasa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP37A0304I300 is -3.55978 over 498 frames.
+F07UP38A0101I41 jasawantanagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP38A0101I41 is -4.4091 over 298 frames.
+F07UP41A0286I40 ouraiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP41A0286I40 is -3.25917 over 298 frames.
+F07UP41A0286I42 beewara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP41A0286I42 is -2.79376 over 298 frames.
+F07UP52A0208I44 chibaraamauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP52A0208I44 is -4.61726 over 298 frames.
+F07UP54A1284I430 gaajiipura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP54A1284I430 is -3.90346 over 298 frames.
+F07UP57A0408I41 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP57A0408I41 is -4.67851 over 298 frames.
+F07UP60A0943I300 prataapagadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0943I300 is -4.77024 over 498 frames.
+F07UP60A0944I303 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0944I303 is -3.23766 over 498 frames.
+F07UP60A0949I300 aagaraa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I300 is -3.90145 over 498 frames.
+F07UP60A0949I302 maholii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I302 is -3.38242 over 498 frames.
+F07UP60A0949I303 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0949I303 is -3.28729 over 498 frames.
+F07UP60A0953I41 ilaahaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0953I41 is -3.52389 over 298 frames.
+F07UP60A0962I427 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0962I427 is -4.0815 over 298 frames.
+F07UP60A0963I46 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP60A0963I46 is -4.60111 over 298 frames.
+F07UP64A0395I300 sambhala 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0395I300 is -3.82453 over 498 frames.
+F07UP64A0397I301 kushiinagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0397I301 is -4.60344 over 498 frames.
+F07UP64A0402I41 amarohaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP64A0402I41 is -3.91001 over 298 frames.
+F07UP72A0728I300 sonbhadra 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP72A0728I300 is -4.4535 over 498 frames.
+F07UP75A0756I300 waaraanxasxii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP75A0756I300 is -3.83654 over 498 frames.
+F07UP75A0763I435 mirjaapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance F07UP75A0763I435 is -3.4317 over 300 frames.
+M07UP01A0057I427 aagaraa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0057I427 is -5.1063 over 298 frames.
+M07UP01A0062I412 awaagadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0062I412 is -4.50848 over 298 frames.
+M07UP01A0062I45 acaneeraa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0062I45 is -3.83349 over 300 frames.
+M07UP01A0063I43 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0063I43 is -4.14689 over 298 frames.
+M07UP01A0069I413 koshiikalaan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0069I413 is -4.17957 over 298 frames.
+M07UP01A0160I420 coubeepura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I420 is -4.01841 over 298 frames.
+M07UP01A0160I430 uraii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I430 is -4.40909 over 298 frames.
+M07UP01A0160I47 kannouja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP01A0160I47 is -4.56911 over 298 frames.
+M07UP02A0321I47 sikandaraabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0321I47 is -3.91654 over 300 frames.
+M07UP02A0323I300 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0323I300 is -3.7317 over 498 frames.
+M07UP02A0325I43 haatharasa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0325I43 is -4.77765 over 298 frames.
+M07UP02A0329I43 haatharasa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0329I43 is -3.51636 over 298 frames.
+M07UP02A0330I303 jahaangiiraabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0330I303 is -3.22661 over 498 frames.
+M07UP02A0333I45 atarraa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0333I45 is -4.0374 over 298 frames.
+M07UP02A0335I301 konca 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0335I301 is -4.5167 over 498 frames.
+M07UP02A0336I44 bulandashahara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0336I44 is -4.24882 over 290 frames.
+M07UP02A0337I41 eitxaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0337I41 is -4.71572 over 298 frames.
+M07UP02A0337I44 koshiikalaan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP02A0337I44 is -3.52575 over 298 frames.
+M07UP04A1227I45 deewariyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1227I45 is -4.54014 over 298 frames.
+M07UP04A1230I303 akbarapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1230I303 is -4.02724 over 498 frames.
+M07UP04A1235I41 ambeedxakaranagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1235I41 is -4.57367 over 298 frames.
+M07UP04A1235I46 aajamagadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1235I46 is -3.40487 over 298 frames.
+M07UP04A1236I303 shaahajahaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1236I303 is -4.08966 over 498 frames.
+M07UP04A1239I301 aajamagadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1239I301 is -3.47012 over 498 frames.
+M07UP04A1242I410 akbarapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1242I410 is -4.14245 over 298 frames.
+M07UP04A1243I300 ambeedxakaranagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1243I300 is -4.5321 over 498 frames.
+M07UP04A1243I435 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1243I435 is -3.92358 over 300 frames.
+M07UP04A1244I44 bastii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1244I44 is -5.14715 over 298 frames.
+M07UP04A1245I48 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP04A1245I48 is -4.97548 over 298 frames.
+M07UP05A0903I43 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0903I43 is -3.73702 over 298 frames.
+M07UP05A0910I300 ameitxhii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0910I300 is -3.14134 over 498 frames.
+M07UP05A0911I42 baaraabankii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0911I42 is -4.29332 over 298 frames.
+M07UP05A0914I300 ameitxhii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0914I300 is -3.33731 over 498 frames.
+M07UP05A0914I302 jaapharaganja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0914I302 is -3.8092 over 498 frames.
+M07UP05A0915I301 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0915I301 is -3.50833 over 498 frames.
+M07UP05A0916I43 siitaapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0916I43 is -4.0405 over 298 frames.
+M07UP05A0920I411 sultaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP05A0920I411 is -3.90678 over 298 frames.
+M07UP06A0427I301 muraadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0427I301 is -2.58891 over 498 frames.
+M07UP06A0428I41 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0428I41 is -4.53009 over 298 frames.
+M07UP06A0429I411 lakhiimapurakhiirii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0429I411 is -3.67858 over 298 frames.
+M07UP06A0433I301 muraadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I301 is -3.31836 over 498 frames.
+M07UP06A0433I40 hasanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I40 is -4.04347 over 298 frames.
+M07UP06A0433I41 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0433I41 is -4.46224 over 298 frames.
+M07UP06A0437I42 muraadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0437I42 is -3.29948 over 298 frames.
+M07UP06A0438I41 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0438I41 is -3.4588 over 298 frames.
+M07UP06A0442I41 amarohaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0442I41 is -4.56879 over 298 frames.
+M07UP06A0442I42 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0442I42 is -4.01909 over 300 frames.
+M07UP06A0444I43 bijanoura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0444I43 is -3.48943 over 298 frames.
+M07UP06A0445I301 shaadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0445I301 is -4.10218 over 490 frames.
+M07UP06A0447I41 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP06A0447I41 is -3.62326 over 298 frames.
+M07UP07A0134I42 kannouja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0134I42 is -3.41038 over 298 frames.
+M07UP07A0134I436 kaanapuradeehaata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0134I436 is -4.15314 over 298 frames.
+M07UP07A0136I410 daataaganja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0136I410 is -4.69419 over 298 frames.
+M07UP07A0136I438 uraii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0136I438 is -4.53904 over 298 frames.
+M07UP07A0138I414 itxaawaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0138I414 is -3.0017 over 298 frames.
+M07UP07A0139I42 jaalouna 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0139I42 is -4.2148 over 298 frames.
+M07UP07A0142I43 kannouja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0142I43 is -4.65655 over 298 frames.
+M07UP07A0143I45 kaanapuradeehaata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0143I45 is -4.34768 over 298 frames.
+M07UP07A0145I436 jaalouna 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP07A0145I436 is -3.34211 over 298 frames.
+M07UP09A0483I300 dudhii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0483I300 is -3.1399 over 498 frames.
+M07UP09A0485I43 gaajiyaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0485I43 is -4.01747 over 298 frames.
+M07UP09A0488I43 gaajiyaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0488I43 is -4.78675 over 298 frames.
+M07UP09A0489I300 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0489I300 is -3.57183 over 498 frames.
+M07UP09A0490I301 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0490I301 is -3.23226 over 498 frames.
+M07UP09A0494I300 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0494I300 is -3.4314 over 498 frames.
+M07UP09A0495I301 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0495I301 is -3.39135 over 498 frames.
+M07UP09A0495I41 mujjapharanagara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0495I41 is -4.12271 over 298 frames.
+M07UP09A0496I303 gaajiyaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0496I303 is -3.25427 over 498 frames.
+M07UP09A0499I43 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0499I43 is -3.03372 over 298 frames.
+M07UP09A0500I42 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0500I42 is -4.49786 over 298 frames.
+M07UP09A0500I44 haapudxqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0500I44 is -3.56126 over 298 frames.
+M07UP09A0503I301 meeratxha 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0503I301 is -3.9646 over 498 frames.
+M07UP09A0505I300 baagapata 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0505I300 is -4.54227 over 498 frames.
+M07UP09A0505I504 uraii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP09A0505I504 is -4.42676 over 298 frames.
+M07UP11A1317I41 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1317I41 is -3.42949 over 298 frames.
+M07UP11A1319I300 baliiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1319I300 is -3.46177 over 498 frames.
+M07UP11A1328I301 gaajiipura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1328I301 is -3.46105 over 498 frames.
+M07UP11A1337I301 gaajiipura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1337I301 is -3.42924 over 498 frames.
+M07UP11A1349I303 mauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1349I303 is -4.33706 over 498 frames.
+M07UP11A1351I302 baliiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1351I302 is -3.7037 over 498 frames.
+M07UP11A1352I427 baliiyaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1352I427 is -3.61662 over 298 frames.
+M07UP11A1352I429 gorakhapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP11A1352I429 is -3.52284 over 298 frames.
+M07UP13A0882I300 baaraabankii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0882I300 is -4.33814 over 498 frames.
+M07UP13A0882I301 lakhanauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0882I301 is -4.53112 over 498 frames.
+M07UP13A0884I303 kamalaaganja 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0884I303 is -4.41532 over 498 frames.
+M07UP13A0888I41 sandxiilaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0888I41 is -4.0883 over 298 frames.
+M07UP13A0889I41 sandxiilaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0889I41 is -5.13923 over 298 frames.
+M07UP13A0890I43 lakhanauu 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0890I43 is -5.29242 over 298 frames.
+M07UP13A0897I302 kheiraagadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0897I302 is -4.0905 over 498 frames.
+M07UP13A0897I41 siitaapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0897I41 is -3.92361 over 298 frames.
+M07UP13A0898I303 baaraabankii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0898I303 is -4.30735 over 498 frames.
+M07UP13A0900I436 kaanapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP13A0900I436 is -4.157 over 298 frames.
+M07UP14A0572I301 phateehapura 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0572I301 is -3.35336 over 498 frames.
+M07UP14A0576I41 baaraabankii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0576I41 is -4.19386 over 298 frames.
+M07UP14A0583I300 baandaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0583I300 is -4.24683 over 498 frames.
+M07UP14A0588I41 pheijaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0588I41 is -3.99503 over 300 frames.
+M07UP14A0590I300 baandaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0590I300 is -3.56911 over 498 frames.
+M07UP14A0590I43 raaibareilii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0590I43 is -4.11239 over 298 frames.
+M07UP14A0591I302 baandaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0591I302 is -3.42007 over 498 frames.
+M07UP14A0591I303 citrakuutxa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP14A0591I303 is -4.39375 over 498 frames.
+M07UP18A0362I47 itxaawaa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0362I47 is -4.16933 over 298 frames.
+M07UP18A0363I300 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0363I300 is -3.62348 over 498 frames.
+M07UP18A0363I302 candousii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0363I302 is -3.3634 over 498 frames.
+M07UP18A0365I42 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0365I42 is -4.04281 over 298 frames.
+M07UP18A0366I41 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0366I41 is -4.06115 over 298 frames.
+M07UP18A0367I43 bareelii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0367I43 is -4.17265 over 298 frames.
+M07UP18A0368I301 muraadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0368I301 is -4.22009 over 498 frames.
+M07UP18A0368I49 haatharasa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0368I49 is -4.17949 over 298 frames.
+M07UP18A0369I48 pharrukhaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0369I48 is -4.95034 over 298 frames.
+M07UP18A0371I300 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0371I300 is -4.60895 over 498 frames.
+M07UP18A0374I300 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0374I300 is -5.26204 over 498 frames.
+M07UP18A0374I48 pharrukhaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0374I48 is -4.63197 over 298 frames.
+M07UP18A0375I45 bulandashahara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0375I45 is -4.64537 over 298 frames.
+M07UP18A0376I43 bareelii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0376I43 is -3.56332 over 298 frames.
+M07UP18A0376I49 haatharasa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0376I49 is -3.88323 over 298 frames.
+M07UP18A0378I302 candousii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0378I302 is -4.99868 over 498 frames.
+M07UP18A0380I300 badaayuun 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP18A0380I300 is -4.3136 over 498 frames.
+M07UP19A0341I48 bahajoii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0341I48 is -3.19497 over 298 frames.
+M07UP19A0345I300 bulandashahara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0345I300 is -5.0853 over 490 frames.
+M07UP19A0345I45 haapudxqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0345I45 is -3.75646 over 298 frames.
+M07UP19A0346I301 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0346I301 is -4.58086 over 498 frames.
+M07UP19A0348I301 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0348I301 is -3.61736 over 498 frames.
+M07UP19A0354I301 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0354I301 is -4.80049 over 498 frames.
+M07UP19A0354I303 jahaangiiraabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0354I303 is -4.56875 over 498 frames.
+M07UP19A0356I43 muraadaabaada 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0356I43 is -3.91537 over 298 frames.
+M07UP19A0357I300 bulandashahara 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0357I300 is -3.88739 over 498 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 185 utterances, errors on 0
+M07UP19A0358I303 aliigadxhqa 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0358I303 is -3.46312 over 498 frames.
+M07UP19A0359I40 bareelii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP19A0359I40 is -3.5881 over 298 frames.
+M07UP20A0734I300 candoulii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0734I300 is -3.83532 over 498 frames.
+M07UP20A0739I44 sonbhadra 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0739I44 is -3.63598 over 298 frames.
+M07UP20A0739I45 waaraanxasxii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0739I45 is -3.24967 over 300 frames.
+LOG (transform-feats:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.6153 over 69428 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 185 utterances; 0 had errors.
+M07UP20A0740I302 candoulii 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0740I302 is -3.68632 over 498 frames.
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:175) Time taken 151.113s: real-time factor assuming 100 frames/sec is 0.217654
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:178) Done 185 utterances, failed for 0
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:180) Overall log-likelihood per frame is -4.02494 over 69428 frames.
+# Accounting: time=151 threads=1
+# Ended (code 0) at Thu Jul 21 14:57:40 IST 2016, elapsed time 151 seconds

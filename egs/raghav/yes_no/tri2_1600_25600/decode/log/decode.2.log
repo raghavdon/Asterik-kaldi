@@ -1,0 +1,383 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/2/utt2spk scp:data/test/split3/2/cmvn.scp scp:data/test/split3/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |" "ark:|gzip -c > exp/tri2_1600_25600/decode/lat.2.gz" 
+# Started at Thu Jul 21 15:05:41 IST 2016
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri2_1600_25600/graph/words.txt exp/tri2_1600_25600/final.mdl exp/tri2_1600_25600/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split3/2/utt2spk scp:data/test/split3/2/cmvn.scp scp:data/test/split3/2/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- |' 'ark:|gzip -c > exp/tri2_1600_25600/decode/lat.2.gz' 
+transform-feats exp/tri2_1600_25600/final.mat ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split3/2/utt2spk scp:data/test/split3/2/cmvn.scp scp:data/test/split3/2/feats.scp ark:- 
+M07UP20A0742I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0742I302 is -3.09233 over 498 frames.
+M07UP20A0750I40 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0750I40 is -4.32239 over 298 frames.
+M07UP20A0753I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP20A0753I43 is -4.97131 over 298 frames.
+M07UP21A0593I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0593I302 is -4.49479 over 498 frames.
+M07UP21A0598I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0598I41 is -3.89466 over 298 frames.
+M07UP21A0600I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0600I300 is -4.24142 over 498 frames.
+M07UP21A0600I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0600I42 is -4.04931 over 298 frames.
+M07UP21A0606I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0606I301 is -4.20004 over 498 frames.
+M07UP21A0606I302 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0606I302 is -4.69499 over 498 frames.
+M07UP21A0607I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP21A0607I301 is -3.8709 over 498 frames.
+M07UP22A1323I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1323I47 is -3.09733 over 298 frames.
+M07UP22A1326I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1326I300 is -3.95929 over 498 frames.
+M07UP22A1342I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1342I301 is -3.443 over 498 frames.
+M07UP22A1347I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1347I43 is -5.16146 over 298 frames.
+M07UP22A1347I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1347I47 is -4.88595 over 300 frames.
+M07UP22A1355I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1355I301 is -4.45344 over 498 frames.
+M07UP22A1355I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1355I47 is -4.12723 over 298 frames.
+M07UP22A1357I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1357I300 is -3.79068 over 498 frames.
+M07UP22A1357I45 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1357I45 is -3.89533 over 298 frames.
+M07UP22A1357I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP22A1357I47 is -3.93015 over 298 frames.
+M07UP23A0224I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0224I44 is -5.09458 over 298 frames.
+M07UP23A0233I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0233I43 is -3.41247 over 298 frames.
+M07UP23A0234I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0234I41 is -5.222 over 298 frames.
+M07UP23A0235I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0235I42 is -5.06207 over 298 frames.
+M07UP23A0236I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0236I43 is -4.51755 over 298 frames.
+M07UP23A0239I40 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0239I40 is -4.81497 over 298 frames.
+M07UP23A0242I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP23A0242I42 is -4.73089 over 298 frames.
+M07UP24A0171I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0171I300 is -4.11691 over 498 frames.
+M07UP24A0172I45 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0172I45 is -4.67505 over 298 frames.
+M07UP24A0172I49 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0172I49 is -4.62113 over 298 frames.
+M07UP24A0173I44 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0173I44 is -3.59099 over 298 frames.
+M07UP24A0173I46 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0173I46 is -3.20277 over 298 frames.
+M07UP24A0175I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0175I301 is -4.03883 over 498 frames.
+M07UP24A0177F606 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0177F606 is -3.52185 over 998 frames.
+M07UP24A0179I302 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0179I302 is -3.71942 over 498 frames.
+M07UP24A0181I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0181I301 is -5.02315 over 498 frames.
+M07UP24A0181I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0181I42 is -4.80075 over 298 frames.
+M07UP24A0181I48 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0181I48 is -4.55128 over 298 frames.
+M07UP24A0185I303 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0185I303 is -4.38139 over 498 frames.
+M07UP24A0188I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0188I302 is -3.9785 over 498 frames.
+M07UP24A0191I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP24A0191I300 is -3.55191 over 498 frames.
+M07UP25A1205I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1205I302 is -4.73121 over 498 frames.
+M07UP25A1205I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1205I43 is -4.80338 over 298 frames.
+M07UP25A1206I45 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1206I45 is -4.51226 over 298 frames.
+M07UP25A1209I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1209I41 is -4.22008 over 298 frames.
+M07UP25A1216I41 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1216I41 is -5.02061 over 298 frames.
+M07UP25A1220I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1220I300 is -4.11853 over 498 frames.
+M07UP25A1220I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1220I42 is -4.16888 over 298 frames.
+M07UP25A1261I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP25A1261I302 is -4.75152 over 500 frames.
+M07UP26A0214I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0214I42 is -5.1799 over 298 frames.
+M07UP26A0255I48 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0255I48 is -4.07252 over 300 frames.
+M07UP26A0257I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0257I47 is -3.34245 over 298 frames.
+M07UP26A0258I414 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0258I414 is -3.93884 over 298 frames.
+M07UP26A0261I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0261I47 is -4.07253 over 298 frames.
+M07UP26A0262I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0262I41 is -4.67949 over 298 frames.
+M07UP26A0263I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0263I43 is -3.70082 over 298 frames.
+M07UP26A0267I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0267I44 is -4.04704 over 298 frames.
+M07UP26A0269I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0269I47 is -4.93134 over 298 frames.
+M07UP26A0270I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0270I42 is -4.44595 over 298 frames.
+M07UP26A0272I44 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP26A0272I44 is -3.19576 over 298 frames.
+M07UP27A0641I438 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP27A0641I438 is -3.93891 over 298 frames.
+M07UP27A0647I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP27A0647I41 is -4.09911 over 298 frames.
+M07UP27A0647I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP27A0647I43 is -4.15142 over 298 frames.
+M07UP27A0657I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP27A0657I303 is -4.16747 over 498 frames.
+M07UP28A0216I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0216I301 is -4.43871 over 498 frames.
+M07UP28A0218I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0218I300 is -4.02296 over 498 frames.
+M07UP28A0219I40 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0219I40 is -4.18473 over 298 frames.
+M07UP28A0219I505 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0219I505 is -4.06209 over 300 frames.
+M07UP28A0225I302 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0225I302 is -4.57413 over 498 frames.
+M07UP28A0225I40 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0225I40 is -4.08402 over 298 frames.
+M07UP28A0225I41 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP28A0225I41 is -5.61859 over 298 frames.
+M07UP29A0506I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0506I301 is -3.68352 over 498 frames.
+M07UP29A0509I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0509I42 is -4.16672 over 298 frames.
+M07UP29A0509I45 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0509I45 is -4.15383 over 298 frames.
+M07UP29A0510I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0510I303 is -3.8968 over 500 frames.
+M07UP29A0510I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0510I44 is -3.55549 over 298 frames.
+M07UP29A0511I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0511I301 is -4.21177 over 498 frames.
+M07UP29A0511I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0511I42 is -4.65757 over 298 frames.
+M07UP29A0513I44 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0513I44 is -3.97038 over 298 frames.
+M07UP29A0514I41 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0514I41 is -4.2725 over 298 frames.
+M07UP29A0516I41 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0516I41 is -4.92575 over 298 frames.
+M07UP29A0517I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0517I303 is -3.98618 over 498 frames.
+M07UP29A0520I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0520I42 is -3.73496 over 298 frames.
+M07UP29A0520I45 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0520I45 is -4.59429 over 298 frames.
+M07UP29A0521I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0521I303 is -3.83169 over 498 frames.
+M07UP29A0521I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP29A0521I47 is -3.84008 over 298 frames.
+M07UP31A1290I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1290I43 is -3.92304 over 298 frames.
+M07UP31A1291I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1291I42 is -4.21979 over 298 frames.
+M07UP31A1292I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1292I301 is -3.88899 over 498 frames.
+M07UP31A1294I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1294I302 is -3.65016 over 498 frames.
+M07UP31A1294I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1294I43 is -4.37382 over 298 frames.
+M07UP31A1296I500 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1296I500 is -3.0961 over 498 frames.
+M07UP31A1300I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1300I300 is -4.98624 over 498 frames.
+M07UP31A1302I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1302I301 is -4.02176 over 498 frames.
+M07UP31A1306I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1306I302 is -4.01858 over 498 frames.
+M07UP31A1306I303 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1306I303 is -5.12137 over 498 frames.
+M07UP31A1306I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1306I43 is -3.61643 over 298 frames.
+M07UP31A1307I430 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1307I430 is -4.28455 over 298 frames.
+M07UP31A1308I435 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1308I435 is -4.13063 over 298 frames.
+M07UP31A1309I44 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1309I44 is -5.17834 over 298 frames.
+M07UP31A1310I45 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP31A1310I45 is -4.81555 over 298 frames.
+M07UP34A0551I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0551I43 is -4.46891 over 300 frames.
+M07UP34A0554I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0554I301 is -3.76201 over 498 frames.
+M07UP34A0555I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0555I300 is -5.04167 over 498 frames.
+M07UP34A0558I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0558I42 is -4.36653 over 298 frames.
+M07UP34A0559I303 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0559I303 is -4.00701 over 498 frames.
+M07UP34A0559I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0559I44 is -4.12571 over 298 frames.
+M07UP34A0561I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0561I300 is -4.86442 over 498 frames.
+M07UP34A0563I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0563I303 is -3.66483 over 498 frames.
+M07UP34A0564I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0564I43 is -4.18254 over 298 frames.
+M07UP34A0566I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP34A0566I301 is -3.58534 over 498 frames.
+M07UP35A0443I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0443I41 is -4.40526 over 298 frames.
+M07UP35A0446I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0446I301 is -4.13245 over 498 frames.
+M07UP35A0448I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0448I301 is -3.53835 over 498 frames.
+M07UP35A0450I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0450I301 is -5.01297 over 498 frames.
+M07UP35A0452I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0452I303 is -3.54461 over 498 frames.
+M07UP35A0455I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0455I303 is -3.49004 over 498 frames.
+M07UP35A0455I426 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0455I426 is -4.71386 over 298 frames.
+M07UP35A0456I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0456I43 is -4.38066 over 298 frames.
+M07UP35A0457I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0457I41 is -4.63684 over 298 frames.
+M07UP35A0459I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP35A0459I303 is -3.71216 over 498 frames.
+M07UP36A0825I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0825I301 is -4.14361 over 498 frames.
+M07UP36A0825I40 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0825I40 is -4.10356 over 298 frames.
+M07UP36A0827I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0827I300 is -3.40059 over 498 frames.
+M07UP36A0829I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0829I302 is -4.04557 over 498 frames.
+M07UP36A0832I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0832I302 is -4.29505 over 498 frames.
+M07UP36A0840I41 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP36A0840I41 is -3.49198 over 298 frames.
+M07UP37A0301I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0301I42 is -3.05605 over 298 frames.
+M07UP37A0302I45 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0302I45 is -4.79103 over 298 frames.
+M07UP37A0306I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0306I47 is -5.24846 over 298 frames.
+M07UP37A0307I303 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0307I303 is -4.93005 over 498 frames.
+M07UP37A0309I40 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0309I40 is -5.32814 over 298 frames.
+M07UP37A0309I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0309I44 is -4.83093 over 300 frames.
+M07UP37A0311I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0311I43 is -4.01401 over 298 frames.
+M07UP37A0311I44 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0311I44 is -4.00874 over 298 frames.
+M07UP37A0311I48 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0311I48 is -3.30375 over 300 frames.
+M07UP37A0313I427 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0313I427 is -4.251 over 298 frames.
+M07UP37A0314I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0314I300 is -4.67198 over 498 frames.
+M07UP37A0316I305 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0316I305 is -5.14113 over 498 frames.
+M07UP37A0317I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0317I47 is -3.94355 over 298 frames.
+M07UP37A0317I48 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0317I48 is -4.95474 over 298 frames.
+M07UP37A0319I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP37A0319I301 is -5.07634 over 498 frames.
+M07UP38A0103I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP38A0103I43 is -4.2087 over 298 frames.
+M07UP38A0107I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP38A0107I43 is -4.29073 over 298 frames.
+M07UP39A0774I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0774I301 is -3.59786 over 498 frames.
+M07UP39A0776I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0776I302 is -3.51572 over 498 frames.
+M07UP39A0777I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0777I300 is -3.82306 over 498 frames.
+M07UP39A0777I423 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0777I423 is -3.2735 over 298 frames.
+M07UP39A0778I303 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0778I303 is -4.11194 over 498 frames.
+M07UP39A0781I501 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP39A0781I501 is -3.90721 over 398 frames.
+M07UP41A0273I301 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0273I301 is -5.19693 over 498 frames.
+M07UP41A0273I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0273I47 is -4.56786 over 298 frames.
+M07UP41A0275I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0275I300 is -3.48289 over 498 frames.
+M07UP41A0277I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0277I300 is -4.4999 over 498 frames.
+M07UP41A0277I43 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0277I43 is -4.98399 over 298 frames.
+M07UP41A0279I301 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0279I301 is -4.42258 over 498 frames.
+M07UP41A0279I302 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0279I302 is -4.1375 over 498 frames.
+M07UP41A0279I47 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0279I47 is -5.25732 over 298 frames.
+M07UP41A0280I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0280I42 is -4.49398 over 298 frames.
+M07UP41A0280I45 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0280I45 is -5.16982 over 298 frames.
+M07UP41A0283I48 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0283I48 is -3.29076 over 298 frames.
+M07UP41A0289I303 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0289I303 is -4.41076 over 498 frames.
+M07UP41A0289I44 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0289I44 is -3.89217 over 300 frames.
+M07UP41A0290I47 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0290I47 is -3.94228 over 298 frames.
+M07UP41A0291I43 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0291I43 is -3.63746 over 298 frames.
+M07UP41A0291I46 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP41A0291I46 is -3.95395 over 298 frames.
+M07UP42A0111I46 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0111I46 is -3.7121 over 298 frames.
+M07UP42A0116I430 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0116I430 is -4.64531 over 298 frames.
+M07UP42A0117I419 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0117I419 is -4.14846 over 298 frames.
+M07UP42A0117I423 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0117I423 is -4.57284 over 298 frames.
+M07UP42A0119I300 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0119I300 is -4.94954 over 498 frames.
+M07UP42A0119I46 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0119I46 is -4.9001 over 298 frames.
+M07UP42A0120I418 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0120I418 is -4.30564 over 298 frames.
+M07UP42A0120I424 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0120I424 is -4.3057 over 298 frames.
+M07UP42A0120I429 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0120I429 is -4.6597 over 298 frames.
+M07UP42A0122I302 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0122I302 is -4.36666 over 498 frames.
+M07UP42A0122I424 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0122I424 is -4.54193 over 298 frames.
+LOG (apply-cmvn:main():apply-cmvn.cc:146) Applied cepstral mean normalization to 184 utterances, errors on 0
+M07UP42A0122I46 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0122I46 is -4.42636 over 298 frames.
+M07UP42A0123I42 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0123I42 is -4.49693 over 298 frames.
+M07UP42A0123I424 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0123I424 is -4.77513 over 298 frames.
+M07UP42A0124I45 haan 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0124I45 is -4.11248 over 298 frames.
+M07UP42A0126I437 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP42A0126I437 is -4.45948 over 298 frames.
+LOG (transform-feats:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -92.6153 over 69450 frames.
+LOG (transform-feats:main():transform-feats.cc:161) Applied transform to 184 utterances; 0 had errors.
+M07UP43A0148I300 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP43A0148I300 is -4.81636 over 498 frames.
+M07UP43A0151I42 nahiin 
+LOG (gmm-latgen-faster:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:285) Log-like per frame for utterance M07UP43A0151I42 is -5.17919 over 298 frames.
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:175) Time taken 60.8147s: real-time factor assuming 100 frames/sec is 0.0875662
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:178) Done 184 utterances, failed for 0
+LOG (gmm-latgen-faster:main():gmm-latgen-faster.cc:180) Overall log-likelihood per frame is -4.232 over 69450 frames.
+# Accounting: time=61 threads=1
+# Ended (code 0) at Thu Jul 21 15:06:42 IST 2016, elapsed time 61 seconds

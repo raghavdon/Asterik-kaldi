@@ -1,0 +1,1012 @@
+#!/usr/bin/php -q                                 
+<?php
+//////////////////////////# log #espeak -vhi+f4 "12345" -w /home/raghav/vb/as.wav //////////////////////////
+
+function raghav_log($text)
+	{
+		global $date, $mypath, $callerid;
+		
+		if (!file_exists("${mypath}/call_details")) {
+   		 mkdir("${mypath}/call_details", 0777, true);
+		}
+		if (!file_exists("${mypath}/call_details/log")) {
+   		 mkdir("${mypath}/call_details/log", 0777, true);
+		}
+
+		$fname 	= "${mypath}/call_details/log/${date}_call_flow.log";
+		file_put_contents($fname, "${callerid}_".date('His').substr((string)microtime(), 2, 3).": ".$text."\n", FILE_APPEND);
+	}
+
+////////////////////////////////////////// data base connect //////////////////////////////////////////////
+
+function raghav_database_connect()
+	{
+		global $dbhost,$dbuser,$dbpass,$dbschema,$dbconn;
+		
+		$dbhost 	= '127.0.0.1';
+		$dbuser 	= 'raghav';
+		$dbpass 	= 'don123';
+		$dbschema	= "Agri_ASR";
+		$dbname		= 'raghav_speech';
+		
+		$dbconn = pg_pconnect("host=$dbhost dbname=$dbname user=$dbuser password=$dbpass");
+		
+		if (!$dbconn)				   					     
+		{
+			raghav_log("DB Connection Failure");
+			return NULL;
+		}
+		else
+			return $dbconn;
+	}
+
+//////////////////////////// district recognisation ////////////////////
+
+function raghav_district_recognisation ($state_name)
+{
+
+global $mypath,$agi,$max_attempts;
+
+$ret=NULL;
+raghav_log("district recognisation :");
+$d_repeat=false;
+$d_attempt=1;
+
+do{
+	
+if ($d_attempt>=$max_attempts)
+	{
+			$agi->stream_file("$mypath/don/you_have_reached_maximum_try_limit_please_try_again_later");
+			raghav_ending_procedure();
+	}
+
+	if($d_repeat==false){
+	raghav_log("say_district");
+	$agi->stream_file("$mypath/don/say_dist_like");
+	sleep(0.1);
+	$agi->stream_file("$mypath/don/Lucknow");
+	
+	}
+
+	else{
+	$agi->stream_file("$mypath/don/say_district_again");
+	
+	}
+
+$utterance = date('His').substr((string)microtime(), 2, 3);
+raghav_log("district Recording Start");
+$recodord_path="$mypath/record/$utterance";
+if (!file_exists($recodord_path)) {
+    mkdir($recodord_path, 0777, true);
+}
+sleep(0.6);
+$agi->record_file("$recodord_path/$utterance","wav","0",3000,NULL,true,2);
+
+if($state_name=="madhyapradesh" || $state_name=="eempii"){
+$crop=shell_exec('sh '.$mypath.'/online_speech.sh '.$recodord_path.' '.$utterance.'.wav mp_district');
+}
+else{
+$crop=shell_exec('sh '.$mypath.'/online_speech.sh '.$recodord_path.' '.$utterance.'.wav up_district');
+}
+list($u1, $u2,$u3) = explode("\n", $crop);
+raghav_log("Recognized $u2 with  Score: $u3");
+
+$valid_word=NULL;
+if(strpos($u2, 'no final-state reached') !== false || $u3 < 0.5){
+raghav_log("Score Less than 0.4, Repeating...");
+$d_repeat=true;
+$d_attempt++;
+$agi->stream_file("$mypath/don/sorry");
+$agi->stream_file("$mypath/don/we_are_not_able_hear_you_correctly");
+}
+
+else {
+$valid = raghav_validate_recognized_word($u2, "district");
+$valid_word=$valid[1];
+$returnvalue=$valid[0];
+
+
+raghav_log("district vaild word : $valid_word");
+	
+		if($valid_word !=NULL){
+		$agi->stream_file("$mypath/don/yousaid");
+		$agi->stream_file("$mypath/don/${valid_word}");
+		
+		$confirmation = raghav_confirmation();
+		raghav_log("Confirmation : $confirmation");
+			
+			if ($confirmation == "haan")
+				{
+				$d_repeat = false;
+				}
+			
+			else if ($confirmation == "nahiin")
+				{
+				$d_repeat = true;
+				$d_attempt++;
+				}
+			
+		}
+	
+
+
+	else{
+
+		$agi->stream_file("$mypath/don/sorry");
+		$agi->stream_file("$mypath/don/in_this_district_commodity_information_not_reported");
+		$agi->stream_file("$mypath/don/do_you_need_information_for_another_district");
+		
+		$confirmation = raghav_confirmation();
+
+			if ($confirmation == "haan")
+				{
+				$d_attempt++;
+				$d_repeat = true;
+				}
+			else if ($confirmation == "nahiin")
+				{
+				$d_repeat = false;
+				raghav_ending_procedure();
+				}
+			
+
+		}
+	    }
+  }
+
+while($d_repeat);
+
+$code=NULL;
+$retarr=NULL;
+
+if($returnvalue=="district"){
+raghav_log("district code for district $valid_word");
+$code=raghav_DistrictCode($valid_word);
+raghav_log("fecting market and district code for district code $code");
+$retarr=raghav_fect_market_district($code,$returnvalue);
+
+}
+else if($returnvalue=="market"){
+raghav_log("market code for market $valid_word");
+$code=raghav_marketCode($valid_word);
+raghav_log("fecting market and district code for market code $code");
+$retarr=raghav_fect_market_district($code,$returnvalue);
+}
+else{
+$agi->stream_file("$mypath/don/sorry");
+$agi->stream_file("$mypath/don/due_to_some_technical_reasons_this_call_cannot_continue_please_try_again_later");
+raghav_ending_procedure();
+}
+
+$counting=count($retarr);
+	$j=0;
+	while($j<$counting)
+	{
+	$asd=$retarr[$j]["DistrictCode"];
+	$asd2=$retarr[$j]["MarketCode"];
+	raghav_log("district recognisation returning : $asd----- $asd2 ");
+	$j++;
+	}
+
+
+return $retarr;
+
+}
+
+
+//////////////////////////////////////// validate recognized word //////////////////////////////////////#
+
+
+function raghav_validate_recognized_word($word, $item)
+	{
+		
+	global $dbconn, $dbschema;
+		
+		switch ($item)	
+		{		
+			case "district":
+				$dbcolumnname_1 = "AgmarkName";
+				$dbcolumnname_2 = "DistrictName";
+				$dbtablename	= "DistrictMaster";
+				break;
+			
+			case "commodity":
+				$dbcolumnname_1 = "CommodityName";
+				$dbcolumnname_2 = "DictionaryName";
+				$dbtablename	= "CommodityDictionaryMapping";
+				
+				break;
+			
+			case "market":
+				$dbcolumnname_1 = "AgmarkMarketName";
+				$dbcolumnname_2 = "MarketName";
+				$dbtablename	= "MarketMaster";
+				break;
+
+			default:
+				$flag_others = 1;
+				break;
+
+
+		}
+			$dbcolumnname_1 	= "\"$dbcolumnname_1\"";
+			$dbcolumnname_2 	= "\"$dbcolumnname_2\"";
+			$dbtablename  		= "\"$dbschema\".\"$dbtablename\"";
+			$str			= "'$word'";
+
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.' = '.$str;
+		
+		$result = pg_query($dbconn, $query);
+		raghav_log("query : $query");
+		
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+		$arr = pg_fetch_array($result, 0, PGSQL_NUM);
+		$valid_name = $arr[0];
+
+		raghav_log("valid name :$valid_name");
+		
+		$arr=NULL;
+		$arr[0]=$item;
+		if ($valid_name!=NULL)
+		{	$arr[1]=$valid_name;
+			
+			return $arr;
+		}
+		
+		else
+		{
+			if($item=="district"){
+				$arr=raghav_validate_recognized_word($word, "market");
+				return $arr;
+			 }
+
+			else {
+
+			raghav_log("Word \"${word}\" is not present in Database");
+			return $arr;
+			}
+		}
+	}
+
+//////////////////////////////////// MARKET MASTER ///////////////////////////////////////////
+
+function raghav_fect_market_district($code,$item)
+{
+global $dbconn, $dbschema;
+	switch ($item)
+		{
+			case "district":
+				$dbcolumnname_1 = "MarketCode";
+				$dbcolumnname_2 = "DistrictCode";
+				$dbcolumnname_3 = "DistrictCode";
+				$dbtablename	= "MarketMaster";
+				break;
+			
+			
+			case "market":
+				$dbcolumnname_1 = "MarketCode";
+				$dbcolumnname_2 = "DistrictCode";
+				$dbcolumnname_3 = "MarketCode";
+				$dbtablename	= "MarketMaster";
+				break;
+
+			default:
+				$flag_others = 1;
+				break;
+
+
+		}
+			$dbcolumnname_1 	= "\"$dbcolumnname_1\"";
+			$dbcolumnname_2 	= "\"$dbcolumnname_2\"";
+			$dbcolumnname_3 	= "\"$dbcolumnname_3\"";
+			$dbtablename  		= "\"$dbschema\".\"$dbtablename\"";
+			$str			= "'$code'";
+
+	$query = 'SELECT '.$dbcolumnname_2.','.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_3.' = '.$str;
+		
+		$result = pg_query($dbconn, $query);
+		raghav_log($query);
+		$rt=NULL;
+		
+		if (pg_num_rows($result)!=0)
+		{
+			$row_all = pg_fetch_all($result);
+			
+			$rt=$row_all;
+		}
+		
+			return $rt;
+
+}
+
+
+////////////////////////////////////# confirmation ////////////////////////////////////////////////#
+
+function raghav_confirmation ()
+	{
+		
+		global $max_attempts;
+		global $agi;
+		global $mypath;
+
+	$ynrepeat = false;
+	$ynattempt=1;
+	do
+	{
+		if($ynrepeat == true){
+		$agi->stream_file("$mypath/don/say_again");
+		}
+		else{
+		$agi->stream_file("$mypath/don/say_yes_or_no_1");
+		}
+
+		
+		sleep(0.6);
+		
+		raghav_log("Please say  \"haan\" or \"nahin\"");
+			
+		$utterance = date('His').substr((string)microtime(), 2, 3);
+		
+		raghav_log("yes_no Recording Start");
+		
+		$recodord_path="$mypath/record/$utterance";
+		
+		if (!file_exists($recodord_path)) {
+   		 mkdir($recodord_path, 0777, true);
+		}
+		sleep(0.3);
+		$agi->record_file("$recodord_path/$utterance","wav","0",2000,NULL,true,1);
+
+		raghav_log("yes_no Recording END");
+		
+		$crop=shell_exec('sh '.$mypath.'/online_speech.sh '.$recodord_path.' '.$utterance.'.wav yes_no');
+		
+		list($u1, $u2,$u3) = explode("\n", $crop);
+
+		raghav_log("Recognized $u2 with  Score: $u3");
+		
+		$returnn=NULL;
+
+		if ((($u2=="haan")||($u2=="nahiin")) && $u3>=0.6)
+				{
+					$returnn=$u2;
+					$ynrepeat=false;
+				}
+			else
+				{
+					
+					$ynattempt++;
+					$ynrepeat=true;
+				}
+	
+		if ($ynattempt >= $max_attempts)
+				{
+			$agi->stream_fil("$mypath/don/you_have_reached_maximum_try_limit_please_try_again_later");
+			$ynrepeat=false;
+			raghav_ending_procedure();
+				}
+
+	}
+while($ynrepeat);
+	
+	return $returnn;
+	}
+
+
+/////////////////////////// state recoginigation /////////////////////////
+
+function raghav_state ()
+	{
+		
+		global $max_attempts;
+		global $agi;
+		global $mypath;
+
+	$strepeat = false;
+	$stattempt=1;
+	do
+	{
+		if($strepeat == true){
+		$agi->stream_file("$mypath/don/say_state");
+		}
+		else{
+		$agi->stream_file("$mypath/don/say_state");
+		sleep(0.1);
+		$agi->stream_file("$mypath/don/like");
+		sleep(0.1);
+		$agi->stream_file("$mypath/don/mp");
+		sleep(0.1);
+		$agi->stream_file("$mypath/don/or");
+		sleep(0.1);
+		$agi->stream_file("$mypath/don/up");
+		sleep(0.1);	
+		}
+
+		
+		sleep(0.6);
+		
+		raghav_log("Please say  state");
+			
+		$utterance = date('His').substr((string)microtime(), 2, 3);
+		
+		raghav_log("state Recording Start");
+		
+		$recodord_path="$mypath/record/$utterance";
+		
+		if (!file_exists($recodord_path)) {
+   		 mkdir($recodord_path, 0777, true);
+		}
+		sleep(0.3);
+		$agi->record_file("$recodord_path/$utterance","wav","0",3000,NULL,true,3);
+
+		raghav_log("state Recording END");
+
+		raghav_log("Recorded file :-$recodord_path");
+		
+		$crop=shell_exec('sh '.$mypath.'/online_speech.sh '.$recodord_path.' '.$utterance.'.wav state');
+		raghav_log(" recognized outpot $crop");
+		list($u1, $u2,$u3) = explode("\n", $crop);
+
+		raghav_log("Recognized state $u2 with  Score: $u3");
+		
+
+		$valid_word=NULL;
+		
+		if(strpos($u2, 'no final-state reached') !== false || $u3 < 0.5){
+		raghav_log("Score Less than 0.4, Repeating...");
+		$strepeat=true;
+		$stattempt++;
+		$agi->stream_file("$mypath/don/sorry");
+		$agi->stream_file("$mypath/don/we_are_not_able_hear_you_correctly");
+			}
+
+		else {
+		
+		$valid_word=$u2;
+		raghav_log("district vaild word : $valid_word");
+	
+		
+		$agi->stream_file("$mypath/don/yousaid");
+		$agi->stream_file("$mypath/don/${valid_word}");
+		
+		$confirmation = raghav_confirmation();
+		raghav_log("Confirmation : $confirmation");
+			
+			if ($confirmation == "haan")
+				{
+				$strepeat = false;
+				}
+			
+			else if ($confirmation == "nahiin")
+				{
+				$strepeat = true;
+				$stattempt++;
+				}
+			
+		}
+	
+if ($stattempt >= $max_attempts)
+				{
+			$agi->stream_fil("$mypath/don/you_have_reached_maximum_try_limit_please_try_again_later");
+			$strepeat=false;
+			raghav_ending_procedure();
+				}
+
+	}while($strepeat);
+	
+	return $valid_word;
+	}
+
+
+
+
+
+
+
+/////////////////////////////////////////// commodity price ////////////////////////////////////////
+
+function raghav_fetch_and_play_price($DistrictCode, $commoditycode, $marketcode)
+	{
+		global $agi, $mypath,$price_play_count_limit;
+		$price_play_count_limit=4;
+
+		raghav_log("Fetching Price info from Database for ${commodity} in ${district}");
+		
+		raghav_log("Fetching district code");
+
+		//$DistrictCode = raghav_DistrictCode($district);
+		
+	raghav_log("Fetching Price  $DistrictCode, market code: $marketcode,commodity code: $commoditycode");	
+			
+		$return_values = raghav_fetch_price($DistrictCode,$marketcode,$commoditycode);
+		
+		$count_prices=count($return_values);
+		
+		if ($count_prices!=0)
+		{
+		raghav_log("Number of Price Info avaliable in Database for ${commodity} in ${district}: ${count_prices}");
+			$i=0;
+
+			while(($i<$count_prices)&&($i<$price_play_count_limit))
+			{
+				if ($return_values[$i]["ModelPrice"]!="NR")
+				{
+					raghav_say_price($return_values[$i]["DistrictName"],$return_values[$i]["MarketName"], $return_values[$i]["CommodityName"],$model_price = $return_values[$i]["ModelPrice"], "Model");
+				}
+				elseif ($return_values[$i]["MaxPrice"]!="NR")
+				{
+					raghav_say_price($return_values[$i]["DistrictName"],$return_values[$i]["MarketName"], $return_values[$i]["CommodityName"],$model_price = $return_values[$i]["MaxPrice"], "Max");
+				}
+				elseif ($return_values[$i]["MinPrice"]!="NR")
+				{
+					raghav_say_price($return_values[$i]["DistrictName"],$return_values[$i]["MarketName"], $return_values[$i]["CommodityName"],$model_price = $return_values[$i]["MinPrice"], "Min");
+				}
+				$i++;
+			}
+			return true;
+		}
+	else{
+		return false;
+		}
+		
+		
+}
+		
+////////////////////////////////// fetch and play price neighbour district ///////////////////////
+
+function raghav_fetch_and_play_price_neighbour($DistrictCode, $commoditycode, $marketcode)
+{
+
+		
+	
+		$districts_neighbour_array = raghav_neighbouring_districts($DistrictCode);
+			
+		$j=0;
+		$price_play_count = 0;
+
+			
+			while($districts_neighbour_array[$j])
+			{
+			
+			
+			$neighbourDistrictCode = $districts_neighbour_array[$j];	
+	raghav_log("fetching neighbour district name from distric code : $neighbourDistrictCode.....");		
+	
+	$district_neighbour = raghav_districtname_from_districtcode($neighbourDistrictCode);
+			
+	raghav_log("fetched $district_neighbour");
+	raghav_log("fetched district name $district_neighbour from distric code : $neighbourDistrictCode");
+			
+	$return_values = raghav_fetch_price($neighbourDistrictCode, $district_neighbour,$market, $commodity);
+				
+			$count_prices = count($return_values);
+				if ($count_prices!=0)
+				{
+		raghav_log("Number of Price for ${commodity_other} in Districts in ${statecode}: ${count_prices}");
+				
+					
+					$i=0;
+					while(($i<$count_prices)&&($i<$price_play_count_limit))
+					{
+						if ($return_values[$i]["ModelPrice"]!="NR")
+						{
+		raghav_say_price( $return_values[$i]["DistrictName"], $return_values[$i]["MarketName"], $return_values[$i]["CommodityName"], $model_price = $return_values[$i]["ModelPrice"], "Model");
+						}
+						elseif ($return_values[$i]["MaxPrice"]!="NR")
+						{
+		raghav_say_price( $return_values[$i]["DistrictName"], $return_values[$i]["MarketName"], $return_values[$i]["CommodityName"], $model_price = $return_values[$i]["MaxPrice"], "Max");
+						}
+						elseif ($return_values[$i]["MinPrice"]!="NR")
+						{
+		raghav_say_price( $return_values[$i]["DistrictName"], $return_values[$i]["MarketName"], $return_values[$i]["CommodityName"], $model_price = $return_values[$i]["MinPrice"], "Min");
+						}
+						$i++;
+						$price_play_count++;
+					}
+				}
+				$j++;
+			}
+			
+
+
+		if ($price_play_count==0)
+			{
+		return false;
+		
+			}
+		else
+			{
+				return true;
+			}
+		
+
+	  
+
+}
+
+
+
+////////////////////////////////////////////// District Code //////////////////////////////////////
+
+function raghav_DistrictCode($district)
+	{
+		global $dbconn, $dbschema;
+		
+		$dbtablename	= "DistrictMaster";
+		
+		$dbcolumnname_1 = "\"DistrictCode\"";
+		$dbcolumnname_2 = "\"AgmarkName\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'$district'";
+
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+	
+		$result = pg_query($dbconn, $query);
+		
+		raghav_log($query);
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		$row = pg_fetch_array($result, 0, PGSQL_NUM);
+		raghav_log("query result : ${row[0]}");
+		
+			return $row[0];
+		
+	}
+/////////////////////////////////////////////////////////////////
+
+function raghav_commodity_Code($commodity)
+	{
+		global $dbconn, $dbschema;
+		
+		$dbtablename	= "CommodityDictionaryMapping";
+		
+		$dbcolumnname_1 = "\"CommodityCode\"";
+		$dbcolumnname_2 = "\"DictionaryName\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'$commodity'";
+
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+	
+		$result = pg_query($dbconn, $query);
+		
+		raghav_log($query);
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		$row = pg_fetch_all($result);
+		//raghav_log("query result : ${row[0]}");
+		$j=0;
+		$counting=count($row );
+		while($j<$counting){
+		$re=$row[$j]["CommodityCode"];
+		raghav_log("query result :$re ");
+			$j++;
+			}
+			return $row;
+		
+	}
+
+//////////////////////////////////market code////////////////////////////////////////////
+
+
+function raghav_marketCode($market)
+	{
+		global $dbconn, $dbschema;
+		
+		$dbtablename	= "MarketMaster";
+		
+		$dbcolumnname_1 = "\"MarketCode\"";
+		$dbcolumnname_2 = "\"AgmarkMarketName\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'$market'";
+
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+	
+		$result = pg_query($dbconn, $query);
+		
+		raghav_log($query);
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		$row = pg_fetch_array($result, 0, PGSQL_NUM);
+		raghav_log("query result : ${row[0]}");
+		
+			return $row[0];
+		
+	}
+
+
+////////////////////////////////////// fetch price //////////////////////////////////////////
+
+function raghav_fetch_price($DistrictCode, $marketcode, $commodity_code)
+	{
+	raghav_log("raghav_fetch_price");
+		
+		global $dbconn, $dbschema;
+		
+		$dbcolumnname_1		= "MinPrice";
+		$dbcolumnname_2		= "ModelPrice";
+		$dbcolumnname_3		= "MaxPrice";
+		$dbcolumnname_4		= "DistrictName";
+		$dbcolumnname_5		= "MarketName";
+		$dbcolumnname_6		= "CommodityName";
+		$dbcolumnname_7		= "DistrictCode";
+		$dbcolumnname_8		= "MarketCode";
+		$dbcolumnname_9		= "CommodityCode";
+		$dbtablename		= "CommodityPriceInformation";
+		
+		$dbcolumnname_1 	= "\"$dbcolumnname_1\"";
+		$dbcolumnname_2 	= "\"$dbcolumnname_2\"";
+		$dbcolumnname_3 	= "\"$dbcolumnname_3\"";
+		$dbcolumnname_4 	= "\"$dbcolumnname_4\"";
+		$dbcolumnname_5 	= "\"$dbcolumnname_5\"";
+		$dbcolumnname_6 	= "\"$dbcolumnname_6\"";
+		$dbcolumnname_7 	= "\"$dbcolumnname_7\"";
+		$dbcolumnname_8 	= "\"$dbcolumnname_8\"";
+		$dbcolumnname_9 	= "\"$dbcolumnname_9\"";
+		$dbtablename  		= "\"$dbschema\".\"$dbtablename\"";
+
+		
+		$str_2	= "'%$marketcode%'";
+		$str_3	= "'%$commodity_code%'";
+		$str_4	= "'%${DistrictCode}%'";
+		
+		
+		$query 	= 'SELECT DISTINCT ON ('.$dbcolumnname_6.') '.$dbcolumnname_1.','.$dbcolumnname_2.','.$dbcolumnname_3.','.$dbcolumnname_4.','.$dbcolumnname_5.','.$dbcolumnname_6.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_7.' LIKE '.$str_4.' AND '.$dbcolumnname_8.' LIKE '.$str_2.' AND '.$dbcolumnname_9.' LIKE '.$str_3;
+
+
+
+		$result = pg_query($dbconn, $query);
+		
+		raghav_log($query);
+		$rt=NULL;
+		if (pg_num_rows($result)!=0)
+		{
+			$row_all = pg_fetch_all($result);
+			
+			$rt=$row_all;
+		}
+		
+			return $rt;
+	}
+
+
+//////////////////////////////////////////// say price ////////////////////////////////////////////////////
+
+function raghav_say_price($district, $market, $commodity, $price, $price_type)
+	{
+		global $mypath;
+		global $fname;
+		global $agi;
+
+
+		raghav_log("${price_type} Price of ".$commodity." at ".$market." Market in ".$district." District is = Rs. ".$price." per Quintal");
+		
+if (!file_exists("$mypath/price/$price.gsm")){
+
+$out=shell_exec('espeak -vhi+f4 "'.$price.'" -w '.$mypath.'/price/'.$price.'.wav');
+
+$out = shell_exec('chmod 777 '.$mypath.'/price/'.$price.'.wav');
+
+$out = shell_exec("sox -v `sox $mypath/price/$price.wav -n stat -v 2>&1` $mypath/price/$price.wav $mypath/price/${price}_norm.wav");
+
+$out = shell_exec("sox $mypath/price/${price}_norm.wav -c 1 $mypath/price/$price.gsm");
+
+$out = shell_exec("chmod 777 $mypath/price/$price.gsm");
+
+shell_exec("rm $mypath/price/$price.wav");
+		
+}
+		
+
+
+		$agi->stream_file(" ");
+		$agi->stream_file(" ");
+		
+		$agi->stream_file("$mypath/don/$district");
+		$agi->stream_file("$mypath/don/in_district");
+		
+		$agi->stream_file("$mypath/don/$market");
+		$agi->stream_file("$mypath/don/in_market");
+		
+		$agi->stream_file("$mypath/don/$commodity");
+		$agi->stream_file("$mypath/don/commodity_price");
+		
+		
+		$agi->stream_file("$mypath/price/$price");
+		$agi->stream_file("$mypath/don/rupees");
+		$agi->stream_file("$mypath/don/quintal");
+		return 0;
+	
+	}
+
+////////////////////////////////// neighbouring districts //////////////////////////////////////////
+
+function raghav_neighbouring_districts($districtcode)
+	{
+		global $dbconn, $dbschema;
+		
+		$dbconn = raghav_database_connect();
+		
+		if($dbconn==NULL)
+		{
+			raghav_log("DB Connection Failure");
+			exit;
+		}
+		
+		
+		$dbcolumnname_1 	= "NeighbourCode";
+		$dbcolumnname_2 	= "DistrictCode";
+		
+		$dbcolumnname_1 	= "\"$dbcolumnname_1\"";
+		$dbcolumnname_2 	= "\"$dbcolumnname_2\"";
+		
+		$dbtablename		= "DistrictNeighbour";
+	
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str_1 = "'$districtcode'";
+
+		//Fetching Data from Database
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.' = '.$str_1.' AND '.$dbcolumnname_1.' != '.$str_1;
+	
+		$result = pg_query($dbconn, $query);
+		
+		raghav_log($query);
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		//$items_array = pg_fetch_all_columns($result, 0);
+		//$items_array = pg_fetch_array($result, 0, PGSQL_NUM);
+		$items_array = pg_fetch_all($result);
+		$i=0;
+		$districts_neighbour_array=NULL;
+		while($items_array[$i]["NeighbourCode"])
+		{
+		$dctcode=$items_array[$i]["NeighbourCode"];
+		raghav_log("result : $dctcode");
+		$districts_neighbour_array[$i] = $dctcode;
+		
+		raghav_log("neighbour district code  $dctcode");	
+			$i++;
+		}
+		
+		return $districts_neighbour_array;
+	}
+	
+///////////////////////////// districtname from district code ////////////////////	
+
+function raghav_districtname_from_districtcode($dctcode)
+	{
+		
+		
+		global $dbconn, $dbschema;
+		
+		raghav_log("raghav_districtname_from_districtcode");
+
+		$dbtablename	= "DistrictMaster";
+		
+		$dbcolumnname_1 = "\"DistrictName\"";
+		$dbcolumnname_2 = "\"DistrictCode\"";
+			
+		$dbtablename  	= "\"$dbschema\".\"$dbtablename\"";
+		
+		$str		= "'${dctcode}'";
+
+		
+		$query = 'SELECT '.$dbcolumnname_1.' FROM '.$dbtablename.' WHERE '.$dbcolumnname_2.'='.$str;
+		
+		raghav_log($query);
+		$result = pg_query($dbconn, $query);
+		
+		
+	
+		if (!$result) 
+		{
+			raghav_log ("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	
+		$arr2 = pg_fetch_array($result, 0, PGSQL_NUM);
+			
+		
+		$rtn=$arr2[0];
+		
+		raghav_log("result: $rtn");	
+		return $rtn;
+		
+		
+	}
+
+
+	
+	
+//////////////////////////////////////////////////////////////////
+
+function raghav_ending_procedure()
+	{
+		global $callerid, $starttime,  $district, $choice, $commodity, $market, $mypath;
+		
+		raghav_caller_details($callerid, $starttime, $district, $choice, $commodity, $market);
+		
+		#$agi->stream_file("$mypath/don/end_credit");
+		$endtime = date('YmdHis');
+		raghav_log("Call Ended at : ".date('d/m/Y H:i:s'));
+		raghav_log("*******************************************\n");
+		exit();
+	}
+
+
+//////////////////////////////////////////////////////////////////////////////
+	
+function raghav_caller_details($callerid, $datetimestamp, $district, $choice, $commodity, $market)
+	{
+		global $dbconn, $dbschema,  $language;
+		
+		//Inserting Caller Details into Database
+
+		$dbtablename	= "CallerDetails";
+			
+		$dbcolumnname_1 	= "\"CallerID\"";
+		$dbcolumnname_2 	= "\"DateTimeStamp\"";
+		$dbcolumnname_3 	= "\"Language\"";
+		$dbcolumnname_4 	= "\"District\"";
+		$dbcolumnname_5 	= "\"Commodity\"";
+		$dbcolumnname_6 	= "\"Market\"";
+		$dbcolumnname_7 	= "\"Choice\"";
+		
+		$dbtablename  		= "\"$dbschema\".\"$dbtablename\"";
+					
+		$str_1	= "'$callerid'";
+		$str_2	= "'$datetimestamp'";
+		$str_3	= "'$language'";
+		$str_4	= "'$district'";
+		$str_5	= "'$commodity'";
+		$str_6	= "'$market'";
+		$str_7	= "'$choice'";
+		
+		$query = 'INSERT INTO '.$dbtablename.' ('.$dbcolumnname_1.', '.$dbcolumnname_2.', '.$dbcolumnname_3.', '.$dbcolumnname_4.', '.$dbcolumnname_5.', '.$dbcolumnname_6.', '.$dbcolumnname_7.') VALUES ('.$str_1.', '.$str_2.', '.$str_3.', '.$str_4.', '.$str_5.', '.$str_6.', '.$str_7.')';
+		
+		raghav_log($query);
+				
+		if(!pg_query($query))
+		{
+			raghav_log("Query Failed: $query");
+			exit("Query Failed: $query");
+		}
+	}	
+	
+////////////////////////////////////////////////////////#	
+	
+
+
+
+?>
+

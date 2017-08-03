@@ -1,0 +1,232 @@
+don_122043879: *******************************************
+don_122043879: Recognition Test Call Date & Time : 20/07/2016 12:20:43
+don_122043879: Channel: SIP/don-00000000, Extension: 1234, Caller ID: don
+don_122059590: district recognisation :
+don_122059590: say_district
+don_122105299: district Recording Start
+don_122112109: Recognized kaanapura with  Score: 1.00
+don_122112526: query : SELECT "AgmarkName" FROM "Agri_ASR"."DistrictMaster" WHERE "DistrictName" = 'kaanapura'
+don_122112526: valid name :Kanpur
+don_122112526: district vaild word : Kanpur
+don_122116096: Please say  "haan" or "nahin"
+don_122116097: yes_no Recording Start
+don_122118483: yes_no Recording END
+don_122119105: Recognized haan with  Score: 1.00
+don_122119105: district code for district Kanpur
+don_122119119: SELECT "DistrictCode" FROM "Agri_ASR"."DistrictMaster" WHERE "AgmarkName"='Kanpur'
+don_122119119: query result : UPKN
+don_122119119: fecting market and district code for district code UPKN
+don_122119187: SELECT "DistrictCode","MarketCode" FROM "Agri_ASR"."MarketMaster" WHERE "DistrictCode" = 'UPKN'
+don_122119187: district recognisation returning : UPKN----- UPKNCB 
+don_122119187: district recognisation returning : UPKN----- UPKNJJ 
+don_122119187: district recognisation returning : UPKN----- UPKNKP 
+don_122119187: district recognisation returning : UPKN----- UPKNPK 
+don_122119187: district recognisation returning : UPKN----- UPKNRR 
+don_122119187: district recognisation returning : UPKN----- UPKNUT 
+don_122119187: district recognisation returning : UPKN----- UPKNVP 
+don_122119187: commodity recognisation :
+don_122122643: say commodity 
+don_122126722: commodity Recording Start
+don_122130165: commodity Recording END
+don_122130930: Recognized aaluu with  Score: 1.00
+don_122130931: query for valid word
+don_122131113: query : SELECT "CommodityName" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName" = 'aaluu'
+don_122131113: valid name :Potato_Other
+don_122132790: yousaid: Potato_Other----- pls say yes or no
+don_122134291: Please say  "haan" or "nahin"
+don_122134291: yes_no Recording Start
+don_122136734: yes_no Recording END
+don_122137141: Recognized haan with  Score: 1.00
+don_122137141: confirmation : haan
+don_122137141: SELECT "CommodityCode" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName"='aaluu'
+don_122137141: query result :CC0496 
+don_122137141: total market =0
+don_122137141: fetching for market UPKNCB of district UPKN
+don_122137142: Fetching Price info from Database for  in 
+don_122137142: Fetching district code
+don_122137142: Fetching Price  UPKN, market code: UPKNCB,commodity code: CC0496
+don_122137142: raghav_fetch_price
+don_122137315: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNCB%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137316: 0
+don_122137316: fetching for market UPKNJJ of district UPKN
+don_122137316: Fetching Price info from Database for  in 
+don_122137316: Fetching district code
+don_122137316: Fetching Price  UPKN, market code: UPKNJJ,commodity code: CC0496
+don_122137316: raghav_fetch_price
+don_122137317: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNJJ%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137317: 1
+don_122137317: fetching for market UPKNKP of district UPKN
+don_122137317: Fetching Price info from Database for  in 
+don_122137317: Fetching district code
+don_122137317: Fetching Price  UPKN, market code: UPKNKP,commodity code: CC0496
+don_122137317: raghav_fetch_price
+don_122137318: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNKP%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137318: 2
+don_122137318: fetching for market UPKNPK of district UPKN
+don_122137318: Fetching Price info from Database for  in 
+don_122137318: Fetching district code
+don_122137318: Fetching Price  UPKN, market code: UPKNPK,commodity code: CC0496
+don_122137318: raghav_fetch_price
+don_122137319: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNPK%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137319: 3
+don_122137320: fetching for market UPKNRR of district UPKN
+don_122137320: Fetching Price info from Database for  in 
+don_122137320: Fetching district code
+don_122137320: Fetching Price  UPKN, market code: UPKNRR,commodity code: CC0496
+don_122137320: raghav_fetch_price
+don_122137321: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNRR%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137321: 4
+don_122137321: fetching for market UPKNUT of district UPKN
+don_122137321: Fetching Price info from Database for  in 
+don_122137321: Fetching district code
+don_122137321: Fetching Price  UPKN, market code: UPKNUT,commodity code: CC0496
+don_122137321: raghav_fetch_price
+don_122137322: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNUT%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137322: 5
+don_122137322: fetching for market UPKNVP of district UPKN
+don_122137322: Fetching Price info from Database for  in 
+don_122137322: Fetching district code
+don_122137322: Fetching Price  UPKN, market code: UPKNVP,commodity code: CC0496
+don_122137322: raghav_fetch_price
+don_122137323: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPKN%' AND "MarketCode" LIKE '%UPKNVP%' AND "CommodityCode" LIKE '%CC0496%'
+don_122137323: 6
+don_122137323: No Price Info avaliable in Database for  in 
+don_122137323: Fetching Price for  in Neighbouring Districts in
+don_122145149: SELECT "NeighbourCode" FROM "Agri_ASR"."DistrictNeighbour" WHERE "DistrictCode" = '' AND "NeighbourCode" != ''
+don_122145150: No Price Info avaliable in Database for  in Neighbouring Districts
+don_122153704: yousaid: $Potato_Other----- pls say yes or no
+don_122155205: Please say  "haan" or "nahin"
+don_122155205: yes_no Recording Start
+don_122157647: yes_no Recording END
+don_122158159: Recognized nahiin with  Score: 0.71
+don_122158159: confirmation : nahiin
+don_122158159: INSERT INTO "Agri_ASR"."CallerDetails" ("CallerID", "DateTimeStamp", "Language", "District", "Commodity", "Market", "Choice") VALUES ('don', '20160720122043', '', '', '', '', '')
+don_122158191: Call Ended at : 20/07/2016 12:21:58
+don_122158191: *******************************************
+
+don_185953088: *******************************************
+don_185953097: Recognition Test Call Date & Time : 20/07/2016 18:59:53
+don_185953097: Channel: SIP/don-00000000, Extension: 1234, Caller ID: don
+don_194159549: *******************************************
+don_194159550: Recognition Test Call Date & Time : 20/07/2016 19:41:59
+don_194159550: Channel: SIP/don-00000006, Extension: +911234, Caller ID: don
+don_195927924: *******************************************
+don_195927924: Recognition Test Call Date & Time : 20/07/2016 19:59:27
+don_195927924: Channel: SIP/don-00000007, Extension: 1234, Caller ID: don
+don_210516702: *******************************************
+don_210516718: Recognition Test Call Date & Time : 20/07/2016 21:05:16
+don_210516718: Channel: SIP/don-00000008, Extension: 1234, Caller ID: don
+don_210532420: district recognisation :
+don_210532420: say_district
+don_210538117: district Recording Start
+don_210542754: Recognized  with  Score: 
+don_210542754: Score Less than 0.4, Repeating...
+don_210549545: district Recording Start
+don_210554373: Recognized mauu with  Score: 0.37
+don_210554373: Score Less than 0.4, Repeating...
+don_210601135: district Recording Start
+don_210604427: Recognized jhaansii with  Score: 0.31
+don_210604427: Score Less than 0.4, Repeating...
+don_210641794: *******************************************
+don_210641795: Recognition Test Call Date & Time : 20/07/2016 21:06:41
+don_210641795: Channel: SIP/don-00000009, Extension: 1234, Caller ID: don
+don_210657477: district recognisation :
+don_210657477: say_district
+don_210703138: district Recording Start
+don_210708463: Recognized mauu with  Score: 0.56
+don_210708902: query : SELECT "AgmarkName" FROM "Agri_ASR"."DistrictMaster" WHERE "DistrictName" = 'mauu'
+don_210708902: valid name :Mau(Maunathbhanjan)
+don_210708902: district vaild word : Mau(Maunathbhanjan)
+don_210712376: Please say  "haan" or "nahin"
+don_210712376: yes_no Recording Start
+don_210714818: yes_no Recording END
+don_210715341: Recognized haan with  Score: 0.97
+don_210715341: district code for district Mau(Maunathbhanjan)
+don_210715361: SELECT "DistrictCode" FROM "Agri_ASR"."DistrictMaster" WHERE "AgmarkName"='Mau(Maunathbhanjan)'
+don_210715361: query result : UPMB
+don_210715361: fecting market and district code for district code UPMB
+don_210715428: SELECT "DistrictCode","MarketCode" FROM "Agri_ASR"."MarketMaster" WHERE "DistrictCode" = 'UPMB'
+don_210715429: district recognisation returning : UPMB----- UPMBDO 
+don_210715429: district recognisation returning : UPMB----- UPMBKO 
+don_210715429: commodity recognisation :
+don_210718885: say commodity 
+don_210722957: commodity Recording Start
+don_210726399: commodity Recording END
+don_210727202: Recognized keelaa with  Score: 0.99
+don_210727202: query for valid word
+don_210727383: query : SELECT "CommodityName" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName" = 'keelaa'
+don_210727383: valid name :Banana_Other_Large
+don_210729603: yousaid: Banana_Other_Large----- pls say yes or no
+don_210731104: Please say  "haan" or "nahin"
+don_210731104: yes_no Recording Start
+don_210732566: yes_no Recording END
+don_210732954: Recognized nahiin with  Score: 0.95
+don_210732954: confirmation : nahiin
+don_210739636: say commodity again
+don_210739636: commodity Recording Start
+don_210743078: commodity Recording END
+don_210743839: Recognized keelaa with  Score: 0.98
+don_210743839: query for valid word
+don_210743839: query : SELECT "CommodityName" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName" = 'keelaa'
+don_210743839: valid name :Banana_Other_Large
+don_210746041: yousaid: Banana_Other_Large----- pls say yes or no
+don_210747542: Please say  "haan" or "nahin"
+don_210747542: yes_no Recording Start
+don_210749984: yes_no Recording END
+don_210750420: Recognized haan with  Score: 0.99
+don_210750420: confirmation : haan
+don_210750420: SELECT "CommodityCode" FROM "Agri_ASR"."CommodityDictionaryMapping" WHERE "DictionaryName"='keelaa'
+don_210750420: query result :CC0051 
+don_210750420: query result :CC0052 
+don_210750421: query result :CC0053 
+don_210750421: total market =0
+don_210750421: fetching for market UPMBDO of district UPMB
+don_210750421: Fetching Price info from Database for  in 
+don_210750421: Fetching district code
+don_210750421: Fetching Price  UPMB, market code: UPMBDO,commodity code: CC0051
+don_210750421: raghav_fetch_price
+don_210750618: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBDO%' AND "CommodityCode" LIKE '%CC0051%'
+don_210750618: fetching for market UPMBDO of district UPMB
+don_210750618: Fetching Price info from Database for  in 
+don_210750619: Fetching district code
+don_210750619: Fetching Price  UPMB, market code: UPMBDO,commodity code: CC0052
+don_210750619: raghav_fetch_price
+don_210750620: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBDO%' AND "CommodityCode" LIKE '%CC0052%'
+don_210750620: fetching for market UPMBDO of district UPMB
+don_210750620: Fetching Price info from Database for  in 
+don_210750620: Fetching district code
+don_210750620: Fetching Price  UPMB, market code: UPMBDO,commodity code: CC0053
+don_210750620: raghav_fetch_price
+don_210750621: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBDO%' AND "CommodityCode" LIKE '%CC0053%'
+don_210750621: 0
+don_210750621: fetching for market UPMBKO of district UPMB
+don_210750621: Fetching Price info from Database for  in 
+don_210750621: Fetching district code
+don_210750621: Fetching Price  UPMB, market code: UPMBKO,commodity code: CC0051
+don_210750621: raghav_fetch_price
+don_210750622: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBKO%' AND "CommodityCode" LIKE '%CC0051%'
+don_210750622: fetching for market UPMBKO of district UPMB
+don_210750622: Fetching Price info from Database for  in 
+don_210750622: Fetching district code
+don_210750623: Fetching Price  UPMB, market code: UPMBKO,commodity code: CC0052
+don_210750623: raghav_fetch_price
+don_210750624: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBKO%' AND "CommodityCode" LIKE '%CC0052%'
+don_210750624: Number of Price Info avaliable in Database for  in : 1
+don_210750624: Model Price of Banana_Other_Medium at Kopaganj Market in Mau(Maunathbhanjan) District is = Rs. 1550 per Quintal
+don_210800939: fetching for market UPMBKO of district UPMB
+don_210800940: Fetching Price info from Database for  in 
+don_210800940: Fetching district code
+don_210800940: Fetching Price  UPMB, market code: UPMBKO,commodity code: CC0053
+don_210800940: raghav_fetch_price
+don_210800942: SELECT DISTINCT ON ("CommodityName") "MinPrice","ModelPrice","MaxPrice","DistrictName","MarketName","CommodityName" FROM "Agri_ASR"."CommodityPriceInformation" WHERE "DistrictCode" LIKE '%UPMB%' AND "MarketCode" LIKE '%UPMBKO%' AND "CommodityCode" LIKE '%CC0053%'
+don_210800942: 1
+don_210804340: yousaid: $Banana_Other_Large----- pls say yes or no
+don_210805841: Please say  "haan" or "nahin"
+don_210805841: yes_no Recording Start
+don_210808217: yes_no Recording END
+don_210808831: Recognized nahiin with  Score: 0.61
+don_210808831: confirmation : nahiin
+don_210808832: INSERT INTO "Agri_ASR"."CallerDetails" ("CallerID", "DateTimeStamp", "Language", "District", "Commodity", "Market", "Choice") VALUES ('don', '20160720210641', '', '', '', '', '')
+don_210808875: Call Ended at : 20/07/2016 21:08:08
+don_210808875: *******************************************
+

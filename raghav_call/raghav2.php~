@@ -1,0 +1,30 @@
+#!/usr/bin/php -q                                 
+<?php
+require('phpagi.php');
+$mypath="/home/raghav/ex/raghav_call";
+
+
+require "${mypath}/raghav_fun2.inc";
+
+
+
+
+	$agi 		= new AGI();
+	$extension  = $agi->request['agi_extension'];
+	$channel    = $agi->request['agi_channel'];
+	$callerid   = $agi->request['agi_callerid'];
+	$callstatus	= 0;
+	$date		= date('Ymd');	
+	$timestamp	= date('His');
+	$starttime 	= "$date$timestamp";
+	$uniqueid 	= "$extension"."_"."$channel"."_"."$callerid"."_"."$starttime";
+	$fname		= "$date"."_"."$timestamp"."_"."$callerid";	// File Name with <Date Time Stamp and Cal
+	$dbschema	= "Agri_ASR";
+	$max_attempts	= 5;
+
+$dbconn = raghav_database_connect();
+
+
+$sd=raghav_districtname_from_districtcode("MPUP");
+echo "$sd";
+?>
